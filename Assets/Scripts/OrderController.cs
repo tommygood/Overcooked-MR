@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Networking;
 
-public class DisplayOrders : MonoBehaviour
+public class OrderController : MonoBehaviour
 {
   public RectTransform contentParent;         // Scroll View Content
   public GameObject textItemPrefab;           // Text prefab (TextMeshProUGUI)
@@ -27,6 +27,8 @@ public class DisplayOrders : MonoBehaviour
   public string api_get_items = "/api/cartItem"; // Endpoint for getting orders
 
   public string api_get_food_list = "/api/foods"; // Endpoint for getting food list
+
+  private string x_api_key = "283b65a5e93dc42e58d23b1262cc821226396b71a7fc0f1a1208caaed6d0941f"; // API key
 
   // store the id and name of the foods
   [System.Serializable]
@@ -71,7 +73,6 @@ public class DisplayOrders : MonoBehaviour
 
   private IEnumerator FetchAndGenerateFoodList()
   {
-    Debug.Log("Fetching food lists from API...");
     yield return StartCoroutine(GetFoodList());
     if (foodList != null)
     {
@@ -81,10 +82,8 @@ public class DisplayOrders : MonoBehaviour
 
   private IEnumerator GetFoodList() {
     string url = api_base_url + api_get_food_list;
-    Debug.Log("Fetching food lists from: " + url);
     using (UnityWebRequest request = UnityWebRequest.Get(url))
     {
-      // set the header "x-api-key: 283b65a5e93dc42e58d23b1262cc821226396b71a7fc0f1a1208caaed6d0941f"
       request.SetRequestHeader("Content-Type", "application/json");
       request.certificateHandler = new BypassCertificate();
       yield return request.SendWebRequest();
@@ -96,8 +95,6 @@ public class DisplayOrders : MonoBehaviour
       }
       else
       {
-        // 假設回傳內容為 ["Apple","Banana"]
-        Debug.Log("Received food lists: " + request.downloadHandler.text);
         string json = request.downloadHandler.text;
         // set the foodList to the result
         foodList = JsonHelper.FromJson<Food>(json);
@@ -106,7 +103,6 @@ public class DisplayOrders : MonoBehaviour
   }
   private IEnumerator FetchAndGenerateList()
   {
-    Debug.Log("Fetching items from API...");
     yield return StartCoroutine(GetOrders());
 
     if (orders != null)
@@ -122,11 +118,9 @@ public class DisplayOrders : MonoBehaviour
   private IEnumerator GetOrders()
   {
     string url = api_base_url + api_get_items;
-    Debug.Log("Fetching items from: " + url);
     using (UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequest.Get(url))
     {
-      // set the header "x-api-key: 283b65a5e93dc42e58d23b1262cc821226396b71a7fc0f1a1208caaed6d0941f"
-      request.SetRequestHeader("x-api-key", "283b65a5e93dc42e58d23b1262cc821226396b71a7fc0f1a1208caaed6d0941f");
+      request.SetRequestHeader("x-api-key", x_api_key);
       request.SetRequestHeader("Content-Type", "application/json");
       request.certificateHandler = new BypassCertificate();
       yield return request.SendWebRequest();
@@ -137,8 +131,6 @@ public class DisplayOrders : MonoBehaviour
       }
       else
       {
-        // 假設回傳內容為 ["Apple","Banana"]
-        Debug.Log("Received items: " + request.downloadHandler.text);
         string json = request.downloadHandler.text;
         // set the orders to the result
         orders = JsonHelper.FromJson<Order>(json);
@@ -147,14 +139,6 @@ public class DisplayOrders : MonoBehaviour
         {
           Debug.LogError("Failed to parse orders.");
           yield break;
-        }
-        else
-        {
-          Debug.Log("Parsed orders: " + orders.Length);
-          foreach (Order order in orders)
-          {
-            Debug.Log("User ID: " + order.user_id + ", Food ID: " + order.food_id + ", Quantity: " + order.item_qty);
-          }
         }
       }
     }
@@ -167,13 +151,11 @@ public class DisplayOrders : MonoBehaviour
       Destroy(child.gameObject);
     }
 
-    Debug.Log("Generating list...");
     // show the orders
     foreach (Order order in orders)
     {
       // get the food name from the foodList
       string foodName = "";
-      Debug.Log("User ID" + order.user_id + ", Food ID: " + order.food_id + ", Quantity: " + order.item_qty);
       foreach (Food food in foodList)
       {
         if (food.food_id == order.food_id)
@@ -198,6 +180,24 @@ public class DisplayOrders : MonoBehaviour
     }
     // Reset y position for next generation
     y = 0f;
+  }
+
+  public IEnumerator DeleteOrder(int user_id, int food_id) {
+    // Delete order from API
+    string url = api_base_url + "/api/cartItem/" + user_id + "/" + food_id;
+    //Debug.Log("Deleting order from: " + url);
+    using (UnityWebRequest request = UnityWebRequest.Delete(url))
+    {
+      request.SetRequestHeader("x-api-key", x_api_key);
+      request.SetRequestHeader("Content-Type", "application/json");
+      request.certificateHandler = new BypassCertificate();
+      yield return request.SendWebRequest();
+
+      if (request.result != UnityWebRequest.Result.Success)
+      {
+        Debug.LogError("Failed to delete order: " + request.error);
+      }
+    }
   }
 }
 

@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 2078418812}
   - component: {fileID: 2078418811}
   - component: {fileID: 2078418810}
-  - component: {fileID: 2078418809}
+  - component: {fileID: 2078418814}
   m_Layer: 5
   m_Name: OrderPanel
   m_TagString: Untagged
@@ -524,26 +524,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2078418809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2078418808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7775de0cf5e60496e8d9827b30794ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contentParent: {fileID: 2078418813}
-  textItemPrefab: {fileID: 832341105}
-  fontSize: 5
-  lineHeight: 1
-  api_base_url: https://163.22.17.116:8002
-  api_get_items: /api/cartItem
-  api_get_food_list: /api/foods
-  check_order_interval: 5
 --- !u!114 &2078418810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,6 +606,26 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2078418814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078418808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7775de0cf5e60496e8d9827b30794ff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contentParent: {fileID: 2078418813}
+  textItemPrefab: {fileID: 832341105}
+  fontSize: 5
+  lineHeight: 1
+  api_base_url: https://163.22.17.116:8002
+  api_get_items: /api/cartItem
+  api_get_food_list: /api/foods
+  check_order_interval: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
