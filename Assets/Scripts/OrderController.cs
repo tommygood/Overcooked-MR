@@ -8,19 +8,20 @@ public class OrderController : MonoBehaviour
 {
   public RectTransform contentParent;         // Scroll View Content
   public GameObject textItemPrefab;           // Text prefab (TextMeshProUGUI)
+  public GameObject casher;
   public float fontSize = 5f;
 
   public float lineHeight = 1f;
   private float y = 0f;
 
   [System.Serializable]
-  private class Order {
+  public class Order {
     public int user_id;
     public int food_id;
     public int item_qty;
   }
 
-  private Order[] orders;
+  public Order[] orders;
 
   public string api_base_url = "https://163.22.17.116:8002"; // Base URL for API
 
@@ -32,7 +33,7 @@ public class OrderController : MonoBehaviour
 
   // store the id and name of the foods
   [System.Serializable]
-  private class Food
+  public class Food
   {
     public int food_id;
     public string food_name;
@@ -47,13 +48,15 @@ public class OrderController : MonoBehaviour
     public string food_src;
   }
 
-  private Food[] foodList;
+  public Food[] foodList;
 
   public float check_order_interval = 5f; // Interval to check for new orders
   private float lastCheckTime = 0f;
 
   void Start()
   {
+    initOrderPanel();
+        
     StartCoroutine(FetchAndGenerateFoodList());
   }
 
@@ -70,6 +73,22 @@ public class OrderController : MonoBehaviour
       lastCheckTime += Time.deltaTime;
     }
   }
+
+    private void initOrderPanel()
+    {
+        if (casher != null)
+        {
+            // Move this panel to the casher's position
+            transform.position = casher.transform.position;
+
+            // Optional offset so it doesn't overlap exactly
+            transform.position += new Vector3(0.271f, 3.2f, -0.05f); // e.g., 2 units above the casher
+        }
+        else
+        {
+            Debug.LogError("Casher GameObject not assigned.");
+        }
+    }
 
   private IEnumerator FetchAndGenerateFoodList()
   {
@@ -169,7 +188,7 @@ public class OrderController : MonoBehaviour
       TMP_Text textComponent = newTextItem.GetComponent<TMP_Text>();
       if (textComponent != null)
       {
-        textComponent.text = "User ID: " + order.user_id + " Food Name: " + foodName + " Quantity: " + order.item_qty + " \n";
+        textComponent.text = "UID:" + order.user_id + "FID:" + order.food_id + "x" + order.item_qty + "\n";
         textComponent.fontSize = fontSize;
         textComponent.enabled = true;
       }
@@ -205,7 +224,7 @@ class BypassCertificate : CertificateHandler
 {
     protected override bool ValidateCertificate(byte[] certificateData)
     {
-        return true; // 跳過憑證驗證（不安全）
+        return true;
     }
 }
 
