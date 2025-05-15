@@ -53,6 +53,8 @@ public class OrderController : MonoBehaviour
   public float check_order_interval = 5f; // Interval to check for new orders
   private float lastCheckTime = 0f;
 
+  private bool order_not_change = false;
+
   void Start()
   {
     initOrderPanel();
@@ -93,7 +95,7 @@ public class OrderController : MonoBehaviour
   private IEnumerator FetchAndGenerateFoodList()
   {
     yield return StartCoroutine(GetFoodList());
-    if (foodList != null)
+    if (foodList != null && !order_not_change)
     {
       StartCoroutine(FetchAndGenerateList());
     }
@@ -126,7 +128,10 @@ public class OrderController : MonoBehaviour
 
     if (orders != null)
     {
-      GenerateList();
+        if (!order_not_change)
+        {
+            GenerateList();
+        }
     }
     else {
       Debug.LogError("Failed to fetch orders.");
@@ -152,18 +157,46 @@ public class OrderController : MonoBehaviour
       {
         string json = request.downloadHandler.text;
         // set the orders to the result
-        orders = JsonHelper.FromJson<Order>(json);
+        Order[] orders_temp = JsonHelper.FromJson<Order>(json);
         // check if the orders is null
-        if (orders == null)
+        if (orders_temp == null)
         {
           Debug.LogError("Failed to parse orders.");
           yield break;
+        }
+        else if (AreOrdersEqual(orders, orders_temp))
+        {
+          order_not_change = true;         
+        }
+        else
+        {
+          orders = orders_temp;
+          order_not_change = false;
         }
       }
     }
   }
 
-  public void GenerateList()
+  public static bool AreOrdersEqual(Order[] a, Order[] b)
+  {
+    if (a == b) return true;
+    if (a == null || b == null) return false;
+    if (a.Length != b.Length) return false;
+
+    for (int i = 0; i < a.Length; i++)
+    {
+        if (!a[i].user_id.Equals(b[i].user_id) && !a[i].food_id.Equals(b[i].food_id))
+            {
+                Debug.Log("ee" + a[i].food_id + 'q'+ b[i].food_id+'l');
+                return false;
+            }
+            
+    }
+
+    return true;
+  }
+
+    public void GenerateList()
   {
     foreach (Transform child in contentParent)
     {

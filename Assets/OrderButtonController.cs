@@ -62,9 +62,7 @@ public class OrderButtonController : MonoBehaviour
                     OrderController.Order orders = OrderParser(text_mesh.text);
                     textComponent.text = "Receipt: " + getFoodInfo(orders.food_id);
                     
-                    Debug.Log("QQ: " + PopupMenu.activeSelf);
                     PopupMenu.SetActive(true);
-                    Debug.Log("LL: " + PopupMenu.activeSelf);
                     OrderPanel.SetActive(false);
                     PopupMenuCancelButton.SetActive(true);
                 }
