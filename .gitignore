@@ -16,3 +16,5 @@ UserSettings/
 # need include the meta of file
 !*.*.meta
 .vs/
+
+obj/
