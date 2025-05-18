@@ -8,6 +8,29 @@ TagManager:
   - SamplesInfoPanel
   - PopupMenu
   - Spatula
+  - QDSUIBackplateGradient
+  - QDSUIToggleBorderlessButton
+  - QDSUIToggleSwitch
+  - QDSUITooltip
+  - QDSUISharedThemeColor
+  - QDSUIAccentColor
+  - QDSUIBorderlessButton
+  - QDSUIToggleButton
+  - QDSUISecondaryButton
+  - QDSUIIcon
+  - QDSUITextSecondaryColor
+  - QDSUISection
+  - Locomotion
+  - PassThroughButton
+  - LocoButton
+  - LocoText
+  - PassThrough
+  - QDSUIDestructiveButton
+  - QDSUIPrimaryButton
+  - QDSUITextInvertedColor
+  - QDSUITextSecondaryInvertedColor
+  - QDSUIToggleCheckboxRadio
+  - QDSUITextInputField
   layers:
   - Default
   - TransparentFX
@@ -17,7 +40,7 @@ TagManager:
   - UI
   - Spawner Contact
   - Placeable Surface
-  - 
+  - InvisibleForLocalPlayer
   - 
   - 
   - 
