@@ -5,14 +5,29 @@ using UnityEngine.UIElements;
 using System.Collections.Generic;
 using TMPro;
 
+[System.Serializable]
+public class PrefabWithTransform
+{
+    public string name;  // Name of the prefab
+    public GameObject prefab;  // Prefab reference
+    public Vector3 position = new Vector3(0, 0, 0);  // Position of the prefab
+    public Quaternion rotation = Quaternion.Euler(0, 0, 0);  // Rotation of the prefab
+    public float scale = 1.0f;  // Scale of the prefab
+}
+
 public class RoomManager : MonoBehaviour
 {
     public MRUKRoom room;
 
-    public GameObject redCube;
-    public GameObject blueCube;
-
     public List<GameObject> tables;
+
+    public List<PrefabWithTransform> utensils;
+    /*
+        0: Pan
+        1: Pot
+        2: Ladle
+        3: Sink
+    */
 
     private void SetupTables()
     {
@@ -31,29 +46,46 @@ public class RoomManager : MonoBehaviour
                 //     var newCube = Instantiate(cube, grandChild.transform);
                 //     newCube.transform.SetParent(grandChild.transform);
                 // }
+
+                var text = Instantiate(new GameObject(), grandChild.transform).AddComponent<TextMeshPro>();
+                text.text = grandChild.transform.position.ToString();
+                text.alignment = TextAlignmentOptions.Center;
+                text.transform.localScale *= 0.05f;
+                text.transform.SetParent(grandChild.transform);
+
                 if (grandChild.gameObject.name == "TABLE_EffectMesh")
                 {
-                    // Add test cube to tables
-                    var newCube = Instantiate(blueCube, grandChild.transform);
-                    newCube.transform.SetParent(grandChild.transform);
+                    // Add objects to tables
+                    PrefabWithTransform pan = utensils.Find(x => x.name == "Pan");
+                    var newObject = Instantiate(pan.prefab, grandChild.transform);
+                    newObject.transform.SetParent(grandChild.transform);
 
                     // Adjust the position of spawned objects
-                    Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
-                    Vector3 size = bounds.size;
-                    Vector3 offset = new Vector3(size.x / 2f - size.x / 10f, 0, size.z / 2f - size.z / 10f);
-                    newCube.transform.position += offset;
+                    // Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
+                    // Vector3 size = bounds.size;
+                    // Vector3 offset = new Vector3(size.x / 2f - size.x / 10f, 0, size.z / 2f - size.z / 10f);
+                    // newObject.transform.position += offset;
+
+                    newObject.transform.position += pan.position;
+                    newObject.transform.Rotate(pan.rotation.eulerAngles);
+                    newObject.transform.localScale *= pan.scale;
                 }
                 if (grandChild.gameObject.name == "COUCH_EffectMesh")
                 {
-                    // Add test cube to tables
-                    var newCube = Instantiate(redCube, grandChild.transform);
-                    newCube.transform.SetParent(grandChild.transform);
+                    // Add objects to couches
+                    PrefabWithTransform pot = utensils.Find(x => x.name == "Pot");
+                    var newObject = Instantiate(pot.prefab, grandChild.transform);
+                    newObject.transform.SetParent(grandChild.transform);
 
                     // Adjust the position of spawned objects
                     Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
                     Vector3 size = bounds.size;
                     Vector3 offset = new Vector3(0, size.y / 2f, 0);
-                    newCube.transform.position += offset;
+                    newObject.transform.position += offset;
+
+                    newObject.transform.position += pot.position;
+                    newObject.transform.Rotate(pot.rotation.eulerAngles);
+                    newObject.transform.localScale *= pot.scale;
                 }
             }
 
