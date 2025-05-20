@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2392,6 +2392,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123301543}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!137 &124272354 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 4620208632789552194, guid: 423e36757a1d2b54abf183da624856c2, type: 3}
+  m_PrefabInstance: {fileID: 1021505631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &128169013
 GameObject:
   m_ObjectHideFlags: 0
@@ -3971,10 +3976,36 @@ MonoBehaviour:
   - {fileID: 631696065}
   - {fileID: 811266544}
   - {fileID: 590115574}
-  _openXRSkinnedMeshRenderer: {fileID: 0}
+  _openXRSkinnedMeshRenderer: {fileID: 124272354}
   _openXRRoot: {fileID: 0}
   _openXRHandMaterialPropertyBlockEditor: {fileID: 0}
-  _openXRJointTransforms: []
+  _openXRJointTransforms:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &231280408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3987,7 +4018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e477b940c8a084ab4f2dda703b49ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _handVisual: {fileID: 0}
+  _handVisual: {fileID: 231280407}
   _hand: {fileID: 1605068}
   _jointsRadiusFeature: {fileID: 565022393}
   _asTriggers: 0
@@ -4927,6 +4958,7 @@ GameObject:
   - component: {fileID: 287875534}
   - component: {fileID: 287875539}
   - component: {fileID: 287875540}
+  - component: {fileID: 287875541}
   m_Layer: 0
   m_Name: '[BuildingBlock] Network Manager'
   m_TagString: Untagged
@@ -5131,6 +5163,23 @@ MonoBehaviour:
   AutoConnectAndJoin: 1
   UseFusionAppSettings: 1
   UseFusionAuthValues: 1
+--- !u!114 &287875541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287875532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5a1ff9dee264bfd829a39e6542dcbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _physicsAuthority: 2
+  _physicsTiming: 3
+  ClientPhysicsSimulation: 0
+  DeltaTimeMultiplier: 1
+  SetUnityFixedTimestep: 0
 --- !u!1 &288638831
 GameObject:
   m_ObjectHideFlags: 0
@@ -12795,7 +12844,7 @@ MonoBehaviour:
   - {fileID: 216005602}
   - {fileID: 716558619}
   - {fileID: 1093316029}
-  _openXRSkinnedMeshRenderer: {fileID: 0}
+  _openXRSkinnedMeshRenderer: {fileID: 1297477400}
   _openXRRoot: {fileID: 0}
   _openXRHandMaterialPropertyBlockEditor: {fileID: 0}
   _openXRJointTransforms:
@@ -12837,7 +12886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e477b940c8a084ab4f2dda703b49ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _handVisual: {fileID: 0}
+  _handVisual: {fileID: 881006832}
   _hand: {fileID: 347114917}
   _jointsRadiusFeature: {fileID: 565022393}
   _asTriggers: 0
@@ -13415,7 +13464,33 @@ MonoBehaviour:
   - {fileID: 313301778}
   - {fileID: 61727938}
   - {fileID: 1659269482}
-  _jointTransformsOpenXR: []
+  _jointTransformsOpenXR:
+  - {fileID: 2096204995}
+  - {fileID: 423307433}
+  - {fileID: 1731213282}
+  - {fileID: 1115959964}
+  - {fileID: 342900833}
+  - {fileID: 394344256}
+  - {fileID: 0}
+  - {fileID: 40797166}
+  - {fileID: 476325511}
+  - {fileID: 233112055}
+  - {fileID: 527171366}
+  - {fileID: 0}
+  - {fileID: 670570170}
+  - {fileID: 777262387}
+  - {fileID: 85192}
+  - {fileID: 313301778}
+  - {fileID: 0}
+  - {fileID: 1862975111}
+  - {fileID: 268342198}
+  - {fileID: 19580517}
+  - {fileID: 61727938}
+  - {fileID: 801491397}
+  - {fileID: 15146661}
+  - {fileID: 169584733}
+  - {fileID: 1116770860}
+  - {fileID: 1659269482}
   _handSkeletonProvider: {fileID: 954965919}
   _trackingToWorldTransformer: {fileID: 0}
 --- !u!114 &954965922
@@ -19086,6 +19161,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1009611568}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!137 &1297477400 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5207632245641288467, guid: 423e36757a1d2b54abf183da624856c2, type: 3}
+  m_PrefabInstance: {fileID: 1021505631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1297712245
 GameObject:
   m_ObjectHideFlags: 0
@@ -20639,7 +20719,33 @@ MonoBehaviour:
   - {fileID: 2131501960}
   - {fileID: 505204049}
   - {fileID: 919250905}
-  _jointTransformsOpenXR: []
+  _jointTransformsOpenXR:
+  - {fileID: 445329376}
+  - {fileID: 398981577}
+  - {fileID: 580101944}
+  - {fileID: 1933887710}
+  - {fileID: 1394596527}
+  - {fileID: 808338135}
+  - {fileID: 0}
+  - {fileID: 1829358704}
+  - {fileID: 302881276}
+  - {fileID: 1452167595}
+  - {fileID: 1242456497}
+  - {fileID: 0}
+  - {fileID: 1276227080}
+  - {fileID: 15925534}
+  - {fileID: 1517361818}
+  - {fileID: 2131501960}
+  - {fileID: 0}
+  - {fileID: 493363016}
+  - {fileID: 251786739}
+  - {fileID: 789502877}
+  - {fileID: 505204049}
+  - {fileID: 1365507284}
+  - {fileID: 1319605412}
+  - {fileID: 1619977138}
+  - {fileID: 1315564860}
+  - {fileID: 919250905}
   _handSkeletonProvider: {fileID: 1404568624}
   _trackingToWorldTransformer: {fileID: 0}
 --- !u!114 &1404568627
