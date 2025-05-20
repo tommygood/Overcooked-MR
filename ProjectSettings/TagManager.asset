@@ -8,6 +8,14 @@ TagManager:
   - SamplesInfoPanel
   - PopupMenu
   - Spatula
+  - Carrot
+  - Pumpkin
+  - Apple
+  - GroupMeat
+  - Tomato
+  - Cheese
+  - Steak
+  - Toast
   layers:
   - Default
   - TransparentFX
