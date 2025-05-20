@@ -29,6 +29,37 @@ public class RoomManager : MonoBehaviour
         3: Sink
     */
 
+    /*
+        3D Furniture:
+        COUCH - COUCH_EffectMesh
+        BED - BED_EffectMesh
+        SCREEN - SCREEN_EffectMesh
+        TABLE - TABLE_EffectMesh
+        LAMP - LAMP_EffectMesh
+        PLANT - PLANT_EffectMesh
+        STORAGE - STORAGE_EffectMesh
+        OTHER - OTHER_EffectMesh
+    
+        2D Furniture:
+        WINDOW_FRAME - WINDOW_FRAME_EffectMesh
+        WALL_ART - WALL_ART_EffectMesh
+        DOOR_FRAME - DOOR_FRAME_EffectMesh
+
+        Other:
+        WALL_FACE - FLOOR_EffectMesh
+        FLOOR - FLOOR_EffectMesh
+        CEILING - CEILING_EffectMesh
+    */
+
+    /*
+        object-furniture pair
+        gas stove (pan, pot) - on the couch
+        cutting plate - on the bed
+        sink - on the left side of couch
+        uber box -
+        cashier - on the storage
+    */
+
     private void SetupTables()
     {
         foreach (Transform child in room.gameObject.transform)
@@ -47,15 +78,19 @@ public class RoomManager : MonoBehaviour
                 //     newCube.transform.SetParent(grandChild.transform);
                 // }
 
+                /*
+                // Debugging text of the coordinate
                 var text = Instantiate(new GameObject(), grandChild.transform).AddComponent<TextMeshPro>();
                 text.text = grandChild.transform.position.ToString();
                 text.alignment = TextAlignmentOptions.Center;
                 text.transform.localScale *= 0.05f;
                 text.transform.SetParent(grandChild.transform);
+                */
 
                 if (grandChild.gameObject.name == "TABLE_EffectMesh")
                 {
-                    // Add objects to tables
+                    /*
+                    // pan
                     PrefabWithTransform pan = utensils.Find(x => x.name == "Pan");
                     var newObject = Instantiate(pan.prefab, grandChild.transform);
                     newObject.transform.SetParent(grandChild.transform);
@@ -69,15 +104,33 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += pan.position;
                     newObject.transform.Rotate(pan.rotation.eulerAngles);
                     newObject.transform.localScale *= pan.scale;
+                    */
                 }
                 if (grandChild.gameObject.name == "COUCH_EffectMesh")
                 {
-                    // Add objects to couches
+                    // pan
+                    PrefabWithTransform pan = utensils.Find(x => x.name == "Pan");
+                    var newObject = Instantiate(pan.prefab, grandChild.transform);
+                    newObject.transform.SetParent(grandChild.transform);
+
+                    // The position of the couch is in the center
+                    Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
+                    Vector3 size = bounds.size;
+                    Vector3 offset = new Vector3(0, size.y / 2f, 0);
+                    newObject.transform.position += offset;
+
+                    newObject.transform.position += pan.position;
+                    newObject.transform.Rotate(pan.rotation.eulerAngles);
+                    newObject.transform.localScale *= pan.scale;
+                }
+                if (grandChild.gameObject.name == "COUCH_EffectMesh")
+                {
+                    // pot
                     PrefabWithTransform pot = utensils.Find(x => x.name == "Pot");
                     var newObject = Instantiate(pot.prefab, grandChild.transform);
                     newObject.transform.SetParent(grandChild.transform);
 
-                    // Adjust the position of spawned objects
+                    // The position of the couch is in the center
                     Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
                     Vector3 size = bounds.size;
                     Vector3 offset = new Vector3(0, size.y / 2f, 0);
@@ -86,6 +139,28 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += pot.position;
                     newObject.transform.Rotate(pot.rotation.eulerAngles);
                     newObject.transform.localScale *= pot.scale;
+                }
+                if (grandChild.gameObject.name == "BED_EffectMesh")
+                {
+                    // cutting plate
+                    PrefabWithTransform cutting_plate = utensils.Find(x => x.name == "Cutting_Plate");
+                    var newObject = Instantiate(cutting_plate.prefab, grandChild.transform);
+                    newObject.transform.SetParent(grandChild.transform);
+
+                    newObject.transform.position += cutting_plate.position;
+                    newObject.transform.Rotate(cutting_plate.rotation.eulerAngles);
+                    newObject.transform.localScale *= cutting_plate.scale;
+                }
+                if (grandChild.gameObject.name == "BED_EffectMesh")
+                {
+                    // sink
+                    PrefabWithTransform sink = utensils.Find(x => x.name == "Sink");
+                    var newObject = Instantiate(sink.prefab, grandChild.transform);
+                    newObject.transform.SetParent(grandChild.transform);
+
+                    newObject.transform.position += sink.position;
+                    newObject.transform.Rotate(sink.rotation.eulerAngles);
+                    newObject.transform.localScale *= sink.scale;
                 }
             }
 

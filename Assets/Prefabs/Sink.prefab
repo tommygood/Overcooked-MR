@@ -30,7 +30,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5621230293566053393}
-  - {fileID: 4303674841791745579}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7671504566172879032
@@ -39,19 +38,23 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 7567538033498002311}
+    m_TransformParent: {fileID: 5621230293566053393}
     m_Modifications:
+    - target: {fileID: 3647260099202318312, guid: 2aff6043e8121544eb8107e3d8ade3e9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5894949913087559315, guid: 2aff6043e8121544eb8107e3d8ade3e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5894949913087559315, guid: 2aff6043e8121544eb8107e3d8ade3e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4625635
+      value: 1.026
       objectReference: {fileID: 0}
     - target: {fileID: 5894949913087559315, guid: 2aff6043e8121544eb8107e3d8ade3e9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.32550734
+      value: -0.342
       objectReference: {fileID: 0}
     - target: {fileID: 5894949913087559315, guid: 2aff6043e8121544eb8107e3d8ade3e9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -121,7 +124,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -262,6 +265,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2306889916820387821, guid: 75a81e859f47c0b488c478841c94ecc7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3344976329286307556}
+    - targetCorrespondingSourceObject: {fileID: 2306889916820387821, guid: 75a81e859f47c0b488c478841c94ecc7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4303674841791745579}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3118857661164170583, guid: 75a81e859f47c0b488c478841c94ecc7, type: 3}
       insertIndex: -1
