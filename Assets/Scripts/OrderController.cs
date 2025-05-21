@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Networking;
+using static OrderAnimator;
 
 public class OrderController : MonoBehaviour
 {
@@ -10,12 +11,16 @@ public class OrderController : MonoBehaviour
   public GameObject textItemPrefab;           // Text prefab (TextMeshProUGUI)
   public GameObject casher;
   public float fontSize = 5f;
+  public GameObject OrderObject; // Assign in inspector
+  public Transform casherTransform;
+
 
   public float lineHeight = 1f;
   private float y = 0f;
 
   [System.Serializable]
   public class Order {
+    public int table_id;
     public int user_id;
     public int food_id;
     public int item_qty;
@@ -177,24 +182,39 @@ public class OrderController : MonoBehaviour
     }
   }
 
-  public static bool AreOrdersEqual(Order[] a, Order[] b)
-  {
-    if (a == b) return true;
-    if (a == null || b == null) return false;
-    if (a.Length != b.Length) return false;
-
-    for (int i = 0; i < a.Length; i++)
+    public bool AreOrdersEqual(Order[] a, Order[] b)
     {
-        if (!a[i].user_id.Equals(b[i].user_id) && !a[i].food_id.Equals(b[i].food_id))
+        bool is_equal = true;
+
+        if (a == null || b == null) return is_equal;
+
+        foreach (Order orderB in b)
+        {
+            bool found = false;
+            foreach (Order orderA in a)
             {
-                Debug.Log("ee" + a[i].food_id + 'q'+ b[i].food_id+'l');
-                return false;
+                if (orderA.user_id == orderB.user_id && orderA.food_id == orderB.food_id)
+                {
+                    found = true;
+                    break;
+                }
             }
-            
+
+            if (!found)
+            {
+                Debug.Log($"Order not found in A: user_id={orderB.user_id}, food_id={orderB.food_id}");
+                is_equal = false;
+                GameObject newOrderGO = Instantiate(OrderObject, casherTransform);
+                newOrderGO.SetActive(true);
+                OrderAnimator orderAnimator = newOrderGO.GetComponent<OrderAnimator>();
+                orderAnimator.DisplayText($"Neww Order: table={orderB.table_id}, food={orderB.food_id}");
+                orderAnimator.Up();
+            }
+        }
+
+        return is_equal;
     }
 
-    return true;
-  }
 
     public void GenerateList()
   {
@@ -221,7 +241,7 @@ public class OrderController : MonoBehaviour
       TMP_Text textComponent = newTextItem.GetComponent<TMP_Text>();
       if (textComponent != null)
       {
-        textComponent.text = "UID:" + order.user_id + "FID:" + order.food_id + "x" + order.item_qty + "\n";
+        textComponent.text = "TID:" + order.table_id + "FID:" + order.food_id + "x" + order.item_qty + "\n";
         textComponent.fontSize = fontSize;
         textComponent.enabled = true;
       }

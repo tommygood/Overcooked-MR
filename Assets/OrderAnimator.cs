@@ -26,7 +26,10 @@ public class OrderAnimator : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Failed to find the text component in the PopupMenu");
+            textComponent = GetComponentInChildren<TMP_Text>();
+            if (textComponent == null)
+                Debug.LogError("Failed to find the text component in the PopupMenu");
+            else textComponent.text = text;
         }
     }
 
