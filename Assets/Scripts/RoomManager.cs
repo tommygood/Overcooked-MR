@@ -53,11 +53,10 @@ public class RoomManager : MonoBehaviour
 
     /*
         object-furniture pair
-        gas stove (pan, pot) - on the couch
-        cutting plate - on the bed
-        sink - on the left side of couch
-        uber box -
-        cashier - on the storage
+        gas stove (pan, pot) - couch
+        cutting plate - bed
+        sink - screen
+        cashier - storage
     */
 
     private void SetupTables()
@@ -108,9 +107,9 @@ public class RoomManager : MonoBehaviour
                 }
                 if (grandChild.gameObject.name == "COUCH_EffectMesh")
                 {
-                    // pan
-                    PrefabWithTransform pan = utensils.Find(x => x.name == "Pan");
-                    var newObject = Instantiate(pan.prefab, grandChild.transform);
+                    // gas stove set
+                    PrefabWithTransform gas_stove_set = utensils.Find(x => x.name == "Gas_Stove_Set");
+                    var newObject = Instantiate(gas_stove_set.prefab, grandChild.transform);
                     newObject.transform.SetParent(grandChild.transform);
 
                     // The position of the couch is in the center
@@ -119,26 +118,9 @@ public class RoomManager : MonoBehaviour
                     Vector3 offset = new Vector3(0, size.y / 2f, 0);
                     newObject.transform.position += offset;
 
-                    newObject.transform.position += pan.position;
-                    newObject.transform.Rotate(pan.rotation.eulerAngles);
-                    newObject.transform.localScale *= pan.scale;
-                }
-                if (grandChild.gameObject.name == "COUCH_EffectMesh")
-                {
-                    // pot
-                    PrefabWithTransform pot = utensils.Find(x => x.name == "Pot");
-                    var newObject = Instantiate(pot.prefab, grandChild.transform);
-                    newObject.transform.SetParent(grandChild.transform);
-
-                    // The position of the couch is in the center
-                    Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
-                    Vector3 size = bounds.size;
-                    Vector3 offset = new Vector3(0, size.y / 2f, 0);
-                    newObject.transform.position += offset;
-
-                    newObject.transform.position += pot.position;
-                    newObject.transform.Rotate(pot.rotation.eulerAngles);
-                    newObject.transform.localScale *= pot.scale;
+                    newObject.transform.position += gas_stove_set.position;
+                    newObject.transform.Rotate(gas_stove_set.rotation.eulerAngles);
+                    newObject.transform.localScale *= gas_stove_set.scale;
                 }
                 if (grandChild.gameObject.name == "BED_EffectMesh")
                 {
@@ -151,7 +133,7 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.Rotate(cutting_plate.rotation.eulerAngles);
                     newObject.transform.localScale *= cutting_plate.scale;
                 }
-                if (grandChild.gameObject.name == "BED_EffectMesh")
+                if (grandChild.gameObject.name == "SCREEN_EffectMesh")
                 {
                     // sink
                     PrefabWithTransform sink = utensils.Find(x => x.name == "Sink");
@@ -161,6 +143,23 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += sink.position;
                     newObject.transform.Rotate(sink.rotation.eulerAngles);
                     newObject.transform.localScale *= sink.scale;
+                }
+                if (grandChild.gameObject.name == "STORAGE_EffectMesh")
+                {
+                    // casher
+                    PrefabWithTransform casher = utensils.Find(x => x.name == "Casher");
+                    var newObject = Instantiate(casher.prefab, grandChild.transform);
+                    newObject.transform.SetParent(grandChild.transform);
+                    
+                    // The position of the storage is in the center
+                    Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
+                    Vector3 size = bounds.size;
+                    Vector3 offset = new Vector3(0, size.y / 2f, 0);
+                    newObject.transform.position += offset;
+
+                    newObject.transform.position += casher.position;
+                    newObject.transform.Rotate(casher.rotation.eulerAngles);
+                    newObject.transform.localScale *= casher.scale;
                 }
             }
 
