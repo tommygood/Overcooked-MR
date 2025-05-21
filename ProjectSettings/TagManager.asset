@@ -39,6 +39,11 @@ TagManager:
   - QDSUITextSecondaryInvertedColor
   - QDSUIToggleCheckboxRadio
   - QDSUITextInputField
+  - Lettuce
+  - Bread
+  - Tortilla
+  - Burger_Meat
+  - Rice
   layers:
   - Default
   - TransparentFX
