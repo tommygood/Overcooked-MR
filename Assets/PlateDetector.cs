@@ -10,11 +10,8 @@ public class PlateDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("QQ" + other.name);
         if (other.CompareTag("Plate") && !is_send)
         {
-            Debug.Log("Plate detected!");
-
             if (photoTaker != null)
             {
                 StartCoroutine(photoTaker.TakePhotoAndUpload(uploadUrl));
