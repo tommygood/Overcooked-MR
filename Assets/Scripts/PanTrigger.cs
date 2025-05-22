@@ -6,6 +6,9 @@ public class PanTrigger : MonoBehaviour
     public float cookTime = 30f;       // 總熟成時間
     public float brownDuration = 15f;  // 漸變成褐色時間
     public AudioClip bellSound;        // 鈴聲音效
+    public AudioClip meatDropSound;    // 放入肉音效
+    public AudioClip successSound;     // 成功音效
+    public AudioClip failSound;        // 失敗音效
     public Slider progressBar;         // 進度條
     public GameObject stirUIPanel;     // 攪拌提示UI（15秒跳出）
 
@@ -28,7 +31,6 @@ public class PanTrigger : MonoBehaviour
         if (audioSource == null)
             audioSource = gameObject.AddComponent<AudioSource>();
     }
-
 
     void OnTriggerExit(Collider other)
     {
@@ -69,6 +71,10 @@ public class PanTrigger : MonoBehaviour
 
             if (progressBar != null)
                 progressBar.value = 0f;
+
+            // 播放放入肉音效
+            if (audioSource != null && meatDropSound != null)
+                audioSource.PlayOneShot(meatDropSound);
         }
         else if (other.CompareTag("Spatula") && isCooking && currentCube != null)
         {
@@ -83,8 +89,6 @@ public class PanTrigger : MonoBehaviour
             }
         }
     }
-
-
 
     void Update()
     {
@@ -122,16 +126,33 @@ public class PanTrigger : MonoBehaviour
                     {
                         // 攪拌成功變金色
                         rend.material.color = new Color(1f, 0.84f, 0f); // 金色
+                        // 播放成功音效
+                        if (audioSource != null && successSound != null)
+                            audioSource.PlayOneShot(successSound);
                     }
                     else
                     {
                         // 未攪拌成功變黑色
                         rend.material.color = Color.black;
+                        // 播放失敗音效
+                        if (audioSource != null && failSound != null)
+                            audioSource.PlayOneShot(failSound);
                     }
                 }
-
-                if (audioSource != null && bellSound != null)
-                    audioSource.PlayOneShot(bellSound);
+                else
+                {
+                    // 若沒 renderer 也要播放音效
+                    if (isStirred)
+                    {
+                        if (audioSource != null && successSound != null)
+                            audioSource.PlayOneShot(successSound);
+                    }
+                    else
+                    {
+                        if (audioSource != null && failSound != null)
+                            audioSource.PlayOneShot(failSound);
+                    }
+                }
 
                 // 重置狀態，準備下一次烹煮
                 isCooking = false;

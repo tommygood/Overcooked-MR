@@ -44,6 +44,8 @@ TagManager:
   - Tortilla
   - Burger_Meat
   - Rice
+  - Ingredient
+  - Plate
   layers:
   - Default
   - TransparentFX
@@ -54,7 +56,7 @@ TagManager:
   - Spawner Contact
   - Placeable Surface
   - InvisibleForLocalPlayer
-  - 
+  - Ingredient
   - 
   - 
   - 
