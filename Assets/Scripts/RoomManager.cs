@@ -46,7 +46,7 @@ public class RoomManager : MonoBehaviour
         DOOR_FRAME - DOOR_FRAME_EffectMesh
 
         Other:
-        WALL_FACE - FLOOR_EffectMesh
+        WALL_FACE - WALL_FACE_EffectMesh
         FLOOR - FLOOR_EffectMesh
         CEILING - CEILING_EffectMesh
     */
@@ -55,7 +55,7 @@ public class RoomManager : MonoBehaviour
         object-furniture pair
         gas stove (pan, pot) - couch
         cutting plate - bed
-        sink - screen
+        sink - plant
         cashier - storage
     */
 
@@ -133,8 +133,9 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.Rotate(cutting_plate.rotation.eulerAngles);
                     newObject.transform.localScale *= cutting_plate.scale;
                 }
-                if (grandChild.gameObject.name == "SCREEN_EffectMesh")
+                if (grandChild.gameObject.name == "PLANT_EffectMesh")
                 {
+                    Destroy(grandChild.gameObject.GetComponent<BoxCollider>());
                     // sink
                     PrefabWithTransform sink = utensils.Find(x => x.name == "Sink");
                     var newObject = Instantiate(sink.prefab, grandChild.transform);
@@ -150,7 +151,7 @@ public class RoomManager : MonoBehaviour
                     PrefabWithTransform casher = utensils.Find(x => x.name == "Casher");
                     var newObject = Instantiate(casher.prefab, grandChild.transform);
                     newObject.transform.SetParent(grandChild.transform);
-                    
+
                     // The position of the storage is in the center
                     Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
                     Vector3 size = bounds.size;
@@ -160,6 +161,17 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += casher.position;
                     newObject.transform.Rotate(casher.rotation.eulerAngles);
                     newObject.transform.localScale *= casher.scale;
+                }
+                if (grandChild.gameObject.name == "FLOOR_EffectMesh")
+                {
+                    // ingredients
+                    PrefabWithTransform ingredients = utensils.Find(x => x.name == "Ingredients");
+                    var newObject = Instantiate(ingredients.prefab, grandChild.transform);
+                    newObject.transform.SetParent(grandChild.transform);
+
+                    newObject.transform.position += ingredients.position;
+                    newObject.transform.Rotate(ingredients.rotation.eulerAngles);
+                    newObject.transform.localScale *= ingredients.scale;
                 }
             }
 
