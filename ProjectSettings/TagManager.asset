@@ -6,6 +6,20 @@ TagManager:
   tags:
   - Cookable
   - Spatula
+  - Bread
+  - Tomato
+  - Apple
+  - Burger_Meat
+  - Carrot
+  - Tortilla
+  - Toast
+  - Cheese
+  - Pumpkin
+  - Steak
+  - Rice
+  - Lettuce
+  - CutLettuce
+  - Cut_Tomato
   layers:
   - Default
   - TransparentFX
