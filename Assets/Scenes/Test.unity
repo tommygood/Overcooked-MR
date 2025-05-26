@@ -2401,6 +2401,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MetaHardwareRig
       objectReference: {fileID: 0}
+    - target: {fileID: 5549488980114144806, guid: 423e36757a1d2b54abf183da624856c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3075,7 +3079,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &143180980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3919,7 +3923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &188154181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7722,6 +7726,11 @@ MonoBehaviour:
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1
+  - name: Pole
+    prefab: {fileID: 8302728930736148258, guid: a73a0d107d355a840a65519fcd526816, type: 3}
+    position: {x: 0, y: 2, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: 3
 --- !u!4 &383881771
 Transform:
   m_ObjectHideFlags: 0
@@ -9454,7 +9463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &478356447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32803,7 +32812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1634650260
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -33818,7 +33827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1681366336
 Transform:
   m_ObjectHideFlags: 0
@@ -34105,7 +34114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1691694627
 Transform:
   m_ObjectHideFlags: 0
@@ -40408,7 +40417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2017022747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41139,7 +41148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2057469762
 MonoBehaviour:
   m_ObjectHideFlags: 0

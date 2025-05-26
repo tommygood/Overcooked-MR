@@ -53,10 +53,11 @@ public class RoomManager : MonoBehaviour
 
     /*
         object-furniture pair
-        gas stove (pan, pot) - couch
+        gas stove + pan + pot + spatula - couch
         cutting plate - bed
         sink - plant
         cashier - storage
+        ingredients - floor
     */
 
     private void SetupTables()
@@ -172,6 +173,17 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += ingredients.position;
                     newObject.transform.Rotate(ingredients.rotation.eulerAngles);
                     newObject.transform.localScale *= ingredients.scale;
+                }
+                if (grandChild.gameObject.name == "FLOOR_EffectMesh")
+                {
+                    // pole
+                    PrefabWithTransform pole = utensils.Find(x => x.name == "Pole");
+                    var newObject = Instantiate(pole.prefab, grandChild.transform);
+                    newObject.transform.SetParent(grandChild.transform);
+
+                    newObject.transform.position += pole.position;
+                    newObject.transform.Rotate(pole.rotation.eulerAngles);
+                    newObject.transform.localScale *= pole.scale;
                 }
             }
 
