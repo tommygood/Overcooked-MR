@@ -20,9 +20,11 @@ TagManager:
   - Lettuce
   - CutLettuce
   - Cut_Tomato
+<<<<<<< HEAD
   - Pole
+=======
+>>>>>>> 7b9833e43e425d59fbf6d2d8a407c5c10a8551cb
   - Plate
-  - TurkeyBreastChopped
   layers:
   - Default
   - TransparentFX
