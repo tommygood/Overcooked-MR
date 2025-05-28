@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
             Order top = FindTopIngredientOnPlate();
             if (top != null)
             {
-                Debug.Log("找到最上層食材：" + top.name);
+                Debug.Log("最上層食材：" + top.name);
                 plate.CheckRecipeFromTop(top);
             }
             else
