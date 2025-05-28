@@ -4,17 +4,28 @@ public class Order : MonoBehaviour
 {
     public Order belowIngredient;
 
-    public void UpdateBelowReference()
+    void Update()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 1f))
+
+        // 向下發射短距離 Ray，確認下面是否有 Order 或盤子
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 0.2f))
         {
-            Order below = hitInfo.collider.GetComponent<Order>();
-            if (below != null && below != this)
+            Order lower = hit.collider.GetComponent<Order>();
+            if (lower != null)
             {
-                belowIngredient = below;
-                Debug.Log($"{gameObject.name} 疊在 {below.gameObject.name} 上");
+                belowIngredient = lower;
+                return;
+            }
+
+            if (hit.collider.CompareTag("Plate"))
+            {
+                belowIngredient = null; // 下面是盤子，不是食材
+                return;
             }
         }
+
+        // 沒有東西在下面，重設
+        belowIngredient = null;
     }
 }
