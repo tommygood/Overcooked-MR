@@ -20,6 +20,7 @@ TagManager:
   - Lettuce
   - CutLettuce
   - Cut_Tomato
+  - Pole
   layers:
   - Default
   - TransparentFX
