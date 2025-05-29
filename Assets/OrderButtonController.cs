@@ -6,7 +6,7 @@ using static OrderController;
 
 public class OrderButtonController : MonoBehaviour
 {
-    TextMeshPro text_mesh;
+    public TextMeshPro text_mesh;
     public GameObject PopupMenu;
     public OrderController orderController;
     public GameObject OrderPanel;
@@ -14,7 +14,7 @@ public class OrderButtonController : MonoBehaviour
 
     private void Start()
     {
-        text_mesh = GetComponent<TextMeshPro>();
+        //text_mesh = GetComponent<TextMeshPro>();
     }
 
     public static OrderController.Order OrderParser(string input)

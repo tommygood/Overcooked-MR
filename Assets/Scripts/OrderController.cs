@@ -89,7 +89,7 @@ public class OrderController : MonoBehaviour
             transform.position = casher.transform.position;
 
             // Optional offset so it doesn't overlap exactly
-            transform.position += new Vector3(0.271f, 3.2f, -0.05f); // e.g., 2 units above the casher
+            transform.position += new Vector3(0.271f, 3.2f, -0.005f); // e.g., 2 units above the casher
         }
         else
         {
