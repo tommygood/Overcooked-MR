@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3881585691563204890
+--- !u!1 &3131594809043004510
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7376327818570663796}
-  - component: {fileID: 606532002730008642}
+  - component: {fileID: 9133596476509385982}
+  - component: {fileID: 481153635696029689}
   m_Layer: 0
   m_Name: Room Manager
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7376327818570663796
+--- !u!4 &9133596476509385982
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3881585691563204890}
+  m_GameObject: {fileID: 3131594809043004510}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.06786215, y: 0.32202846, z: -0.24026453}
@@ -32,13 +32,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6223885308696273180}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &606532002730008642
+--- !u!114 &481153635696029689
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3881585691563204890}
+  m_GameObject: {fileID: 3131594809043004510}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08b960d350c471a4ca2febc8eee2f05e, type: 3}
@@ -64,14 +64,34 @@ MonoBehaviour:
     scale: 1
   - name: Sink
     prefab: {fileID: 8249027947088598663, guid: 5fbfba11a02d1bf4997edecff0f3c9be, type: 3}
-    position: {x: -0.75, y: 0, z: 1}
-    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: -0.16507101, y: 0.6875693, z: 0.6875693, w: 0.16507101}
     scale: 0.75
   - name: Cutting_Plate
     prefab: {fileID: 7647832688476776876, guid: ab7b96caac20f924da88b5b371079247, type: 3}
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1.75
+  - name: Gas_Stove_Set
+    prefab: {fileID: 8804210176625436853, guid: 6cd36c00add46e74f867f48d1b8b242a, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
+    scale: 1
+  - name: Casher
+    prefab: {fileID: 3715936666322222693, guid: 89ff6b01ad6a062438293a977239572f, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 0.53
+  - name: Ingredients
+    prefab: {fileID: 935426788455836500, guid: ebc5a63df534b6f46ad328b478f4cf19, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: 1
+  - name: Pole
+    prefab: {fileID: 8302728930736148258, guid: a73a0d107d355a840a65519fcd526816, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: 1
 --- !u!1 &6810049428011808553
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +122,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8150434189370846474}
-  - {fileID: 7376327818570663796}
+  - {fileID: 9133596476509385982}
   - {fileID: 2568149340607714880}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -133,7 +153,7 @@ PrefabInstance:
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44, type: 3}
       propertyPath: <SceneLoadedEvent>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 606532002730008642}
+      objectReference: {fileID: 481153635696029689}
     - target: {fileID: 3613868102660323786, guid: c2e00db6d2dfa42ac8d821db8d493a44, type: 3}
       propertyPath: <SceneLoadedEvent>k__BackingField.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2

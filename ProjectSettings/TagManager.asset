@@ -23,6 +23,7 @@ TagManager:
   - Pole
   - Plate
   - TurkeyBreastChopped
+  - Order
   layers:
   - Default
   - TransparentFX

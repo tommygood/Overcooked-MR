@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: a383f5ea-3856-4c23-a11c-7fdbb9408035
-  instanceId: a24875d5-5fdb-43c9-b246-5ad1c322b19f
+  instanceId: 61b65baa-1566-490c-8ce3-13b6e326d464
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 1d8db162-54f6-43df-b4ef-b499df1f6769
-  instanceId: 63650886-f613-4b65-b159-42246bd3b945
+  instanceId: 050fcffe-3f3c-4b79-b02b-e283cf7561d0
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 676820bd-24bb-4da2-9785-74ad32626885
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3208251038969426995}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33a38d73a8571ce438052dd31e09df5b, type: 3}
   m_Name: 
@@ -758,7 +758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f0540b20-dfd6-420e-b20d-c270f88dc77e
-  instanceId: 9b2a34be-4c56-4c3a-ad61-3aca2e2ab430
+  instanceId: 5a3fe6da-910a-4bee-a3a9-d3595e2a6eaa
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 1f4566e8-f4ba-46d2-9e47-3748c9869766
-  instanceId: 225d0134-ccd1-45b7-aacf-5aaaa7408cdd
+  instanceId: f465df35-d505-4222-bb57-b165c083c069
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 80aa2eb2-af2f-40a9-ad9e-18044ce65bee
-  instanceId: 25730036-d624-463b-a3f1-ae6c84c0116b
+  instanceId: eb6e0c33-cdf4-4ac5-aacd-016e54f2bde1
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
