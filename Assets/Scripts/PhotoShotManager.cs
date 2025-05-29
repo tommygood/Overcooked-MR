@@ -36,6 +36,7 @@ public class PhotoShotManager : MonoBehaviour
         WWWForm form = new WWWForm();
         form.AddBinaryData("file", imageData, "photo.png", "image/png");
         form.AddField("filename", filename);
+        Debug.Log("QQ" + filename);
         UnityWebRequest www = UnityWebRequest.Post(uploadUrl, form);
         yield return www.SendWebRequest();
         if (www.result == UnityWebRequest.Result.Success)

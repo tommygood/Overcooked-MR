@@ -4655,7 +4655,7 @@ GameObject:
   - component: {fileID: 215848923}
   - component: {fileID: 215848922}
   m_Layer: 0
-  m_Name: TableCube
+  m_Name: DeliveryRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4758,7 +4758,8 @@ Transform:
   m_LocalPosition: {x: 1.48, y: -2.91, z: -0.23}
   m_LocalScale: {x: 1, y: 1, z: 2.4381}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1602812059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &215877805
@@ -34876,11 +34877,11 @@ Transform:
   m_GameObject: {fileID: 1602812057}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.48, y: 5.91, z: 0.09433575}
+  m_LocalScale: {x: 0.73555106, y: 0.6123947, z: 0.6917344}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 215848926}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1607462791
 GameObject:
@@ -46970,7 +46971,6 @@ SceneRoots:
   - {fileID: 33186821}
   - {fileID: 832341108}
   - {fileID: 215848926}
-  - {fileID: 1602812059}
   - {fileID: 2078418813}
   - {fileID: 1591111821}
   - {fileID: 1048438999}
