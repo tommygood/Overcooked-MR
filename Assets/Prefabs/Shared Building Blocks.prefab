@@ -709,6 +709,7 @@ Transform:
   - {fileID: 5158919094808072581}
   - {fileID: 3993402229514646455}
   - {fileID: 708640063935053007}
+  - {fileID: 8213849862794124356}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5628475095769095245
@@ -1073,6 +1074,91 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   automaticHostOrJoin: 1
   timeDiscoveringInSec: 5
+--- !u!1 &6627250984278796409
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8213849862794124356}
+  - component: {fileID: 8077168352840235977}
+  - component: {fileID: 7264845927800706051}
+  - component: {fileID: 2645492924280374624}
+  m_Layer: 0
+  m_Name: '[BuildingBlock] Colocation'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8213849862794124356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627250984278796409}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.9811661, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1414670796391617524}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8077168352840235977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627250984278796409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockId: f308c8f0-7a4b-4cd5-88be-c15b6399f823
+  instanceId: 01dddd82-2636-46cc-92e2-73bb9953d8b7
+  version: 2
+  installationRoutineCheckpoint:
+    _installationRoutineId: 4ec10206-4327-44cd-ae75-ff2b80d3422e
+    _installationVariants:
+    - _memberName: installMatchmaking
+      _value: '{"value__":0}'
+--- !u!114 &7264845927800706051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627250984278796409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e4eb9f4c4632e4293b56356613ab86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColocationReadyCallbacks:
+    m_PersistentCalls:
+      m_Calls: []
+  DebuggingOptions:
+    visualizeAlignmentAnchor: 1
+    enableVerboseLogging: 0
+--- !u!114 &2645492924280374624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6627250984278796409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4157a8a4b7d44f59c8cd6a79f9d818e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnchorPrefab: {fileID: 3105173346702953323, guid: d675ca738ca229f41a80c9105cacfb75, type: 3}
 --- !u!1 &9139606899070633965
 GameObject:
   m_ObjectHideFlags: 0
