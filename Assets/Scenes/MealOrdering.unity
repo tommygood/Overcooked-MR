@@ -17546,16 +17546,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832341105}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.58774585, z: 1}
+  m_LocalRotation: {x: -0.042669345, y: -0.045139816, z: 0.0019295568, w: 0.99806714}
+  m_LocalPosition: {x: 0, y: 0, z: 1.990938}
+  m_LocalScale: {x: 1, y: 1.0366851, z: 1.0717511}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 2078418813}
+  m_LocalEulerAnglesHint: {x: -4.876, y: -5.198, z: 0.443}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.388}
+  m_AnchoredPosition: {x: -14.98201, y: -9.931523}
   m_SizeDelta: {x: 0.8, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!65 &832341109
@@ -34588,6 +34588,7 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2078418813}
   - {fileID: 1320498942}
   - {fileID: 992693860}
   m_Father: {fileID: 0}
@@ -45175,16 +45176,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078418808}
-  m_LocalRotation: {x: 0.1862154, y: 0, z: 0, w: 0.982509}
-  m_LocalPosition: {x: 0, y: 0, z: 0.73}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_LocalRotation: {x: -0.007813409, y: 0.98164374, z: -0.1860515, w: -0.041225098}
+  m_LocalPosition: {x: 0, y: 0, z: 1.9384483}
+  m_LocalScale: {x: 1.428571, y: 0.7142857, z: 1.428571}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 832341108}
+  m_Father: {fileID: 1591111821}
   m_LocalEulerAnglesHint: {x: 21.464, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 15.12, y: 3.98}
+  m_AnchoredPosition: {x: -21.67522, y: 12.157143}
   m_SizeDelta: {x: 0.8, y: 0.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078418814
@@ -46969,9 +46971,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 33186821}
-  - {fileID: 832341108}
   - {fileID: 215848926}
-  - {fileID: 2078418813}
   - {fileID: 1591111821}
   - {fileID: 1048438999}
   - {fileID: 1152892223}
