@@ -207,7 +207,7 @@ public class OrderController : MonoBehaviour
                 GameObject newOrderGO = Instantiate(OrderObject, casherTransform);
                 newOrderGO.SetActive(true);
                 OrderAnimator orderAnimator = newOrderGO.GetComponent<OrderAnimator>();
-                orderAnimator.DisplayText($"Neww Order: table={orderB.table_id}, food={orderB.food_id}");
+                orderAnimator.DisplayText($"Neww Order: table={orderB.table_id}, food={orderB.food_id}, user={orderB.user_id}");
                 orderAnimator.Up();
             }
         }
