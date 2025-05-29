@@ -10,7 +10,7 @@ public class PhotoShotManager : MonoBehaviour
     public int resolutionHeight = 1080;
     public string uploadUrl = "https://mixed-restaurant.bogay.me/api/upload";
 
-    public IEnumerator TakePhotoAndUpload(string uploadUrl)
+    public IEnumerator TakePhotoAndUpload(string uploadUrl, string filename)
     {
         // Create render texture and capture image
         RenderTexture rt = new RenderTexture(resolutionWidth, resolutionHeight, 24);
@@ -27,14 +27,15 @@ public class PhotoShotManager : MonoBehaviour
         RenderTexture.active = null;
         Destroy(rt);
         // Send image data to API
-        yield return StartCoroutine(UploadImage(imageData, uploadUrl));
+        yield return StartCoroutine(UploadImage(imageData, uploadUrl, filename));
     }
 
-    private IEnumerator UploadImage(byte[] imageData, string uploadUrl)
+    private IEnumerator UploadImage(byte[] imageData, string uploadUrl, string filename)
     {
         // Prepare form data
         WWWForm form = new WWWForm();
         form.AddBinaryData("file", imageData, "photo.png", "image/png");
+        form.AddField("filename", filename);
         UnityWebRequest www = UnityWebRequest.Post(uploadUrl, form);
         yield return www.SendWebRequest();
         if (www.result == UnityWebRequest.Result.Success)
