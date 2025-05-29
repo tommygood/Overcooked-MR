@@ -24,7 +24,7 @@ public class PlateDetector : MonoBehaviour
                     if (tmp3D != null)
                     {
                         (int tableId, int foodId, int userId) = ExtractIds(tmp3D.text);
-                        string filename = "$(food_id)_$(user_id)_$(table_id)";
+                        string filename = $"order_{foodId}_{userId}_{tableId}";
                         StartCoroutine(photoTaker.TakePhotoAndUpload(uploadUrl, filename));
                     }
                     else
@@ -36,7 +36,7 @@ public class PlateDetector : MonoBehaviour
                 {
                     (int tableId, int foodId, int userId) = ExtractIds(tmp.text);
                     Debug.Log("Plate Text (UI TMP): " + tmp.text);
-                    string filename = "$(food_id)_$(user_id)_$(table_id)";
+                    string filename = $"order_{foodId}_{userId}_{tableId}";
                     StartCoroutine(photoTaker.TakePhotoAndUpload(uploadUrl, filename));
                 }
                 
