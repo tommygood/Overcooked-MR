@@ -22,12 +22,6 @@ public class RoomManager : MonoBehaviour
     public List<GameObject> tables;
 
     public List<PrefabWithTransform> utensils;
-    /*
-        0: Pan
-        1: Pot
-        2: Ladle
-        3: Sink
-    */
 
     /*
         3D Furniture:
@@ -56,8 +50,9 @@ public class RoomManager : MonoBehaviour
         gas stove + pan + pot + spatula - couch
         cutting plate - bed
         sink - plant
-        cashier - storage
-        ingredients - floor
+        casher - storage
+        ingredients - lamp
+        pole - floor
     */
 
     private void SetupRoom()
@@ -67,25 +62,6 @@ public class RoomManager : MonoBehaviour
             Debug.Log("[Debug] " + child.gameObject.name);
             foreach (Transform grandChild in child)
             {
-                if (grandChild.gameObject.name == "TABLE_EffectMesh")
-                {
-                    /*
-                    // pan
-                    PrefabWithTransform pan = utensils.Find(x => x.name == "Pan");
-                    var newObject = Instantiate(pan.prefab, grandChild.transform);
-                    newObject.transform.SetParent(grandChild.transform);
-
-                    // Adjust the position of spawned objects
-                    // Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
-                    // Vector3 size = bounds.size;
-                    // Vector3 offset = new Vector3(size.x / 2f - size.x / 10f, 0, size.z / 2f - size.z / 10f);
-                    // newObject.transform.position += offset;
-
-                    newObject.transform.position += pan.position;
-                    newObject.transform.Rotate(pan.rotation.eulerAngles);
-                    newObject.transform.localScale *= pan.scale;
-                    */
-                }
                 if (grandChild.gameObject.name == "COUCH_EffectMesh")
                 {
                     // gas stove set
@@ -147,8 +123,9 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.localScale *= casher.scale;
                     Debug.Log("[Debug] Casher spawned");
                 }
-                if (grandChild.gameObject.name == "FLOOR_EffectMesh")
+                if (grandChild.gameObject.name == "LAMP_EffectMesh")
                 {
+                    Destroy(grandChild.gameObject.GetComponent<BoxCollider>());
                     // ingredients
                     PrefabWithTransform ingredients = utensils.Find(x => x.name == "Ingredients");
                     var newObject = Instantiate(ingredients.prefab, grandChild.transform);
@@ -181,12 +158,6 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += delivery_ring.position;
                     newObject.transform.Rotate(delivery_ring.rotation.eulerAngles);
                     newObject.transform.localScale *= delivery_ring.scale;
-
-                    //// Place the table number on the table
-                    //Debug.Log(grandChild.gameObject.name);
-                    //var tableNumber = Instantiate(new TextMeshProUGUI(), grandChild.transform);
-                    //tableNumber.text = (tables.IndexOf(grandChild.gameObject) + 1).ToString();
-                    //tableNumber.transform.SetParent(grandChild.transform);
 
                     // Add the table to the table list
                     tables.Add(grandChild.gameObject);
