@@ -12,7 +12,7 @@ public class PlateDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Plate"))
+        if (other.CompareTag("Order"))
         {
             if (photoTaker != null)
             {

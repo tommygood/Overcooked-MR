@@ -2,6 +2,8 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.Networking;
+using System.Linq; // Required for FirstOrDefault
+
 
 public class OrderController : MonoBehaviour
 {
@@ -17,11 +19,38 @@ public class OrderController : MonoBehaviour
   private float y = 0f;
 
   [System.Serializable]
-  public class Order {
+  public class FeedbackResponse
+  {
+    public FeedbackData[] data;
+  }
+
+  [System.Serializable]
+  public class FeedbackData
+  {
+    public int cart_id;
+    public int user_id;
+    public int food_id;
+    public int item_qty;
+    public int table_id;
+    public string feedback;
+    public int grade;
+    public int delivered;
+    public string food_name;
+    public string food_price;
+    public string food_discount;
+    public string food_src;
+    public string user_name;
+  }
+
+  [System.Serializable]
+  public class Order
+  {
     public int table_id;
     public int user_id;
     public int food_id;
     public int item_qty;
+    
+    public int cart_id;
   }
 
   public Order[] orders;
@@ -31,6 +60,8 @@ public class OrderController : MonoBehaviour
   public string api_get_items = "/api/cartItem"; // Endpoint for getting orders
 
   public string api_get_food_list = "/api/foods"; // Endpoint for getting food list
+
+  public string api_feedback = "/api/delivered-items"; // Endpoint for feedback
 
   private string x_api_key = "283b65a5e93dc42e58d23b1262cc821226396b71a7fc0f1a1208caaed6d0941f"; // API key
 
@@ -73,6 +104,7 @@ public class OrderController : MonoBehaviour
     {
       lastCheckTime = 0f;
       StartCoroutine(FetchAndGenerateList());
+      StartCoroutine(DisplayOrderFeedback());
     }
     else
     {
@@ -230,6 +262,7 @@ public class OrderController : MonoBehaviour
                 newOrderGO.SetActive(true);
                 OrderAnimator orderAnimator = newOrderGO.GetComponent<OrderAnimator>();
                 orderAnimator.DisplayText($"Neww Order: table={orderB.table_id}, food={orderB.food_id}, user={orderB.user_id}");
+                newOrderGO.name = $"Order_{orderB.cart_id}";
                 orderAnimator.Up();
             }
         }
@@ -276,7 +309,58 @@ public class OrderController : MonoBehaviour
     y = 0f;
   }
 
-  public IEnumerator DeleteOrder(int user_id, int food_id) {
+  private IEnumerator DisplayOrderFeedback()
+  {
+    // call the feedback API
+    // example return value: {"status":true,"message":"Successfully retrieved delivered items","data":[{"cart_id":12,"user_id":3,"food_id":2,"item_qty":1,"table_id":1,"feedback":"aaaa","grade":1,"delivered":1,"food_name":"shrimp tacos","food_price":"15.00","food_discount":"3.00","food_src":"taco/taco-2.png","user_name":"qq"}]}
+    string url = api_base_url + api_feedback;
+    using (UnityWebRequest request = UnityWebRequest.Get(url))
+    {
+      request.SetRequestHeader("x-api-key", x_api_key);
+      request.SetRequestHeader("Content-Type", "application/json");
+      request.certificateHandler = new BypassCertificate();
+      yield return request.SendWebRequest();
+
+      if (request.result != UnityWebRequest.Result.Success)
+      {
+        Debug.LogError("Failed to fetch feedback: " + request.error);
+      }
+      else
+      {
+        string json = request.downloadHandler.text;
+        // Parse the JSON and display feedback
+        Debug.Log("Feedback: " + json);
+        // You can further process the feedback data here
+        // extract the feedback and grade from the JSON
+        var feedbackData = JsonUtility.FromJson<FeedbackResponse>(json);
+        if (feedbackData != null && feedbackData.data != null)
+        {
+          foreach (var item in feedbackData.data)
+          {
+            // find the order Gameobject by order's name (Order_cart_id)
+            GameObject orderGO = GameObject.Find($"Order_{item.cart_id}");
+            if (orderGO != null)
+            {
+              string text = $"Feedback: {item.feedback}\n Grade: {item.grade}";
+              Debug.Log(text);
+              TMP_Text textComponent = orderGO.GetComponentsInChildren<TMP_Text>()
+              .FirstOrDefault(t => t.gameObject.name == "OrderFeedback");
+              if (textComponent == null)
+                Debug.LogError("Failed to find the text component in the OrderFeedback");
+              else textComponent.text = text;
+            }
+            else
+            {
+              Debug.LogWarning($"Failed to fill the feedback, Order with cart_id {item.cart_id} not found in the scene.");
+            }
+          }
+        }
+      }
+    }
+  }
+
+  public IEnumerator DeleteOrder(int user_id, int food_id)
+  {
     // Delete order from API
     string url = api_base_url + "/api/cartItem/" + user_id + "/" + food_id;
     //Debug.Log("Deleting order from: " + url);

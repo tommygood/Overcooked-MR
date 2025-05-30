@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TMPro; // Required for TMP_Text
+using System.Linq; // Required for FirstOrDefault
 
 public class OrderAnimator : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class OrderAnimator : MonoBehaviour
         }
         else
         {
-            textComponent = GetComponentInChildren<TMP_Text>();
+            textComponent = GetComponentsInChildren<TMP_Text>()
+                .FirstOrDefault(t => t.gameObject.name == "OrderInfo");
             if (textComponent == null)
                 Debug.LogError("Failed to find the text component in the PopupMenu");
             else textComponent.text = text;
