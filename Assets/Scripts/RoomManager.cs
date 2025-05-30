@@ -8,7 +8,6 @@ using Fusion;
 public class PrefabWithTransform
 {
     public string name;  // Name of the prefab
-    public GameObject prefab;  // Prefab reference
     public NetworkPrefabRef networkPrefabRef;  // Network prefab reference for Fusion
     public Vector3 position = new Vector3(0, 0, 0);  // Position of the prefab
     public Quaternion rotation = Quaternion.Euler(0, 0, 0);  // Rotation of the prefab
