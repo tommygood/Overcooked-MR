@@ -7,45 +7,51 @@ public class PlateDetector : MonoBehaviour
 {
     public PhotoShotManager photoTaker; // Assign this in the Inspector
     public string uploadUrl = "https://your-api-endpoint.com/upload"; // Replace with your actual API URL
-    private bool is_send = false;
+
+    private HashSet<string> sentFilenames = new HashSet<string>();
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Plate") && !is_send)
+        if (other.CompareTag("Plate"))
         {
             if (photoTaker != null)
             {
-                // Attempt to find the TMP text in the child hierarchy
+                string filename = null;
+
+                // Try to get TMP UGUI first
                 TextMeshProUGUI tmp = other.GetComponentInChildren<TextMeshProUGUI>();
-                if (tmp == null)
+                if (tmp != null)
                 {
-                    // Fallback: maybe it uses TextMeshPro (3D version) instead of UGUI
+                    (int tableId, int foodId, int userId) = ExtractIds(tmp.text);
+                    Debug.Log("Plate Text (UI TMP): " + tmp.text);
+                    filename = $"order_{foodId}_{userId}_{tableId}";
+                }
+                else
+                {
+                    // Fallback: Try 3D TMP
                     TextMeshPro tmp3D = other.GetComponentInChildren<TextMeshPro>();
                     if (tmp3D != null)
                     {
                         (int tableId, int foodId, int userId) = ExtractIds(tmp3D.text);
-                        string filename = $"order_{foodId}_{userId}_{tableId}";
-                        StartCoroutine(photoTaker.TakePhotoAndUpload(uploadUrl, filename));
+                        filename = $"order_{foodId}_{userId}_{tableId}";
                     }
                     else
                     {
                         Debug.LogWarning("No TMP or TMPUGUI text found under Plate.");
                     }
                 }
-                else
+
+                // If filename was successfully parsed and not already sent
+                if (!string.IsNullOrEmpty(filename) && !sentFilenames.Contains(filename))
                 {
-                    (int tableId, int foodId, int userId) = ExtractIds(tmp.text);
-                    Debug.Log("Plate Text (UI TMP): " + tmp.text);
-                    string filename = $"order_{foodId}_{userId}_{tableId}";
+                    sentFilenames.Add(filename);
                     StartCoroutine(photoTaker.TakePhotoAndUpload(uploadUrl, filename));
                 }
-                
             }
             else
             {
                 Debug.LogWarning("PhotoTaker reference not set!");
             }
-            is_send = true;
         }
     }
 

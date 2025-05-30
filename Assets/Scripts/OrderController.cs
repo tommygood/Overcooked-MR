@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Networking;
 using static OrderAnimator;
+using System.Collections.Generic;
+using System.Linq;
 
 public class OrderController : MonoBehaviour
 {
@@ -65,7 +67,8 @@ public class OrderController : MonoBehaviour
     initOrderPanel();
         
     StartCoroutine(FetchAndGenerateFoodList());
-  }
+    StartCoroutine(AutoGenerateOrder());
+    }
 
   void Update()
   {
@@ -80,6 +83,28 @@ public class OrderController : MonoBehaviour
       lastCheckTime += Time.deltaTime;
     }
   }
+
+    private IEnumerator AutoGenerateOrder()
+    {
+        string url = "https://mixed-restaurant.bogay.me/api/cart/auto-generate";
+
+        using (UnityWebRequest request = UnityWebRequest.PostWwwForm(url, ""))
+        {
+            // Optionally set headers here, for example:
+            // request.SetRequestHeader("Authorization", "Bearer YOUR_TOKEN");
+
+            yield return request.SendWebRequest();
+
+            if (request.result == UnityWebRequest.Result.Success)
+            {
+                Debug.Log("Order auto-generated successfully: " + request.downloadHandler.text);
+            }
+            else
+            {
+                Debug.LogError("Failed to auto-generate order: " + request.error);
+            }
+        }
+    }
 
     private void initOrderPanel()
     {
@@ -146,7 +171,16 @@ public class OrderController : MonoBehaviour
   // return a string array of items
   private IEnumerator GetOrders()
   {
-    string url = api_base_url + api_get_items;
+        var queryParams = new Dictionary<string, string>()
+        {
+            { "delivered", "false" },
+        };
+
+        string queryString = string.Join("&",
+            queryParams.Select(kvp =>
+                $"{UnityWebRequest.EscapeURL(kvp.Key)}=" +
+                $"{UnityWebRequest.EscapeURL(kvp.Value)}"));
+    string url = api_base_url + api_get_items + queryString;
     using (UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequest.Get(url))
     {
       request.SetRequestHeader("x-api-key", x_api_key);
@@ -177,6 +211,11 @@ public class OrderController : MonoBehaviour
         {
           orders = orders_temp;
           order_not_change = false;
+          // show the orders
+                    foreach (Order order in orders)
+                    {
+                        Debug.Log("qq order" + order.food_id);
+                    }
         }
       }
     }
