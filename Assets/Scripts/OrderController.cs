@@ -1,11 +1,7 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Networking;
-using static OrderAnimator;
-using System.Collections.Generic;
-using System.Linq;
 
 public class OrderController : MonoBehaviour
 {
@@ -171,20 +167,12 @@ public class OrderController : MonoBehaviour
   // return a string array of items
   private IEnumerator GetOrders()
   {
-        var queryParams = new Dictionary<string, string>()
-        {
-            { "delivered", "false" },
-        };
-
-        string queryString = string.Join("&",
-            queryParams.Select(kvp =>
-                $"{UnityWebRequest.EscapeURL(kvp.Key)}=" +
-                $"{UnityWebRequest.EscapeURL(kvp.Value)}"));
-    string url = api_base_url + api_get_items + queryString;
+    string url = api_base_url + api_get_items;
     using (UnityEngine.Networking.UnityWebRequest request = UnityEngine.Networking.UnityWebRequest.Get(url))
     {
       request.SetRequestHeader("x-api-key", x_api_key);
       request.SetRequestHeader("Content-Type", "application/json");
+      request.SetRequestHeader("delivered", "false");
       request.certificateHandler = new BypassCertificate();
       yield return request.SendWebRequest();
 
@@ -211,11 +199,6 @@ public class OrderController : MonoBehaviour
         {
           orders = orders_temp;
           order_not_change = false;
-          // show the orders
-                    foreach (Order order in orders)
-                    {
-                        Debug.Log("qq order" + order.food_id);
-                    }
         }
       }
     }
@@ -325,8 +308,18 @@ public static class JsonHelper
     public static T[] FromJson<T>(string json)
     {
         string wrapped = "{\"items\":" + json + "}";
-        Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(wrapped);
-        return wrapper.items;
+        // do the try catch here
+        try
+        {
+          Wrapper<T> wrapper = JsonUtility.FromJson<Wrapper<T>>(wrapped);
+          return wrapper.items;
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Failed to parse JSON: " + e.Message + "\n" + json);
+            return new T[0]; // Return an empty array on failure
+        }
+        
     }
 
     [System.Serializable]
