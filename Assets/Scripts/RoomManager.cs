@@ -1,21 +1,20 @@
 using UnityEngine;
 using Meta.XR.MRUtilityKit;
 using System.Collections;
-using UnityEngine.UIElements;
 using System.Collections.Generic;
-using TMPro;
+using Fusion;
 
 [System.Serializable]
 public class PrefabWithTransform
 {
     public string name;  // Name of the prefab
-    public GameObject prefab;  // Prefab reference
+    public NetworkPrefabRef networkPrefabRef;  // Network prefab reference for Fusion
     public Vector3 position = new Vector3(0, 0, 0);  // Position of the prefab
     public Quaternion rotation = Quaternion.Euler(0, 0, 0);  // Rotation of the prefab
     public float scale = 1.0f;  // Scale of the prefab
 }
 
-public class RoomManager : MonoBehaviour
+public class RoomManager : NetworkBehaviour
 {
     public MRUKRoom room;
 
@@ -66,7 +65,7 @@ public class RoomManager : MonoBehaviour
                 {
                     // gas stove set
                     PrefabWithTransform gas_stove_set = utensils.Find(x => x.name == "Gas_Stove_Set");
-                    var newObject = Instantiate(gas_stove_set.prefab, grandChild.transform);
+                    var newObject = Runner.Spawn(gas_stove_set.networkPrefabRef);
                     newObject.transform.SetParent(grandChild.transform);
 
                     // The position of the couch is in the center
@@ -84,7 +83,7 @@ public class RoomManager : MonoBehaviour
                 {
                     // cutting plate
                     PrefabWithTransform cutting_plate = utensils.Find(x => x.name == "Cutting_Plate");
-                    var newObject = Instantiate(cutting_plate.prefab, grandChild.transform);
+                    var newObject = Runner.Spawn(cutting_plate.networkPrefabRef);
                     newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += cutting_plate.position;
@@ -97,7 +96,7 @@ public class RoomManager : MonoBehaviour
                     Destroy(grandChild.gameObject.GetComponent<BoxCollider>());
                     // sink
                     PrefabWithTransform sink = utensils.Find(x => x.name == "Sink");
-                    var newObject = Instantiate(sink.prefab, grandChild.transform);
+                    var newObject = Runner.Spawn(sink.networkPrefabRef);
                     newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += sink.position;
@@ -109,7 +108,7 @@ public class RoomManager : MonoBehaviour
                 {
                     // casher
                     PrefabWithTransform casher = utensils.Find(x => x.name == "Casher");
-                    var newObject = Instantiate(casher.prefab, grandChild.transform);
+                    var newObject = Runner.Spawn(casher.networkPrefabRef);
                     newObject.transform.SetParent(grandChild.transform);
 
                     // The position of the storage is in the center
@@ -128,7 +127,7 @@ public class RoomManager : MonoBehaviour
                     Destroy(grandChild.gameObject.GetComponent<BoxCollider>());
                     // ingredients
                     PrefabWithTransform ingredients = utensils.Find(x => x.name == "Ingredients");
-                    var newObject = Instantiate(ingredients.prefab, grandChild.transform);
+                    var newObject = Runner.Spawn(ingredients.networkPrefabRef);
                     newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += ingredients.position;
@@ -140,7 +139,7 @@ public class RoomManager : MonoBehaviour
                 {
                     // pole
                     PrefabWithTransform pole = utensils.Find(x => x.name == "Pole");
-                    var newObject = Instantiate(pole.prefab, grandChild.transform);
+                    var newObject = Runner.Spawn(pole.networkPrefabRef);
                     newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += pole.position;
@@ -152,7 +151,7 @@ public class RoomManager : MonoBehaviour
                 {
                     // Place a delivery ring on the table
                     PrefabWithTransform delivery_ring = utensils.Find(x => x.name == "Delivery_Ring");
-                    var newObject = Instantiate(delivery_ring.prefab, grandChild.transform);
+                    var newObject = Runner.Spawn(delivery_ring.networkPrefabRef);
                     newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += delivery_ring.position;
@@ -180,17 +179,28 @@ public class RoomManager : MonoBehaviour
         Debug.Log("[Debug] The room is ready");
     }
 
+    public override void Spawned()
+    {
+        base.Spawned();
+
+        if (Object.HasStateAuthority)
+        {
+            // Initialize the room when the master client spawns
+            StartCoroutine(Initialization());
+        }
+        else
+        {
+            Debug.LogWarning($"{nameof(RoomManager)} can only be enabled by the master client.");
+        }
+    }
+
     // Initialize the room
     private IEnumerator Initialization()
     {
         yield return WaitForRoomCreated();
-        
+
         SetupRoom();
     }
 
-    public void EnableMRUKManager()
-    {
-        Debug.Log($"{nameof(RoomManager)} has been enabled due to scene availability");
-        StartCoroutine(Initialization());
-    }
+    public void EnableMRUKManager() { }
 }
