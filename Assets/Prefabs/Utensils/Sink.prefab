@@ -309,9 +309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d263cf4f1039945b1407ca05859de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handTag: PlayerHand
   dishPrefab:
-    RawGuidValue: ab7b96caac20f924da88b5b371079247
+    RawGuidValue: 070c16dd96d0d7d40996c9869c04a563
 --- !u!1 &4234277365060532015
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +337,7 @@ Transform:
   m_GameObject: {fileID: 4234277365060532015}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.07, z: 0}
+  m_LocalPosition: {x: 0, y: 0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -363,8 +362,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.65976715, y: 0.063394666, z: 0.64924526}
-  m_Center: {x: -0.0044691563, y: 0.5498505, z: -0.013133168}
+  m_Size: {x: 0.65976715, y: 0.2836778, z: 0.64924526}
+  m_Center: {x: -0.0044691563, y: 0.43970895, z: -0.013133168}
 --- !u!1 &4242697345835883918
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,7 +991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5225044024467634966, guid: 4b6dd0d7957ae7e4bb6bde7ddd04ce57, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
