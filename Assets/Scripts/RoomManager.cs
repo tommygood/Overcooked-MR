@@ -179,6 +179,21 @@ public class RoomManager : NetworkBehaviour
         Debug.Log("[Debug] The room is ready");
     }
 
+    public override void Spawned()
+    {
+        base.Spawned();
+
+        if (Object.HasStateAuthority)
+        {
+            // Initialize the room when the master client spawns
+            StartCoroutine(Initialization());
+        }
+        else
+        {
+            Debug.LogWarning($"{nameof(RoomManager)} can only be enabled by the master client.");
+        }
+    }
+
     // Initialize the room
     private IEnumerator Initialization()
     {
@@ -187,15 +202,5 @@ public class RoomManager : NetworkBehaviour
         SetupRoom();
     }
 
-    public void EnableMRUKManager()
-    {
-        if (!Object.HasStateAuthority)
-        {
-            Debug.LogWarning($"{nameof(RoomManager)} can only be enabled by the master client.");
-            return;
-        }
-
-        Debug.Log($"{nameof(RoomManager)} has been enabled due to scene availability");
-        StartCoroutine(Initialization());
-    }
+    public void EnableMRUKManager() { }
 }
