@@ -60,33 +60,13 @@ public class RoomManager : MonoBehaviour
         ingredients - floor
     */
 
-    private void SetupTables()
+    private void SetupRoom()
     {
         foreach (Transform child in room.gameObject.transform)
         {
-            Debug.Log(child.gameObject.name);
+            Debug.Log("[Debug] " + child.gameObject.name);
             foreach (Transform grandChild in child)
             {
-                // if (grandChild.gameObject.name == "TABLE_EffectMesh")
-                // {
-                //     tables.Add(grandChild.gameObject);
-                //     Debug.Log(grandChild.gameObject.name);
-                //     var tableNumber = Instantiate(new TextMeshProUGUI(), grandChild.transform);
-                //     tableNumber.text = (tables.IndexOf(grandChild.gameObject) + 1).ToString();
-                //     tableNumber.transform.SetParent(grandChild.transform);
-                //     var newCube = Instantiate(cube, grandChild.transform);
-                //     newCube.transform.SetParent(grandChild.transform);
-                // }
-
-                /*
-                // Debugging text of the coordinate
-                var text = Instantiate(new GameObject(), grandChild.transform).AddComponent<TextMeshPro>();
-                text.text = grandChild.transform.position.ToString();
-                text.alignment = TextAlignmentOptions.Center;
-                text.transform.localScale *= 0.05f;
-                text.transform.SetParent(grandChild.transform);
-                */
-
                 if (grandChild.gameObject.name == "TABLE_EffectMesh")
                 {
                     /*
@@ -122,6 +102,7 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += gas_stove_set.position;
                     newObject.transform.Rotate(gas_stove_set.rotation.eulerAngles);
                     newObject.transform.localScale *= gas_stove_set.scale;
+                    Debug.Log("[Debug] Gas_Stove_Set spawned");
                 }
                 if (grandChild.gameObject.name == "BED_EffectMesh")
                 {
@@ -133,6 +114,7 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += cutting_plate.position;
                     newObject.transform.Rotate(cutting_plate.rotation.eulerAngles);
                     newObject.transform.localScale *= cutting_plate.scale;
+                    Debug.Log("[Debug] Cutting_Plate spawned");
                 }
                 if (grandChild.gameObject.name == "PLANT_EffectMesh")
                 {
@@ -145,6 +127,7 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += sink.position;
                     newObject.transform.Rotate(sink.rotation.eulerAngles);
                     newObject.transform.localScale *= sink.scale;
+                    Debug.Log("[Debug] Sink spawned");
                 }
                 if (grandChild.gameObject.name == "STORAGE_EffectMesh")
                 {
@@ -162,6 +145,7 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += casher.position;
                     newObject.transform.Rotate(casher.rotation.eulerAngles);
                     newObject.transform.localScale *= casher.scale;
+                    Debug.Log("[Debug] Casher spawned");
                 }
                 if (grandChild.gameObject.name == "FLOOR_EffectMesh")
                 {
@@ -173,6 +157,7 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += ingredients.position;
                     newObject.transform.Rotate(ingredients.rotation.eulerAngles);
                     newObject.transform.localScale *= ingredients.scale;
+                    Debug.Log("[Debug] Ingredients spawned");
                 }
                 if (grandChild.gameObject.name == "FLOOR_EffectMesh")
                 {
@@ -184,6 +169,28 @@ public class RoomManager : MonoBehaviour
                     newObject.transform.position += pole.position;
                     newObject.transform.Rotate(pole.rotation.eulerAngles);
                     newObject.transform.localScale *= pole.scale;
+                    Debug.Log("[Debug] Pole spawned");
+                }
+                if (grandChild.gameObject.name == "TABLE_EffectMesh")
+                {
+                    // Place a delivery ring on the table
+                    PrefabWithTransform delivery_ring = utensils.Find(x => x.name == "Delivery_Ring");
+                    var newObject = Instantiate(delivery_ring.prefab, grandChild.transform);
+                    newObject.transform.SetParent(grandChild.transform);
+
+                    newObject.transform.position += delivery_ring.position;
+                    newObject.transform.Rotate(delivery_ring.rotation.eulerAngles);
+                    newObject.transform.localScale *= delivery_ring.scale;
+
+                    //// Place the table number on the table
+                    //Debug.Log(grandChild.gameObject.name);
+                    //var tableNumber = Instantiate(new TextMeshProUGUI(), grandChild.transform);
+                    //tableNumber.text = (tables.IndexOf(grandChild.gameObject) + 1).ToString();
+                    //tableNumber.transform.SetParent(grandChild.transform);
+
+                    // Add the table to the table list
+                    tables.Add(grandChild.gameObject);
+                    Debug.Log("[Debug] Delivery_Ring spawned");
                 }
             }
 
@@ -195,10 +202,11 @@ public class RoomManager : MonoBehaviour
         while (true)
         {
             room = FindAnyObjectByType<MRUKRoom>();
+            Debug.Log("[Debug] Waiting for the room created...");
             if (room) break;
             yield return null;
         }
-        Debug.Log("The room is ready");
+        Debug.Log("[Debug] The room is ready");
     }
 
     // Initialize the room
@@ -206,7 +214,7 @@ public class RoomManager : MonoBehaviour
     {
         yield return WaitForRoomCreated();
         
-        SetupTables();
+        SetupRoom();
     }
 
     public void EnableMRUKManager()

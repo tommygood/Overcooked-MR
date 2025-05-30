@@ -97,3 +97,8 @@ MonoBehaviour:
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 1}
     scale: 1
+  - name: Delivery_Ring
+    prefab: {fileID: 5299391815395610904, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
+    scale: 1
