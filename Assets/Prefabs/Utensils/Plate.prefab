@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 1884840056154323808}
   - component: {fileID: 1747628600327680268}
   - component: {fileID: 4127673476295972634}
+  - component: {fileID: 4175985222287959249}
+  - component: {fileID: 699839378538362440}
   m_Layer: 0
   m_Name: Plate
   m_TagString: Untagged
@@ -165,6 +167,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 1747628600327680268}
   - {fileID: 4127673476295972634}
+  - {fileID: 699839378538362440}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &1747628600327680268
 MonoBehaviour:
@@ -201,6 +204,32 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &4175985222287959249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808103651276854765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3911a8b3757b99e48a46b8374da7c966, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &699839378538362440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808103651276854765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d263cf4f1039945b1407ca05859de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dishPrefab:
+    RawGuidValue: 00000000000000000000000000000000
 --- !u!1 &6423754087960270903
 GameObject:
   m_ObjectHideFlags: 0
