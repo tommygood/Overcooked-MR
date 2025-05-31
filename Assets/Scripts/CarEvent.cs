@@ -5,22 +5,28 @@ using Meta.XR.MRUtilityKit;
 
 public class CarEvent : MonoBehaviour
 {
-    private Vector3 carPosition;
-    private Quaternion carRotation;
+    private Vector3 carPosition = Vector3.zero;
+    private Quaternion carRotation = Quaternion.identity;
     private PrometeoCarController prometeoCarController;
     private bool isReady = false;
 
     void Start()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
         prometeoCarController = GetComponent<PrometeoCarController>();
-        StartCoroutine(Initialization());
+        for (int i = 0; i < 1000; i++)
+        {
+            prometeoCarController.GoForward();
+        }
+        //StartCoroutine(Initialization());
+        //StartCoroutine(Test());
     }
 
-    IEnumerator Test()
+    private IEnumerator Test()
     {
         while (true)
         {
+            //gameObject.SetActive(true);
             InvokeCarEvent();
             yield return new WaitForSeconds(5f);
         }
@@ -28,12 +34,16 @@ public class CarEvent : MonoBehaviour
 
     public void InvokeCarEvent()
     {
+        if (!isReady) return;
+
         gameObject.transform.position = carPosition;
         gameObject.transform.rotation = carRotation;
-        for (int i = 0; i < 30; i++)
+        for (int i = 0; i < 100; i++)
         {
             prometeoCarController.GoForward();
         }
+
+        //gameObject.SetActive(false);
     }
 
     private IEnumerator Initialization()
