@@ -4,8 +4,9 @@ using UnityEngine;
 public class PlateController : MonoBehaviour
 {
     // 食譜定義（由下往上）
-    private List<string> hamburgerRecipe = new List<string> { "Bread", "Cut_Tomato", "Cheese", "CutLettuce", "Burger_Meat" };
-    private List<string> sandwichRecipe = new List<string> { "Toast","TurkeyBreastChopped", "Cheese", "Toast" };
+    private List<string> hamburgerRecipe = new List<string> { "Bread", "Cut_Tomato", "Cheese", "CutLettuce", "Burger_Meat","Bread" };
+    private List<string> sandwichRecipe = new List<string> {  "Toast", "Cheese","Chicken", "Toast"};
+    private List<string> tacoRecipe = new List<string> {  "Tortilla", "CutLettuce","Chicken", "Toast"};
 
     public void CheckRecipeFromTop(Order topIngredient)
     {
@@ -27,7 +28,7 @@ public class PlateController : MonoBehaviour
 
         currentOrder.Reverse(); // 由下往上與食譜比較
 
-        Debug.Log("堆疊順序（下上）:");
+        Debug.Log("堆疊順序（由下至上）:");
         for (int i = 0; i < currentOrder.Count; i++)
         {
             Debug.Log($"  {i + 1}. {currentOrder[i]}");
@@ -43,7 +44,7 @@ public class PlateController : MonoBehaviour
         }
         else
         {
-            Debug.Log("錯誤！0分");
+            Debug.Log("食譜錯誤！0分");
         }
     }
 

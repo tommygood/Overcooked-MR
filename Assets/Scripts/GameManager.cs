@@ -2,31 +2,58 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public PlateController plate; // 拖入含有 PlateController 的盤子物件
+    public Transform playerTransform; // 👉 拖入 Player 的 Transform
+    public PlateController[] allPlates; // 👉 拖入所有 Plate 的 PlateController
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            Debug.Log("Z被按下");
+            Debug.Log("Z按下，找最近的盤子");
 
-            Order top = FindTopIngredientOnPlate();
+            PlateController nearestPlate = FindNearestPlate();
+            if (nearestPlate == null)
+            {
+                Debug.Log("找不到盤子！");
+                return;
+            }
+
+            Debug.Log("最近的盤子：" + nearestPlate.name);
+
+            Order top = FindTopIngredientOnPlate(nearestPlate.transform);
             if (top != null)
             {
                 Debug.Log("最上層食材：" + top.name);
-                plate.CheckRecipeFromTop(top);
+                nearestPlate.CheckRecipeFromTop(top);
             }
             else
             {
-                Debug.Log("未放置任何食材！");
+                Debug.Log("盤子上沒有食材！");
             }
         }
     }
 
-    private Order FindTopIngredientOnPlate()
+    private PlateController FindNearestPlate()
     {
-        // 根據盤子位置搜尋周圍區域的食材（要設定 plate transform）
-        Vector3 center = plate.transform.position + Vector3.up * 0.5f;
+        float minDistance = float.MaxValue;
+        PlateController closestPlate = null;
+
+        foreach (PlateController plate in allPlates)
+        {
+            float dist = Vector3.Distance(playerTransform.position, plate.transform.position);
+            if (dist < minDistance)
+            {
+                minDistance = dist;
+                closestPlate = plate;
+            }
+        }
+
+        return closestPlate;
+    }
+
+    private Order FindTopIngredientOnPlate(Transform plateTransform)
+    {
+        Vector3 center = plateTransform.position + Vector3.up * 0.5f;
         Collider[] colliders = Physics.OverlapBox(center, new Vector3(0.5f, 1f, 0.5f));
 
         Order top = null;

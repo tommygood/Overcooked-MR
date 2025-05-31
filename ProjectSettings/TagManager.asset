@@ -24,6 +24,8 @@ TagManager:
   - Plate
   - TurkeyBreastChopped
   - Order
+  - Stove
+  - Water_T
   layers:
   - Default
   - TransparentFX
