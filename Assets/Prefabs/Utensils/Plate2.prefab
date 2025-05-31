@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: 46efa9e3-99dc-4422-a23a-9e8f064c2535
+  instanceId: 01619dde-5b15-477d-aa9c-313912daafd8
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
@@ -208,6 +208,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _CleanProgress: 0
   _IsClean: 0
+  cleanMaterial: {fileID: 2100000, guid: 9866fda0e61a7904087eb0ec5ab17e03, type: 2}
+  dirtyMaterial: {fileID: 2100000, guid: f52d0efc106b6a14cbb2349d580e195e, type: 2}
 --- !u!1 &3651392111888845870
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 7d508de9-74e4-4050-9de0-524104fe0a14
+  instanceId: cf0fdb8d-ab7c-4179-affd-9e0dd37ea834
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8

@@ -13,33 +13,56 @@ public class WashPlate : NetworkBehaviour
     [OnChangedRender(nameof(OnIsCleanChanged))]
     public bool IsClean { get; set; }
 
+    [SerializeField]
+    private Material cleanMaterial;
+    [SerializeField]
+    private Material dirtyMaterial;
+
+    private Renderer plateRenderer;
+
+    void Start()
+    {
+        this.plateRenderer = GetComponentInChildren<Renderer>();
+    }
+
     public override void Spawned()
     {
         base.Spawned();
         CleanProgress = 0;
         IsClean = true;
+        this.updateVisual();
     }
 
     public void OnCleanProgressChanged()
     {
+        Debug.Log($"Plate clean progress updated: {CleanProgress}% - IsClean: {IsClean}");
         if (!Object.HasStateAuthority) return;
 
         if (CleanProgress >= 100)
         {
             IsClean = true;
-            CleanProgress = 100;
         }
         else
         {
             IsClean = false;
         }
-
-        Debug.Log($"Plate clean progress updated: {CleanProgress}% - IsClean: {IsClean}");
     }
 
     public void OnIsCleanChanged()
     {
-        // TODO: update visual
         Debug.Log($"Plate is now {(IsClean ? "clean" : "dirty")}");
+        this.updateVisual();
+    }
+
+    private void updateVisual()
+    {
+        if (plateRenderer != null)
+        {
+            plateRenderer.material = IsClean ? cleanMaterial : dirtyMaterial;
+        }
+        else
+        {
+            Debug.LogWarning("Plate renderer not found. Cannot update material.");
+        }
     }
 }

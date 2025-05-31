@@ -20,11 +20,11 @@ public class Faucet : MonoBehaviour
     {
         this.waterOriginalScale = this.waterRoot.transform.localScale;
         this.detectZone.OnTriggerStayAsObservable()
-            // .Where(c => c.TryGetComponent<Plate>(out _))
+            .Where(c => c.gameObject.TryGetComponent(out Plate _))
             .Subscribe(_ => this.targetScale = 0.15f)
             .AddTo(this);
         this.detectZone.OnTriggerExitAsObservable()
-            // .Where(c => c.TryGetComponent<Plate>(out _))
+            .Where(c => c.gameObject.TryGetComponent(out Plate _))
             .Subscribe(_ => this.targetScale = 0.001f)
             .AddTo(this);
 
@@ -38,9 +38,9 @@ public class Faucet : MonoBehaviour
 
     void Update()
     {
-        Vector3 waterTargetScale = this.waterOriginalScale;
+        Vector3 waterTargetScale = this.waterRoot.transform.localScale;
         waterTargetScale.y = Mathf.Lerp(
-            this.waterOriginalScale.y,
+            waterTargetScale.y,
             this.targetScale,
             Time.deltaTime * 3f);
         this.waterRoot.transform.localScale = waterTargetScale;
