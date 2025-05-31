@@ -94,12 +94,12 @@ public class HandWashingController : NetworkBehaviour
     public override void FixedUpdateNetwork()
     {
         if (!Object.HasStateAuthority) return;
-        this.debugPlateVisual.SetActive(false);
+        // this.debugPlateVisual?.SetActive(false);
 
         foreach (var plate in this.platesInZone)
         {
             plate.CleanProgress = Mathf.Min(plate.CleanProgress + 1, 100);
-            this.debugPlateVisual.SetActive(true);
+            // this.debugPlateVisual?.SetActive(true);
         }
     }
 
