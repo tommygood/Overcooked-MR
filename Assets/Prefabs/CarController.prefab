@@ -45,10 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c402c6f0968ca1b489cb0e0683f5a3b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interval: 5
-  duration: 2
-  position: {x: -2, y: 0, z: 0}
-  rotation: {x: 0, y: -0.70710677, z: 0, w: 0.70710677}
+  interval: 10
+  goForwardDuration: 4.5
+  TurnLeftDuration: 4.5
+  position: {x: 0, y: -1, z: 2.2}
+  rotation: {x: 0, y: 0.70710677, z: 0, w: -0.70710677}
   scale: 0.4
   car: {fileID: 5377836329353887490}
   prometeoCarController: {fileID: 4776125476941401751}
@@ -62,10 +63,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: maxSpeed
-      value: 120
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: steeringSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: maxSteeringAngle
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+      propertyPath: accelerationMultiplier
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 261786959625234688, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}

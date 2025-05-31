@@ -9,7 +9,8 @@ public class CarController : MonoBehaviour
     private Quaternion carRotation;
 
     public float interval;
-    public float duration;
+    public float goForwardDuration;
+    public float TurnLeftDuration;
 
     public Vector3 position;
     public Quaternion rotation;
@@ -37,14 +38,25 @@ public class CarController : MonoBehaviour
             car.transform.position = carPosition;
             car.transform.rotation = carRotation;
             StartCoroutine(GoForward());
-
+            // StartCoroutine(TurnLeft());
             yield return new WaitForSeconds(interval);
+        }
+    }
+
+    private IEnumerator TurnLeft()
+    {
+        float endTime = Time.time + TurnLeftDuration;
+
+        while (Time.time < endTime)
+        {
+            prometeoCarController.TurnLeft();
+            yield return null;
         }
     }
 
     private IEnumerator GoForward()
     {
-        float endTime = Time.time + duration;
+        float endTime = Time.time + goForwardDuration;
 
         while (Time.time < endTime)
         {
