@@ -1,13 +1,39 @@
 using UnityEngine;
 using Fusion;
-using System.Linq;
+using System.Collections.Generic;
 
 public class HandWashingController : NetworkBehaviour
 {
     [SerializeField]
     private NetworkPrefabRef dishPrefab;
 
-    private BoxCollider zoneCollider;
+    [SerializeField]
+    private GameObject debugVisual;
+
+    [SerializeField]
+    private GameObject debugPlateVisual;
+
+    [Networked]
+    [OnChangedRender(nameof(updateDebugVisual))]
+    public bool IsHandInZone { get; set; } = false;
+
+    private List<WashPlate> platesInZone = new List<WashPlate>();
+
+    private void updateDebugVisual()
+    {
+        if (this.debugVisual == null)
+        {
+            Debug.LogWarning("[Network] HandWashingController updateDebugVisual - Debug visual is not set, trying to find it in the hierarchy.");
+            this.debugVisual = transform.Find("Visual")?.gameObject;
+            if (this.debugVisual == null)
+            {
+                Debug.LogError("[Network] HandWashingController updateDebugVisual - Debug visual is not set.");
+                return;
+            }
+        }
+
+        this.debugVisual.SetActive(IsHandInZone);
+    }
 
     public override void Spawned()
     {
@@ -17,25 +43,63 @@ public class HandWashingController : NetworkBehaviour
             Debug.Log($"[Network] Dish spawned with ID: {obj.Id}");
         });
         Debug.Log($"[Network] HandWashingController spawned with ID: {Object.Id}");
+    }
 
-        this.zoneCollider = GetComponent<BoxCollider>();
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!Object.HasStateAuthority) return;
+
+        if(this.isHand(other.gameObject))
+        {
+            IsHandInZone = true;
+            Debug.Log($"[Network] HandWashingController OnTriggerEnter - Hand detected: {other.gameObject.name}");
+        }
+        else if (other.gameObject.TryGetComponent(out WashPlate plate))
+        {
+            if (!platesInZone.Contains(plate))
+            {
+                platesInZone.Add(plate);
+                Debug.Log($"[Network] HandWashingController OnTriggerEnter - Plate detected: {plate.name}");
+            }
+        }
+        else
+        {
+            Debug.Log($"[Network] HandWashingController OnTriggerEnter - Other object detected: {other.gameObject.name}");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (!Object.HasStateAuthority) return;
+        
+        if (this.isHand(other.gameObject))
+        {
+            IsHandInZone = false;
+            Debug.Log($"[Network] HandWashingController OnTriggerExit - Hand exited: {other.gameObject.name}");
+        }
+        else if (other.gameObject.TryGetComponent(out WashPlate plate))
+        {
+            if (platesInZone.Contains(plate))
+            {
+                platesInZone.Remove(plate);
+                Debug.Log($"[Network] HandWashingController OnTriggerExit - Plate exited: {plate.name}");
+            }
+        }
+        else
+        {
+            Debug.Log($"[Network] HandWashingController OnTriggerExit - Other object exited: {other.gameObject.name}");
+        }
     }
 
     public override void FixedUpdateNetwork()
     {
         if (!Object.HasStateAuthority) return;
+        this.debugPlateVisual.SetActive(false);
 
-        var castResults = Physics.BoxCastAll(transform.position, this.zoneCollider.size / 2, Vector3.up);
-        // Debug.Log($"[Network] HandWashingController FixedUpdateNetwork - Casted {castResults.Length} objects in the zone.");
-        var hasHandInZone = castResults.Any(hit => isHand(hit.collider.gameObject));
-        if (!hasHandInZone) return;
-
-        foreach (var hit in castResults)
+        foreach (var plate in this.platesInZone)
         {
-            if (hit.collider.gameObject.TryGetComponent(out WashPlate plate))
-            {
-                plate.CleanProgress = Mathf.Min(plate.CleanProgress + 1, 100);
-            }
+            plate.CleanProgress = Mathf.Min(plate.CleanProgress + 1, 100);
+            this.debugPlateVisual.SetActive(true);
         }
     }
 

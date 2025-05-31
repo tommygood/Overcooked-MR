@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 1747628600327680268}
   - component: {fileID: 4127673476295972634}
   - component: {fileID: 4175985222287959249}
-  - component: {fileID: 699839378538362440}
+  - component: {fileID: 5354473871920255939}
   m_Layer: 0
   m_Name: Plate
   m_TagString: Untagged
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: 1d29369f-9309-4094-a3d1-6c0f81bd95bf
+  instanceId: efd20d81-1667-4f3e-90a3-e3e8aaebd4ea
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
@@ -167,7 +167,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 1747628600327680268}
   - {fileID: 4127673476295972634}
-  - {fileID: 699839378538362440}
+  - {fileID: 5354473871920255939}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &1747628600327680268
 MonoBehaviour:
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3911a8b3757b99e48a46b8374da7c966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &699839378538362440
+--- !u!114 &5354473871920255939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,11 +225,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5808103651276854765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10d263cf4f1039945b1407ca05859de5, type: 3}
+  m_Script: {fileID: 11500000, guid: af824d7b770b39641aa0c9d8f6839667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dishPrefab:
-    RawGuidValue: 00000000000000000000000000000000
+  _CleanProgress: 0
+  _IsClean: 0
 --- !u!1 &6423754087960270903
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 4e14e0ba-51f2-4a5c-a822-e304bf36d48c
-  instanceId: b88e46cd-e8a8-4453-bf27-8c327cccaa51
+  instanceId: b24f2a76-12c9-4efd-8702-502c02260d54
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: fb25cac7-8f37-455d-ac01-3fa41a1be37d

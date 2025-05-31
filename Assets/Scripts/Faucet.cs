@@ -20,12 +20,19 @@ public class Faucet : MonoBehaviour
     {
         this.waterOriginalScale = this.waterRoot.transform.localScale;
         this.detectZone.OnTriggerStayAsObservable()
-            .Where(c => c.TryGetComponent<Plate>(out _))
+            // .Where(c => c.TryGetComponent<Plate>(out _))
             .Subscribe(_ => this.targetScale = 0.15f)
             .AddTo(this);
         this.detectZone.OnTriggerExitAsObservable()
-            .Where(c => c.TryGetComponent<Plate>(out _))
+            // .Where(c => c.TryGetComponent<Plate>(out _))
             .Subscribe(_ => this.targetScale = 0.001f)
+            .AddTo(this);
+
+        this.detectZone.OnTriggerEnterAsObservable()
+            .Subscribe(c => Debug.Log($"Faucet detected: {c.gameObject.name}"))
+            .AddTo(this);
+        this.detectZone.OnTriggerExitAsObservable()
+            .Subscribe(c => Debug.Log($"Faucet exited: {c.gameObject.name}"))
             .AddTo(this);
     }
 
