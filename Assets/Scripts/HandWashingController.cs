@@ -37,6 +37,7 @@ public class HandWashingController : NetworkBehaviour
 
     public override void Spawned()
     {
+        // TODO: remove debug code
         Runner.Spawn(dishPrefab, transform.position + Vector3.up * 1, Quaternion.identity, Object.InputAuthority, (runner, obj) =>
         {
             // This is where you can initialize the dish if needed
@@ -47,9 +48,9 @@ public class HandWashingController : NetworkBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!Object.HasStateAuthority) return;
+        if (Object == null || !Object.HasStateAuthority) return;
 
-        if(this.isHand(other.gameObject))
+        if (this.isHand(other.gameObject))
         {
             IsHandInZone = true;
             Debug.Log($"[Network] HandWashingController OnTriggerEnter - Hand detected: {other.gameObject.name}");
@@ -70,8 +71,8 @@ public class HandWashingController : NetworkBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (!Object.HasStateAuthority) return;
-        
+        if (Object == null || !Object.HasStateAuthority) return;
+
         if (this.isHand(other.gameObject))
         {
             IsHandInZone = false;

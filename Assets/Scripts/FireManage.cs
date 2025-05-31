@@ -1,28 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
-public class FireManager : MonoBehaviour
+public class FireManager : NetworkBehaviour
 {
-    public List<StoveControl> furnaces;
     public float fireInterval = 15f;
 
-    private void Start()
-    {
-        StartCoroutine(RandomFireRoutine());
-    }
+    [Networked]
+    private TickTimer fireTimer { get; set; }
 
-    IEnumerator RandomFireRoutine()
+    public override void FixedUpdateNetwork()
     {
-        while (true)
+        if (!Object.HasStateAuthority)
         {
-            yield return new WaitForSeconds(fireInterval);
+            return; // 確保只有擁有狀態權限的物件可以處理固定更新
+        }
 
-            if (furnaces.Count > 0)
+        if (fireTimer.Expired(Runner))
+        {
+            fireTimer = TickTimer.CreateFromSeconds(Runner, fireInterval);
+
+            StoveControl[] furnaces = FindObjectsByType<StoveControl>(FindObjectsSortMode.None);
+
+            if (furnaces.Length == 0)
             {
-                int index = Random.Range(0, furnaces.Count);
-                furnaces[index].StartFire();
+                return;
             }
+
+            int index = Random.Range(0, furnaces.Length);
+            furnaces[index].Rpc_StartFire();
+        }
+
+        if (!fireTimer.IsRunning)
+        {
+            fireTimer = TickTimer.CreateFromSeconds(Runner, fireInterval);
         }
     }
 }
