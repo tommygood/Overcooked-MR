@@ -5,7 +5,7 @@ public class PlateController : MonoBehaviour
 {
     // 食譜定義（由下往上）
     private List<string> hamburgerRecipe = new List<string> { "Bread", "Cut_Tomato", "Cheese", "CutLettuce", "Burger_Meat","Bread" };
-    private List<string> sandwichRecipe = new List<string> {  "Toast", "Cheese","Chicken", "Toast"};
+    private List<string> sandwichRecipe = new List<string> {  "Toast", "Cheese"};
     private List<string> tacoRecipe = new List<string> {  "Tortilla", "CutLettuce","Chicken", "Toast"};
 
     public void CheckRecipeFromTop(Order topIngredient)
