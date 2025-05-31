@@ -551,7 +551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 201368091867900143, guid: 5fbfba11a02d1bf4997edecff0f3c9be, type: 3}
       propertyPath: NestedObjects.Array.size
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 201368091867900143, guid: 5fbfba11a02d1bf4997edecff0f3c9be, type: 3}
+      propertyPath: NestedObjects.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2493387612588616026, guid: 5fbfba11a02d1bf4997edecff0f3c9be, type: 3}
       propertyPath: SortKey
