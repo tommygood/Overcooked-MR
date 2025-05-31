@@ -261,7 +261,19 @@ public class OrderController : MonoBehaviour
                 GameObject newOrderGO = Instantiate(OrderObject, casherTransform);
                 newOrderGO.SetActive(true);
                 OrderAnimator orderAnimator = newOrderGO.GetComponent<OrderAnimator>();
-                orderAnimator.DisplayText($"Neww Order: table={orderB.table_id}, food={orderB.food_id}, user={orderB.user_id}");
+                // get the food name from the foodList
+                string foodName = "";
+                string foodDesc = "";
+                foreach (Food food in foodList)
+                {
+                    if (food.food_id == orderB.food_id)
+                    {
+                        foodName = food.food_name;
+                        foodDesc = food.food_desc;
+                        break;
+                    }
+                }
+                orderAnimator.DisplayText($"{foodName}\n{foodDesc}\n\nOrder Info:\ntable={orderB.table_id}, food={orderB.food_id}, user={orderB.user_id}");
                 newOrderGO.name = $"Order_{orderB.cart_id}";
                 orderAnimator.Up();
             }
