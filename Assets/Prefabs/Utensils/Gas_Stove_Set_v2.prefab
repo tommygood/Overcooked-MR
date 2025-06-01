@@ -191,6 +191,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spatula_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 9013735590128526899, guid: 1b2ca760aa549ee4ea223220173121d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9166189107260957586, guid: 1b2ca760aa549ee4ea223220173121d8, type: 3}
       propertyPath: m_UseGravity
       value: 1
@@ -284,6 +288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ladle_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 3166540361854458230, guid: 9094529596b7d5143bb3a8ac25ef07e7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5014713311112821716, guid: 9094529596b7d5143bb3a8ac25ef07e7, type: 3}
       propertyPath: instanceId
       value: 07c12ad6-8c03-41b9-8642-9bb3d8c09813
@@ -328,6 +336,10 @@ PrefabInstance:
     - target: {fileID: 133852334315675423, guid: 6eecc4d191953574ca4033c91be6072d, type: 3}
       propertyPath: m_Name
       value: Pan_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 133852334315675423, guid: 6eecc4d191953574ca4033c91be6072d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5096283147904519082, guid: 6eecc4d191953574ca4033c91be6072d, type: 3}
       propertyPath: instanceId
@@ -490,6 +502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stove
       objectReference: {fileID: 0}
+    - target: {fileID: 7721452653673687789, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
       propertyPath: SortKey
       value: 3896934407
@@ -590,6 +606,10 @@ PrefabInstance:
     - target: {fileID: 7721452653673687789, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
       propertyPath: m_Name
       value: stove
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721452653673687789, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
       propertyPath: Flags
@@ -768,6 +788,10 @@ PrefabInstance:
     - target: {fileID: 5592213156007190801, guid: 55bbac0fff4f8fa46a8c0a705bfc7ad2, type: 3}
       propertyPath: m_Name
       value: Pot_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5592213156007190801, guid: 55bbac0fff4f8fa46a8c0a705bfc7ad2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6626529347667460460, guid: 55bbac0fff4f8fa46a8c0a705bfc7ad2, type: 3}
       propertyPath: instanceId
