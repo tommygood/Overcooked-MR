@@ -18,16 +18,7 @@ public class StoveSetSpawner : NetworkBehaviour
     [SerializeField]
     private StoveSpawnData[] stoveSetTransformData;
 
-    public override void Spawned()
-    {
-        base.Spawned();
-        if (Object.HasStateAuthority)
-        {
-            spawnChildObject();
-        }
-    }
-
-    private void spawnChildObject()
+    public void SpawnChildObject()
     {
         foreach (var stoveData in stoveSetTransformData)
         {

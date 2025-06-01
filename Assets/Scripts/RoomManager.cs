@@ -79,6 +79,12 @@ public class RoomManager : NetworkBehaviour
                     newObject.transform.position += gas_stove_set.position;
                     newObject.transform.Rotate(gas_stove_set.rotation.eulerAngles);
                     newObject.transform.localScale *= gas_stove_set.scale;
+
+                    // HACK
+                    if (newObject.TryGetComponent(out StoveSetSpawner stoveSetSpawner))
+                    {
+                        stoveSetSpawner.SpawnChildObject();
+                    }
                     Debug.Log("[Debug] Gas_Stove_Set spawned");
                 }
                 if (grandChild.gameObject.name == "BED_EffectMesh")
