@@ -6,13 +6,9 @@ public class StartTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.name.Contains("Hand"))
         {
             gameManager.StartGameFromTrigger(); // Call game manager function
-        }
-        else
-        {
-            Debug.Log("QQ Triggered by: " + other.name);
         }
     }
 }

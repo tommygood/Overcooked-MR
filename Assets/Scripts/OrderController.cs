@@ -89,16 +89,21 @@ public class OrderController : MonoBehaviour
 
   private bool order_not_change = false;
 
+  public bool start_ordering = false; // Flag to indicate if ordering has started
+
   void Start()
   {
     initOrderPanel();
         
-    StartCoroutine(FetchAndGenerateFoodList());
-    StartCoroutine(AutoGenerateOrder());
     }
 
   void Update()
   {
+    // If ordering has not started, return
+    if (!start_ordering)
+    {
+      return;
+    }
     // Check if it's time to fetch new orders
     if (lastCheckTime >= check_order_interval)
     {
@@ -112,27 +117,33 @@ public class OrderController : MonoBehaviour
     }
   }
 
-    private IEnumerator AutoGenerateOrder()
+  public void StartOrdering()
+  {
+    StartCoroutine(FetchAndGenerateFoodList());
+    StartCoroutine(AutoGenerateOrder());
+  }
+
+    public IEnumerator AutoGenerateOrder()
+  {
+    string url = "https://mixed-restaurant.bogay.me/api/cart/auto-generate";
+
+    using (UnityWebRequest request = UnityWebRequest.PostWwwForm(url, ""))
     {
-        string url = "https://mixed-restaurant.bogay.me/api/cart/auto-generate";
+      // Optionally set headers here, for example:
+      // request.SetRequestHeader("Authorization", "Bearer YOUR_TOKEN");
 
-        using (UnityWebRequest request = UnityWebRequest.PostWwwForm(url, ""))
-        {
-            // Optionally set headers here, for example:
-            // request.SetRequestHeader("Authorization", "Bearer YOUR_TOKEN");
+      yield return request.SendWebRequest();
 
-            yield return request.SendWebRequest();
-
-            if (request.result == UnityWebRequest.Result.Success)
-            {
-                Debug.Log("Order auto-generated successfully: " + request.downloadHandler.text);
-            }
-            else
-            {
-                Debug.LogError("Failed to auto-generate order: " + request.error);
-            }
-        }
+      if (request.result == UnityWebRequest.Result.Success)
+      {
+        Debug.Log("Order auto-generated successfully: " + request.downloadHandler.text);
+      }
+      else
+      {
+        Debug.LogError("Failed to auto-generate order: " + request.error);
+      }
     }
+  }
 
     private void initOrderPanel()
     {
@@ -150,7 +161,7 @@ public class OrderController : MonoBehaviour
         }
     }
 
-  private IEnumerator FetchAndGenerateFoodList()
+  public IEnumerator FetchAndGenerateFoodList()
   {
     yield return StartCoroutine(GetFoodList());
     if (foodList != null && !order_not_change)
