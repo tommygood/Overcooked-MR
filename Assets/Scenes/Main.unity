@@ -534,10 +534,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1470886269414586446, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: SortKey
-      value: 3018585070
-      objectReference: {fileID: 0}
     - target: {fileID: 6223885308696273180, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -705,6 +701,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56c89c76e7cee044c82aeea51c7aa245, type: 3}
+--- !u!114 &1212865676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8935095007432578709, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+  m_PrefabInstance: {fileID: 1499564179}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982853e400aa945f5a3d95de7aff14d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1499564179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -757,6 +764,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shared Building Blocks
       objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: Flags
+      value: 262145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: SortKey
+      value: 4266978775
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: NetworkedBehaviours.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 1212865676}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
