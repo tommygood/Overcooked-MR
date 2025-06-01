@@ -11,6 +11,8 @@ public class RealGameManager : MonoBehaviour
     public Button startButton;      // Reference to the Start Button
     public bool gameStarted = false;
 
+    public OrderController orderController; // Reference to the OrderController
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +21,19 @@ public class RealGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         
+
     }
 
     public void StartGameFromTrigger()
     {
-        gameStarted = true;
-        Debug.Log("Start game from the trigger");
+        if (!gameStarted)
+        {
+            gameStarted = true;
+            Debug.Log("Start game from the trigger");
+            orderController.StartOrdering();
+            orderController.start_ordering = true;
+        }
     }
+
+
 }
