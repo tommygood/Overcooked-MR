@@ -535,20 +535,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[3].position.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[3].rotation.w
-      value: 1
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[3].rotation.x
-      value: 0
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[3].rotation.y
-      value: 0
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[3].rotation.z
-      value: 0
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[5].position.y
