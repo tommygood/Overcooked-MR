@@ -28,7 +28,7 @@ public class WashPlate : NetworkBehaviour
     public override void Spawned()
     {
         base.Spawned();
-        CleanProgress = 0;
+        CleanProgress = 100;
         IsClean = true;
         this.updateVisual();
     }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3763876864091430547}
   - component: {fileID: -2820752025864031668}
   - component: {fileID: 3433356599052341072}
+  - component: {fileID: 2755988757456448770}
   m_Layer: 0
   m_Name: Gas_Stove_Set
   m_TagString: Untagged
@@ -62,6 +63,7 @@ MonoBehaviour:
   - {fileID: 6628922824478527474}
   NetworkedBehaviours:
   - {fileID: 3433356599052341072}
+  - {fileID: 2755988757456448770}
   ForceRemoteRenderTimeframe: 0
 --- !u!54 &-2820752025864031668
 Rigidbody:
@@ -113,6 +115,24 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &2755988757456448770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8804210176625436853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e306b49b7633604fb3829ea5cf69777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stoveSetTransformData:
+  - position: {x: 0.247, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 0}
+    scale: {x: 0, y: 0, z: 0}
+    prefabRef:
+      RawGuidValue: 00000000000000000000000000000000
 --- !u!1001 &773283555994509881
 PrefabInstance:
   m_ObjectHideFlags: 0
