@@ -603,6 +603,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gas_Stove_Set
       objectReference: {fileID: 0}
+    - target: {fileID: 8804210176625436853, guid: 6cd36c00add46e74f867f48d1b8b242a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

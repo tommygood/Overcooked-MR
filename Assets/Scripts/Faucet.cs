@@ -34,6 +34,18 @@ public class Faucet : MonoBehaviour
         this.detectZone.OnTriggerExitAsObservable()
             .Subscribe(c => Debug.Log($"Faucet exited: {c.gameObject.name}"))
             .AddTo(this);
+
+        this.water.OnTriggerEnterAsObservable()
+            .Subscribe(c =>
+            {
+                Debug.Log($"Faucet water to: {c.gameObject.name}");
+                if (c.gameObject.TryGetComponent(out ReceiveWater receiveWater))
+                {
+                    Debug.Log($"Faucet received water from: {c.gameObject.name}");
+                    receiveWater.Rpc_ReceiveWaterFromFaucet();
+                }
+            })
+            .AddTo(this);
     }
 
     void Update()
