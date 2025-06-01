@@ -2,54 +2,75 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public Transform playerTransform; // 👉 拖入 Player 的 Transform
-    public PlateController[] allPlates; // 👉 拖入所有 Plate 的 PlateController
+    public Transform playerTransform;
+    public int foodId = 56;
 
     void Update()
+{
+    if (Input.GetKeyDown(KeyCode.Z))
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        Debug.Log("Z按下，找最近的盤子或碗");
+
+        PlateController nearestPlate = FindNearestPlateOrBowl();
+        if (nearestPlate == null)
         {
-            Debug.Log("Z按下，找最近的盤子");
-
-            PlateController nearestPlate = FindNearestPlate();
-            if (nearestPlate == null)
-            {
-                Debug.Log("找不到盤子！");
-                return;
-            }
-
-            Debug.Log("最近的盤子：" + nearestPlate.name);
-
-            Order top = FindTopIngredientOnPlate(nearestPlate.transform);
-            if (top != null)
-            {
-                Debug.Log("最上層食材：" + top.name);
-                nearestPlate.CheckRecipeFromTop(top);
-            }
-            else
-            {
-                Debug.Log("盤子上沒有食材！");
-            }
-        }
-    }
-
-    private PlateController FindNearestPlate()
-    {
-        float minDistance = float.MaxValue;
-        PlateController closestPlate = null;
-
-        foreach (PlateController plate in allPlates)
-        {
-            float dist = Vector3.Distance(playerTransform.position, plate.transform.position);
-            if (dist < minDistance)
-            {
-                minDistance = dist;
-                closestPlate = plate;
-            }
+            Debug.Log("找不到盤子或碗！");
+            return;
         }
 
-        return closestPlate;
+
+        Order top = FindTopIngredientOnPlate(nearestPlate.transform);
+        if (top != null)
+        {
+            bool isCorrect = nearestPlate.CheckRecipeFromTop(top, foodId);
+            Debug.Log("是否正確組合：" + isCorrect);
+        }
+        else
+        {
+            Debug.Log("上面沒有食材！");
+        }
+    } 
+} 
+
+    private PlateController FindNearestPlateOrBowl()
+{
+    GameObject[] plates = GameObject.FindGameObjectsWithTag("Plate");
+    //GameObject[] bowls = GameObject.FindGameObjectsWithTag("Bowl");
+
+    float minDistance = float.MaxValue;
+    PlateController closest = null;
+
+    foreach (GameObject obj in plates)
+    {
+        TryUpdateClosest(obj, ref minDistance, ref closest);
     }
+
+    //foreach (GameObject obj in bowls)
+    //{
+    //    TryUpdateClosest(obj, ref minDistance, ref closest);
+    //}
+
+    return closest;
+}
+
+
+   private void TryUpdateClosest(GameObject obj, ref float minDistance, ref PlateController closest)
+{
+
+    PlateController controller = obj.GetComponent<PlateController>();
+    if (controller == null)
+    {
+        return;
+    }
+
+    float dist = Vector3.Distance(playerTransform.position, obj.transform.position);
+
+    if (dist < minDistance)
+    {
+        minDistance = dist;
+        closest = controller;
+    }
+}
 
     private Order FindTopIngredientOnPlate(Transform plateTransform)
     {

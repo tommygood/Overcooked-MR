@@ -3,55 +3,87 @@ using UnityEngine;
 
 public class PlateController : MonoBehaviour
 {
-    // 食譜定義（由下往上）
-    private List<string> hamburgerRecipe = new List<string> { "Bread", "Cut_Tomato", "Cheese", "CutLettuce", "Burger_Meat","Bread" };
-    private List<string> sandwichRecipe = new List<string> {  "Toast", "Cheese"};
-    private List<string> tacoRecipe = new List<string> {  "Tortilla", "CutLettuce","Chicken", "Toast"};
-
-    public void CheckRecipeFromTop(Order topIngredient)
+    private Dictionary<int, List<string>> recipes = new Dictionary<int, List<string>>
     {
-        if (topIngredient == null)
-        {
-            Debug.Log("未放置任何食材！");
-            return;
-        }
+        { 51, new List<string> { "Bread", "Cut_Tomato", "Cheese", "CutLettuce", "Burger_Meat", "Bread" } }, // hamburger
+        { 52, new List<string> { "Toast", "Cheese" ,"Chicken","Toast"} },                                   // sandwich
+        { 55, new List<string> { "Tortilla", "CutLettuce", "Chicken", "Toast" } }                            // Taco
+    };
 
-        List<string> currentOrder = new List<string>();
-        Order current = topIngredient;
+    public bool CheckRecipeFromTop(Order topIngredient, int foodId)
+{
+    if (topIngredient == null)
+    {
+        Debug.Log("頂部食材為 null");
+        return false;
+    }
 
-        // 從上往下蒐集堆疊順序
-        while (current != null)
-        {
-            currentOrder.Add(current.tag);
-            current = current.belowIngredient;
-        }
+    // 單層
+    Dictionary<int, string> singleItemRecipes = new Dictionary<int, string>
+    {
+        { 53, "Pumpkin_Soup" },
+        { 54, "Carrot_Soup" },
+        { 56, "Apple" },
+        { 57, "Salad" },
+        { 58, "Large_Steak" }
+    };
 
-        currentOrder.Reverse(); // 由下往上與食譜比較
+    if (singleItemRecipes.ContainsKey(foodId))
+    {
+        string expectedTag = singleItemRecipes[foodId];
+        string actualTag = topIngredient.tag;
 
-        Debug.Log("堆疊順序（由下至上）:");
-        for (int i = 0; i < currentOrder.Count; i++)
+        if (actualTag == expectedTag)
         {
-            Debug.Log($"  {i + 1}. {currentOrder[i]}");
-        }
-
-        if (MatchRecipe(currentOrder, hamburgerRecipe))
-        {
-            Debug.Log("完整漢堡！+100分");
-        }
-        else if (MatchRecipe(currentOrder, sandwichRecipe))
-        {
-            Debug.Log("完整三明治！+100分");
+            return true;
         }
         else
         {
-            Debug.Log("食譜錯誤！0分");
+            return false;
         }
     }
+
+    // 多層
+    if (!recipes.ContainsKey(foodId))
+    {
+        return false;
+    }
+
+    List<string> currentOrder = new List<string>();
+    Order current = topIngredient;
+
+    while (current != null)
+    {
+        currentOrder.Add(current.tag);
+        current = current.belowIngredient;
+    }
+
+    currentOrder.Reverse(); // 由下往上
+
+    Debug.Log($"檢查多層食物 ID {foodId} 的堆疊順序：");
+    for (int i = 0; i < currentOrder.Count; i++)
+    {
+        Debug.Log($"  {i + 1}. {currentOrder[i]}");
+    }
+
+    bool match = MatchRecipe(currentOrder, recipes[foodId]);
+    if (match)
+    {
+        Debug.Log($"符合！(ID={foodId})");
+    }
+    else
+    {
+        Debug.Log($"不符合！(ID={foodId})");
+    }
+
+    return match;
+}
+
+
 
     private bool MatchRecipe(List<string> current, List<string> recipe)
     {
         if (current.Count != recipe.Count) return false;
-
         for (int i = 0; i < recipe.Count; i++)
         {
             if (current[i] != recipe[i])
