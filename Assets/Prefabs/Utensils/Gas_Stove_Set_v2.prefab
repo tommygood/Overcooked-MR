@@ -146,6 +146,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spatula_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 9166189107260957586, guid: 1b2ca760aa549ee4ea223220173121d8, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9166189107260957586, guid: 1b2ca760aa549ee4ea223220173121d8, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -234,6 +242,14 @@ PrefabInstance:
     - target: {fileID: 5014713311112821716, guid: 9094529596b7d5143bb3a8ac25ef07e7, type: 3}
       propertyPath: instanceId
       value: 07c12ad6-8c03-41b9-8642-9bb3d8c09813
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861217445805166663, guid: 9094529596b7d5143bb3a8ac25ef07e7, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861217445805166663, guid: 9094529596b7d5143bb3a8ac25ef07e7, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -335,6 +351,14 @@ PrefabInstance:
     - target: {fileID: 6335595842565298601, guid: 6eecc4d191953574ca4033c91be6072d, type: 3}
       propertyPath: SortKey
       value: 1895418787
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881671823478499716, guid: 6eecc4d191953574ca4033c91be6072d, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881671823478499716, guid: 6eecc4d191953574ca4033c91be6072d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -760,6 +784,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1632554933278117450, guid: 55bbac0fff4f8fa46a8c0a705bfc7ad2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629331118086398115, guid: 55bbac0fff4f8fa46a8c0a705bfc7ad2, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2629331118086398115, guid: 55bbac0fff4f8fa46a8c0a705bfc7ad2, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5201030515385440940, guid: 55bbac0fff4f8fa46a8c0a705bfc7ad2, type: 3}
