@@ -66,7 +66,9 @@ public class RoomManager : NetworkBehaviour
                     // gas stove set
                     PrefabWithTransform gas_stove_set = utensils.Find(x => x.name == "Gas_Stove_Set");
                     var newObject = Runner.Spawn(gas_stove_set.networkPrefabRef);
-                    newObject.transform.SetParent(grandChild.transform);
+                    newObject.transform.position = grandChild.gameObject.transform.position;
+                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+                    // newObject.transform.SetParent(grandChild.transform);
 
                     // The position of the couch is in the center
                     Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
@@ -84,7 +86,9 @@ public class RoomManager : NetworkBehaviour
                     // cutting plate
                     PrefabWithTransform cutting_plate = utensils.Find(x => x.name == "Cutting_Plate");
                     var newObject = Runner.Spawn(cutting_plate.networkPrefabRef);
-                    newObject.transform.SetParent(grandChild.transform);
+                    newObject.transform.position = grandChild.gameObject.transform.position;
+                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += cutting_plate.position;
                     newObject.transform.Rotate(cutting_plate.rotation.eulerAngles);
@@ -97,7 +101,9 @@ public class RoomManager : NetworkBehaviour
                     // sink
                     PrefabWithTransform sink = utensils.Find(x => x.name == "Sink");
                     var newObject = Runner.Spawn(sink.networkPrefabRef);
-                    newObject.transform.SetParent(grandChild.transform);
+                    newObject.transform.position = grandChild.gameObject.transform.position;
+                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += sink.position;
                     newObject.transform.Rotate(sink.rotation.eulerAngles);
@@ -109,7 +115,9 @@ public class RoomManager : NetworkBehaviour
                     // casher
                     PrefabWithTransform casher = utensils.Find(x => x.name == "Casher");
                     var newObject = Runner.Spawn(casher.networkPrefabRef);
-                    newObject.transform.SetParent(grandChild.transform);
+                    newObject.transform.position = grandChild.gameObject.transform.position;
+                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+                    // newObject.transform.SetParent(grandChild.transform);
 
                     // The position of the storage is in the center
                     Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
@@ -128,7 +136,9 @@ public class RoomManager : NetworkBehaviour
                     // ingredients
                     PrefabWithTransform ingredients = utensils.Find(x => x.name == "Ingredients");
                     var newObject = Runner.Spawn(ingredients.networkPrefabRef);
-                    newObject.transform.SetParent(grandChild.transform);
+                    newObject.transform.position = grandChild.gameObject.transform.position;
+                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += ingredients.position;
                     newObject.transform.Rotate(ingredients.rotation.eulerAngles);
@@ -140,7 +150,9 @@ public class RoomManager : NetworkBehaviour
                     // pole
                     PrefabWithTransform pole = utensils.Find(x => x.name == "Pole");
                     var newObject = Runner.Spawn(pole.networkPrefabRef);
-                    newObject.transform.SetParent(grandChild.transform);
+                    newObject.transform.position = grandChild.gameObject.transform.position;
+                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += pole.position;
                     newObject.transform.Rotate(pole.rotation.eulerAngles);
@@ -152,7 +164,9 @@ public class RoomManager : NetworkBehaviour
                     // Place a delivery ring on the table
                     PrefabWithTransform delivery_ring = utensils.Find(x => x.name == "Delivery_Ring");
                     var newObject = Runner.Spawn(delivery_ring.networkPrefabRef);
-                    newObject.transform.SetParent(grandChild.transform);
+                    newObject.transform.position = grandChild.gameObject.transform.position;
+                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += delivery_ring.position;
                     newObject.transform.Rotate(delivery_ring.rotation.eulerAngles);

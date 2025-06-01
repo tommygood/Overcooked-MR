@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5201030515385440940}
   - component: {fileID: 8536064980415953215}
   - component: {fileID: 1116463842763752394}
-  - component: {fileID: 7439795728249400021}
   m_Layer: 0
   m_Name: Pot_v2
   m_TagString: Untagged
@@ -84,8 +83,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -157,20 +156,6 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
---- !u!114 &7439795728249400021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5592213156007190801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: 6eecc4d191953574ca4033c91be6072d
 --- !u!1 &8289855050989697159
 GameObject:
   m_ObjectHideFlags: 0
