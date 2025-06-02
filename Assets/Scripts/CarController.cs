@@ -85,6 +85,9 @@ public class CarController : MonoBehaviour
                             carPosition = grandChild.position + position;
                             carRotation = grandChild.rotation * rotation;
                             car.transform.localScale *= scale;
+
+                            car.transform.position = carPosition;
+                            car.transform.rotation = carRotation;
                         }
                     }
                 }
