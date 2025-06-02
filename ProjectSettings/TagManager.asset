@@ -27,6 +27,7 @@ TagManager:
   - Stove
   - Water_T
   - Bowl
+  - Turkey
   layers:
   - Default
   - TransparentFX
