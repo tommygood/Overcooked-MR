@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028301, g: 0.22571309, b: 0.30692127, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2720,7 +2720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cutter_duration: 5
-  cut_num_need: 5
+  cut_num_need: 1
+  cut_delay: 2
 --- !u!1 &137709810
 GameObject:
   m_ObjectHideFlags: 0
@@ -17586,6 +17587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutter_duration: 5
   cut_num_need: 5
+  cut_delay: 2
 --- !u!114 &1154213321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22092,6 +22094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutter_duration: 5
   cut_num_need: 5
+  cut_delay: 2
 --- !u!1 &1425188209
 GameObject:
   m_ObjectHideFlags: 0
@@ -22258,6 +22261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutter_duration: 5
   cut_num_need: 5
+  cut_delay: 2
 --- !u!1 &1429587767
 GameObject:
   m_ObjectHideFlags: 0
@@ -22672,8 +22676,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f729b916775664b980d6908f91ed80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cutter_duration: 5
-  cut_num_need: 5
+  cutter_duration: 3
+  cut_num_need: 3
+  cut_delay: 2
 --- !u!1 &1451372263
 GameObject:
   m_ObjectHideFlags: 0
@@ -23770,6 +23775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutter_duration: 5
   cut_num_need: 5
+  cut_delay: 2
 --- !u!1 &1496211440
 GameObject:
   m_ObjectHideFlags: 0
@@ -27017,6 +27023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutter_duration: 5
   cut_num_need: 5
+  cut_delay: 2
 --- !u!1 &1727799651
 GameObject:
   m_ObjectHideFlags: 0

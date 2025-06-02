@@ -262,14 +262,13 @@ GameObject:
   - component: {fileID: 3417215701127492674}
   - component: {fileID: 2035934264901987322}
   - component: {fileID: 1818304306601240611}
-  - component: {fileID: 317837069279775981}
   m_Layer: 0
   m_Name: Steak_cut
   m_TagString: Steak_cut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7198018274821031874
 Transform:
   m_ObjectHideFlags: 0
@@ -404,17 +403,3 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
---- !u!114 &317837069279775981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7107179580374430478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: d1b33362550184d8ea37b827d562ace7
