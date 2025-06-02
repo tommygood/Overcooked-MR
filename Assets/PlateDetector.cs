@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Networking;
 
 public class PlateDetector : MonoBehaviour
 {
     public PhotoShotManager photoTaker; // Assign this in the Inspector
     public string uploadUrl = "https://your-api-endpoint.com/upload"; // Replace with your actual API URL
+
+    public string autoGradeUrl = "https://mixed-restaurant.bogay.me/api/cartItem/auto-grade"; // Replace with your actual API URL
 
     private HashSet<string> sentFilenames = new HashSet<string>();
 
@@ -21,12 +24,18 @@ public class PlateDetector : MonoBehaviour
                 string filename = null;
 
                 // Try to get TMP UGUI first
+                int food_id = -1;
+                int table_id = -1;
+                int user_id = -1;
                 TextMeshProUGUI tmp = other.GetComponentInChildren<TextMeshProUGUI>();
                 if (tmp != null)
                 {
                     (int tableId, int foodId, int userId) = ExtractIds(tmp.text);
                     Debug.Log("Plate Text (UI TMP): " + tmp.text);
                     filename = $"order_{foodId}_{userId}_{tableId}";
+                    food_id = foodId;
+                    table_id = tableId;
+                    user_id = userId;
                 }
                 else
                 {
@@ -36,11 +45,20 @@ public class PlateDetector : MonoBehaviour
                     {
                         (int tableId, int foodId, int userId) = ExtractIds(tmp3D.text);
                         filename = $"order_{foodId}_{userId}_{tableId}";
+                        food_id = foodId;
+                        table_id = tableId;
+                        user_id = userId;
                     }
                     else
                     {
                         Debug.LogWarning("No TMP or TMPUGUI text found under Plate.");
                     }
+                }
+
+                if (food_id == -1 || table_id == -1 || user_id == -1)
+                {
+                    Debug.LogWarning("Failed to extract one of ID from the text!");
+                    return;
                 }
 
                 // If filename was successfully parsed and not already sent
@@ -56,6 +74,25 @@ public class PlateDetector : MonoBehaviour
                         return;
                     }
                     StartCoroutine(CleanPlateAfterDelay(nearestPlate, cleanDelay));
+                    PlateController plate_controller = nearestPlate.GetComponent<PlateController>();
+                    Debug.Log("最近的盤子：" + nearestPlate.name);
+                    Order top = FindTopIngredientOnPlate(nearestPlate.transform);
+                    if (top == null)
+                    {
+                        Debug.LogWarning("No top ingredient found on the plate!");
+                        return;
+                    }
+                    bool isCorrect = plate_controller.CheckRecipeFromTop(top, food_id);
+                    if (isCorrect)
+                    {
+                        Debug.Log("PP組合正確！");
+                        StartCoroutine(SendAutoGradeRequest(autoGradeUrl, food_id.ToString(), user_id.ToString(), table_id.ToString(), "1"));
+                    }
+                    else
+                    {
+                        Debug.Log("PP組合錯誤！");
+                    }
+                    Debug.Log("PP是否正確組合：" + isCorrect);
                 }
             }
             else
@@ -63,6 +100,56 @@ public class PlateDetector : MonoBehaviour
                 Debug.LogWarning("PhotoTaker reference not set!");
             }
         }
+    }
+
+    private IEnumerator SendAutoGradeRequest(string url, string foodId, string userId, string tableId, string autoGrade, System.Action<string> onSuccess = null, System.Action<string> onError = null)
+    {
+        UnityWebRequest request = UnityWebRequest.Put(url, ""); // Body can be empty since you're sending data via headers
+
+        // Set custom headers
+        request.SetRequestHeader("auto-grade", autoGrade);
+        request.SetRequestHeader("food-id", foodId);
+        request.SetRequestHeader("user-id", userId);
+        request.SetRequestHeader("table-id", tableId);
+
+        // Send the request and wait for response
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("PUT request succeeded: " + request.downloadHandler.text);
+            onSuccess?.Invoke(request.downloadHandler.text);
+        }
+        else
+        {
+            Debug.LogError("PUT request failed: " + request.error);
+            onError?.Invoke(request.error);
+        }
+    }
+
+    private Order FindTopIngredientOnPlate(Transform plateTransform)
+    {
+        Vector3 center = plateTransform.position + Vector3.up * 0.5f;
+        Collider[] colliders = Physics.OverlapBox(center, new Vector3(0.5f, 1f, 0.5f));
+
+        Order top = null;
+        float highestY = float.MinValue;
+
+        foreach (Collider col in colliders)
+        {
+            Order ord = col.GetComponent<Order>();
+            if (ord != null)
+            {
+                float y = col.transform.position.y;
+                if (y > highestY)
+                {
+                    highestY = y;
+                    top = ord;
+                }
+            }
+        }
+
+        return top;
     }
 
     private IEnumerator CleanPlateAfterDelay(GameObject plate, float delay)
