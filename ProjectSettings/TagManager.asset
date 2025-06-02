@@ -26,12 +26,16 @@ TagManager:
   - Water_T
   - Bowl
   - Turkey
-  - Apple_cut
-  - Carrot_cut
-  - Tomato_cut
-  - Turkey_cut
-  - Steak_cut
-  - Lettuce_cut
+  - Ingredient
+  - BowlWithWater
+  - Spoon
+  - Cookable_Beef
+  - Trash
+  - Cooked_Beef
+  - Cookable_Pork
+  - Cookable_Chicken
+  - Cooked_Chicken
+  - Cooked_Pork
   layers:
   - Default
   - TransparentFX
