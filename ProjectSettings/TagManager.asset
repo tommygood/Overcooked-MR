@@ -18,8 +18,6 @@ TagManager:
   - Steak
   - Rice
   - Lettuce
-  - CutLettuce
-  - Cut_Tomato
   - Pole
   - Plate
   - TurkeyBreastChopped
@@ -28,6 +26,12 @@ TagManager:
   - Water_T
   - Bowl
   - Turkey
+  - Apple_cut
+  - Carrot_cut
+  - Tomato_cut
+  - Turkey_cut
+  - Steak_cut
+  - Lettuce_cut
   layers:
   - Default
   - TransparentFX
