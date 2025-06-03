@@ -15,6 +15,8 @@ public class PlateDetector : MonoBehaviour
 
     public float cleanDelay = 5f; // Delay before cleaning the plate
 
+    private GameObject[] on_plate_ingredients;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Order"))
@@ -93,6 +95,7 @@ public class PlateDetector : MonoBehaviour
                         Debug.Log("PP組合錯誤！");
                     }
                     Debug.Log("PP是否正確組合：" + isCorrect);
+                    StartCoroutine(DeactivateIngredientsAfterDelay(5f));
                 }
             }
             else
@@ -134,6 +137,7 @@ public class PlateDetector : MonoBehaviour
 
         Order top = null;
         float highestY = float.MinValue;
+        List<GameObject> topIngredients = new List<GameObject>();
 
         foreach (Collider col in colliders)
         {
@@ -147,9 +151,31 @@ public class PlateDetector : MonoBehaviour
                     top = ord;
                 }
             }
+
+            if (col.gameObject != null)
+            {
+                topIngredients.Add(col.gameObject);
+            }
         }
+        on_plate_ingredients = topIngredients.ToArray();
 
         return top;
+    }
+
+    private IEnumerator DeactivateIngredientsAfterDelay(float delay)
+    {
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(delay);
+
+        // Set each GameObject in the ingredients array to inactive
+        foreach (GameObject ingredient in on_plate_ingredients)
+        {
+            if (ingredient != null)
+            {
+                if (ingredient.tag != "Plate")
+                ingredient.SetActive(false);
+            }
+        }
     }
 
     private IEnumerator CleanPlateAfterDelay(GameObject plate, float delay)

@@ -18762,7 +18762,11 @@ MonoBehaviour:
   menuPanel: {fileID: 1928279720}
   startButton: {fileID: 1015576122}
   gameStarted: 0
+  total_game_time: 1
+  currentGameTime: 0
   orderController: {fileID: 202234911}
+  gameOverPanel: {fileID: 0}
+  gameOverText: {fileID: 0}
 --- !u!4 &923912394
 Transform:
   m_ObjectHideFlags: 0

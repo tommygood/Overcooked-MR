@@ -117,11 +117,16 @@ public class OrderController : MonoBehaviour
     }
   }
 
-  public void StartOrdering()
+  public IEnumerator StartOrdering()
   {
-    StartCoroutine(FetchAndGenerateFoodList());
-    StartCoroutine(AutoGenerateOrder());
+        StartCoroutine(AutoGenerateOrder());
+
+        // Wait for 5 seconds
+        yield return new WaitForSeconds(5f);
+        StartCoroutine(FetchAndGenerateFoodList());
   }
+
+
 
     public IEnumerator AutoGenerateOrder()
   {
