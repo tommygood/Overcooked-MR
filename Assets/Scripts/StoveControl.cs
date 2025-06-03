@@ -10,12 +10,14 @@ public class StoveControl : NetworkBehaviour
     [Networked]
     private NetworkObject currentFire { get; set; }
     [Networked]
+    [OnChangedRender(nameof(onFireChanged))]
     private bool isOnFire { get; set; } = false;
     [Networked]
     public bool canMove { get; set; } = true;
     [Networked]
     private TickTimer waterTimer { get; set; }
 
+    private AudioSource fireAudioSource;
 
     [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
     public void Rpc_StartFire()
@@ -91,5 +93,35 @@ public class StoveControl : NetworkBehaviour
         isOnFire = false;
         canMove = true;
         this.waterTimer = TickTimer.None;
+    }
+
+    private void onFireChanged()
+    {
+        if (isOnFire)
+        {
+            SoundManager.Instance.PlaySFX(SoundRegistry.SoundID.Light, transform.position);
+            if (this.fireAudioSource != null)
+            {
+                Debug.LogWarning("火焰音效已經存在，將停止之前的音效");
+                SoundManager.Instance.StopLoopingSFX(this.fireAudioSource);
+                this.fireAudioSource = null;
+            }
+
+            this.fireAudioSource = SoundManager.Instance.PlayLoopingSFX(
+                SoundRegistry.SoundID.Burning,
+                transform.position);
+        }
+        else
+        {
+            if (this.fireAudioSource == null)
+            {
+                Debug.LogWarning("火焰音效不存在，無法停止");
+                return;
+            }
+
+            Debug.Log("停止火焰音效");
+            SoundManager.Instance.StopLoopingSFX(this.fireAudioSource);
+            this.fireAudioSource = null;
+        }
     }
 }
