@@ -5,9 +5,9 @@ public class PlateController : MonoBehaviour
 {
     private Dictionary<int, List<string>> recipes = new Dictionary<int, List<string>>
     {
-        { 50, new List<string> { "Bread", "Cut_Tomato", "Cheese", "CutLettuce", "Burger_Meat", "Bread" } }, // hamburger
-        { 52, new List<string> { "Toast", "Cheese" ,"Chicken","Toast"} },                                   // sandwich
-        { 55, new List<string> { "Tortilla", "CutLettuce", "Chicken", "Toast" } },                            // Taco
+        { 50, new List<string> { "Bread", "Tomato_cut", "Cheese", "Lettuce_cut", "Burger_Meat", "Bread" } }, // hamburger
+        { 52, new List<string> { "Toast", "Cheese" ,"Tuekey_cut","Toast"} },                                   // sandwich
+        { 55, new List<string> { "Tortilla", "CutLettuce", "Steak_cut"} },                            // Taco
         { 51, new List<string> { "Toast", "Cheese" } }                           // Sushi
     };
 
