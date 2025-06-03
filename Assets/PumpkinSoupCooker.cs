@@ -27,8 +27,6 @@ public class PumpkinSoupCooker : MonoBehaviour
     private bool boilSoundPlayed = false;
     private AudioSource audioSource;
 
-    private enum SoupType { None, Pumpkin, Carrot }
-    private SoupType currentSoupType = SoupType.None;
     
     void Start()
     {

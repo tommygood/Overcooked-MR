@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 7726847420066426540}
   - component: {fileID: 7986010656034943921}
   - component: {fileID: 8416771145607231096}
-  - component: {fileID: 2280212458102453912}
   m_Layer: 0
   m_Name: Pumpkin_v2
-  m_TagString: Untagged
+  m_TagString: Pumpkin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,20 +156,6 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
---- !u!114 &2280212458102453912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 581636012352644288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: e18b4143d6cee86479fc2b087db10bd4
 --- !u!1 &5679689014348922436
 GameObject:
   m_ObjectHideFlags: 0

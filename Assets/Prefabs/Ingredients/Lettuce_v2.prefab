@@ -156,10 +156,9 @@ GameObject:
   - component: {fileID: 6004261669203664452}
   - component: {fileID: 2981075088903694580}
   - component: {fileID: 8260949197879753576}
-  - component: {fileID: 3572718369159253987}
   m_Layer: 0
   m_Name: Lettuce_v2
-  m_TagString: Untagged
+  m_TagString: Lettuce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,20 +297,6 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
---- !u!114 &3572718369159253987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8839388667348299921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: a1fb0d91596a9984b95e8ee83c8c3efc
 --- !u!1001 &2066740132343310250
 PrefabInstance:
   m_ObjectHideFlags: 0

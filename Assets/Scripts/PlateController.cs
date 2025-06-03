@@ -24,9 +24,9 @@ public class PlateController : MonoBehaviour
     {
         { 53, "Pumpkin_Soup" },
         { 54, "Carrot_Soup" },
-        { 56, "Apple" },
+        { 56, "Apple_cut" },
         { 57, "Salad" },
-        { 58, "Large_Steak" }
+        { 58, "Cooked_Steak" }
     };
 
     if (singleItemRecipes.ContainsKey(foodId))

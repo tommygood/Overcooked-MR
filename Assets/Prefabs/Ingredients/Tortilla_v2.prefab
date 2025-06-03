@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 8424672404351224620}
   - component: {fileID: 1591453714803026342}
   - component: {fileID: 7247749783978407122}
-  - component: {fileID: 543679424066863744}
   m_Layer: 0
   m_Name: Tortilla_v2
-  m_TagString: Untagged
+  m_TagString: Tortilla
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,20 +156,6 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
---- !u!114 &543679424066863744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7099411500439869951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: 9c228dcea9bbbf74686dd4bbe38a9c18
 --- !u!1 &8221662481079113730
 GameObject:
   m_ObjectHideFlags: 0

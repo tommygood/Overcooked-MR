@@ -15,10 +15,9 @@ GameObject:
   - component: {fileID: 3195290617879405008}
   - component: {fileID: 7488134723620070326}
   - component: {fileID: 7277621604294011556}
-  - component: {fileID: 6621612107685810232}
   m_Layer: 0
   m_Name: Hamburger Bun_v2
-  m_TagString: Untagged
+  m_TagString: Bread
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,20 +156,6 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
---- !u!114 &6621612107685810232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775308633624476778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: f700e79024def774eb93810960392e04
 --- !u!1 &1268399419711338512
 GameObject:
   m_ObjectHideFlags: 0
