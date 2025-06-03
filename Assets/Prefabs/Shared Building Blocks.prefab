@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f547fe18-d477-46ec-bdf5-7208df19cb98
-  instanceId: 030b838f-d954-429a-b94c-b0e13522c6c6
+  instanceId: 80fa0176-e20c-485f-96e5-954755643d0e
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: a383f5ea-3856-4c23-a11c-7fdbb9408035
-  instanceId: 010c5d11-8a88-47b1-84d7-d3514be6c315
+  instanceId: c50fd875-9324-42bb-bf37-281dbe8c1996
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: c5bea02f-8079-4142-87f9-56da5993f861
-  instanceId: 2539bfd4-bcf6-4505-93f4-d0ba1c6d32b2
+  instanceId: cb5c823a-d9d7-484e-b535-51dc3419038d
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 9374d03f-9ea4-4c9b-bfce-18e3f81ba31e
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 975428dc-db04-4e43-be4a-232f192cd3eb
-  instanceId: 104397f3-f0e4-4178-aafc-44e7859a0484
+  instanceId: d51d290b-05f6-4168-8bcb-d100812f485c
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 1d8db162-54f6-43df-b4ef-b499df1f6769
-  instanceId: 18da69d4-e36b-4b66-9508-971ca6f1e3d4
+  instanceId: 603d5c3a-f81d-4cd0-9d64-2445d02e6e0a
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 676820bd-24bb-4da2-9785-74ad32626885
@@ -671,6 +671,70 @@ MonoBehaviour:
   ClientPhysicsSimulation: 3
   DeltaTimeMultiplier: 1
   SetUnityFixedTimestep: 0
+--- !u!1 &3556062426350282594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2950519777509844018}
+  - component: {fileID: 2203843273955611453}
+  - component: {fileID: 9089849400526776346}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2950519777509844018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556062426350282594}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1414670796391617524}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2203843273955611453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556062426350282594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae088a4ac6e17fc4aaf335938c02f6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundRegistry: {fileID: 11400000, guid: 73ab792330b4a33498bb5624ef6e1747, type: 2}
+  MasterVolume: 1
+  MusicVolume: 1
+  SfxVolume: 1
+  UiSfxVolume: 1
+--- !u!114 &9089849400526776346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3556062426350282594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577838ee285e6904783069bff9053a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSourcePrefab: {fileID: 882399963657133013, guid: dffdb8fbb1e364c4ab7755a7911d4824, type: 3}
+  _poolSize: 10
 --- !u!1 &3984999655435179623
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +775,7 @@ Transform:
   - {fileID: 708640063935053007}
   - {fileID: 8213849862794124356}
   - {fileID: 4429624685387010040}
+  - {fileID: 2950519777509844018}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4260831910104748037
@@ -823,7 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f0540b20-dfd6-420e-b20d-c270f88dc77e
-  instanceId: 5a3fe6da-910a-4bee-a3a9-d3595e2a6eaa
+  instanceId: 571acfc1-5448-4258-ab0b-8fe12093fe7f
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -942,7 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 1f4566e8-f4ba-46d2-9e47-3748c9869766
-  instanceId: 0376d49c-42b2-4bbd-9ab0-75dc95fcbb67
+  instanceId: b3027883-1c00-4835-833e-f1ff8786da5a
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -1120,7 +1185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 9141594f-eab4-43f9-b05e-17f2f40db586
-  instanceId: f4c6246b-91de-48aa-8964-708264255384
+  instanceId: 5314549c-bbd0-4fe8-8772-8342f6088884
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 871efd9e-7c98-49a6-bd84-bf6663c44e3f
@@ -1186,7 +1251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f308c8f0-7a4b-4cd5-88be-c15b6399f823
-  instanceId: 01dddd82-2636-46cc-92e2-73bb9953d8b7
+  instanceId: 2b78cc96-fe55-4b63-83de-d5cf095e57e8
   version: 2
   installationRoutineCheckpoint:
     _installationRoutineId: 4ec10206-4327-44cd-ae75-ff2b80d3422e
@@ -1270,7 +1335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 80aa2eb2-af2f-40a9-ad9e-18044ce65bee
-  instanceId: acfe731f-baf8-43a3-9d07-a1d2c2b2946f
+  instanceId: 4fac15bf-10c5-4408-89e4-52d1c10e9bf3
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 

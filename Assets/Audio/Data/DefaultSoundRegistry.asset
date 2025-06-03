@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1983ce7c7ae25b442beb4d6147ded263, type: 3}
+  m_Name: DefaultSoundRegistry
+  m_EditorClassIdentifier: 
+  SoundEntries:
+  - ID: 1
+    Event: {fileID: 11400000, guid: cb473c74df82b374589de38878cb73d1, type: 2}
+  - ID: 2
+    Event: {fileID: 11400000, guid: 369c30f8958991542b36c3e0d7091579, type: 2}
+  - ID: 4
+    Event: {fileID: 11400000, guid: bb3808267d9b0ff40bd24943a98d31a5, type: 2}
+  - ID: 4
+    Event: {fileID: 11400000, guid: bb3808267d9b0ff40bd24943a98d31a5, type: 2}
+  - ID: 5
+    Event: {fileID: 11400000, guid: c894b42ab4e957444b07f01bbd89202c, type: 2}
+  - ID: 6
+    Event: {fileID: 11400000, guid: 2d36afd4bc57e4243912ebc5ee066534, type: 2}
+  - ID: 9
+    Event: {fileID: 11400000, guid: a7ed6da1c89d61146af590a4005360e4, type: 2}
+  - ID: 7
+    Event: {fileID: 11400000, guid: 21f9c21970d617b49852580a03f713f6, type: 2}
+  - ID: 8
+    Event: {fileID: 11400000, guid: d516ece90fae4d145b7d04a8b76f4e84, type: 2}
