@@ -121,14 +121,13 @@ GameObject:
   - component: {fileID: 1583099294517979463}
   - component: {fileID: 3253050528477355991}
   - component: {fileID: 3856942624623586119}
-  - component: {fileID: 6278297085198918779}
   m_Layer: 0
   m_Name: Lettuce_cut
   m_TagString: Lettuce_cut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4624875042296541820
 Transform:
   m_ObjectHideFlags: 0
@@ -263,20 +262,6 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
---- !u!114 &6278297085198918779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6241606389648322960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: 49cfc5b01311947fba2cb721872ccda0
 --- !u!1 &7261524136911755318
 GameObject:
   m_ObjectHideFlags: 0

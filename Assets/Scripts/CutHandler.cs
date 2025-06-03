@@ -22,8 +22,11 @@ public class CutHandler : MonoBehaviour
     public float cutter_duration = 5f;
     private float cutter_duration_passed = 0f;
 
-    public int cut_num_need = 5;
+    public int cut_num_need = 1;
     private int cut_num_current = 0;
+
+    public int cut_delay = 2; // delay for next cut detection
+    private float cut_delay_passed = 2f;
 
     //[Header("Cut Mapping Settings")]
     //public List<CutMapping> cutMappings;
@@ -37,16 +40,22 @@ public class CutHandler : MonoBehaviour
         {
             Debug.LogError("LeftHandAnchor not found! Make sure it's named correctly in the scene.");
         }
-        cutMappings.Add(new CutMapping("Apple", Resources.Load<GameObject>("Apple_cut")));
-        cutMappings.Add(new CutMapping("Carrot", Resources.Load<GameObject>("Carrot_cut")));
-        cutMappings.Add(new CutMapping("Lettuce", Resources.Load<GameObject>("Lettuce_cut")));
-        cutMappings.Add(new CutMapping("Steak", Resources.Load<GameObject>("Steak_cut")));
-        cutMappings.Add(new CutMapping("Turkey", Resources.Load<GameObject>("Turkey_cut")));
-        cutMappings.Add(new CutMapping("Tomato", Resources.Load<GameObject>("Tomato_cut")));
+        cutMappings.Add(new CutMapping("Apple", Resources.Load<GameObject>("Prefabs/Apple_cut")));
+        cutMappings.Add(new CutMapping("Carrot", Resources.Load<GameObject>("Prefabs/Carrot_cut")));
+        cutMappings.Add(new CutMapping("Lettuce", Resources.Load<GameObject>("Prefabs/Lettuce_cut")));
+        cutMappings.Add(new CutMapping("Steak", Resources.Load<GameObject>("Prefabs/Steak_cut")));
+        cutMappings.Add(new CutMapping("Turkey", Resources.Load<GameObject>("Prefabs/Turkey_cut")));
+        cutMappings.Add(new CutMapping("Tomato", Resources.Load<GameObject>("Prefabs/Tomato_cut")));
     }
 
     void Update()
-    {   
+    {
+        if (cut_delay_passed < cut_delay)
+        {
+            cut_delay_passed += Time.deltaTime;
+            return; // Wait for the delay before checking gestures
+        }
+
         // If for some reason it's destroyed or not yet found, try again
         if (LeftHandAnchor == null)
         {
@@ -75,6 +84,11 @@ public class CutHandler : MonoBehaviour
             {
                 is_cutter_gesture = false;
                 cutter_duration_passed = 0f;
+            }
+
+            if (cut_delay_passed >= cut_delay)
+            {
+                cut_delay_passed = 0f; // Reset delay after gesture detected
             }
         }
     }
@@ -132,6 +146,7 @@ public class CutHandler : MonoBehaviour
         if (cutPrefab != null)
         {
             Instantiate(cutPrefab, transform.position, transform.rotation);
+            Debug.Log("replace with cutPrefab: " + cutPrefab.name);
         }
         else
         {
@@ -139,6 +154,7 @@ public class CutHandler : MonoBehaviour
         }
 
         Destroy(gameObject);
+        Debug.Log("CutHandler: Object replaced with cut prefab and original destroyed.");
     }
 
     private GameObject GetCutPrefabByName()
@@ -147,6 +163,7 @@ public class CutHandler : MonoBehaviour
         {
             if (gameObject.name.ToLower().Contains(mapping.originalName.ToLower()))
             {
+                Debug.Log($"Found cut mapping for {gameObject.name}: {mapping.cutPrefab.name}");
                 return mapping.cutPrefab;
             }
         }
