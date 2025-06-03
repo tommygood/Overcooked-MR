@@ -8,6 +8,7 @@ public class IngredientSpawner : NetworkBehaviour
     [System.Serializable]
     private class IngredientSpawnData
     {
+        public string name;
         public Vector3 position;
         public Vector3 rotationEuler;
         public Vector3 scale;
@@ -15,7 +16,25 @@ public class IngredientSpawner : NetworkBehaviour
     }
 
     [SerializeField]
-    private IngredientSpawnData[] ingredientTransformData;
+    private List<IngredientSpawnData> ingredientTransformData = new List<IngredientSpawnData>();
+
+    private void CollectData()
+    {
+        ingredientTransformData.Clear();
+
+        foreach (Transform child in transform)
+        {
+            IngredientSpawnData newData = new IngredientSpawnData
+            {
+                name = child.gameObject.name,
+                position = child.localPosition,
+                rotationEuler = child.localRotation.eulerAngles,
+                scale = child.localScale
+            };
+
+            ingredientTransformData.Add(newData);
+        }
+    }
 
     public void SpawnChildObject()
     {
@@ -30,6 +49,10 @@ public class IngredientSpawner : NetworkBehaviour
             ingredientObject.transform.position += ingredientData.position;
             ingredientObject.transform.rotation *= Quaternion.Euler(ingredientData.rotationEuler);
             ingredientObject.transform.localScale = Vector3.Scale(ingredientObject.transform.localScale, ingredientData.scale);
-        }
+            }
+    }
+    public void Start()
+    {
+        // CollectData();
     }
 }

@@ -550,12 +550,40 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[7].position.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[7].rotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[7].rotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[7].rotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[7].rotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[5].networkPrefabRef.RawGuidValue.Array.data[0]
+      value: -1965935351892419244
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[5].networkPrefabRef.RawGuidValue.Array.data[1]
+      value: -7959945966465197702
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[7].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: -6562707098043922211
+      value: 4948110185735000760
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[7].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: -3861701143273997560
+      value: -866018675142995717
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[10].networkPrefabRef.RawGuidValue.Array.data[0]

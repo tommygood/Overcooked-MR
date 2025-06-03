@@ -68,7 +68,6 @@ public class RoomManager : NetworkBehaviour
                     var newObject = Runner.Spawn(gas_stove_set.networkPrefabRef);
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
-                    // newObject.transform.SetParent(grandChild.transform);
 
                     // The position of the couch is in the center
                     Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
@@ -94,7 +93,6 @@ public class RoomManager : NetworkBehaviour
                     var newObject = Runner.Spawn(cutting_plate.networkPrefabRef);
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
-                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += cutting_plate.position;
                     newObject.transform.Rotate(cutting_plate.rotation.eulerAngles);
@@ -109,7 +107,6 @@ public class RoomManager : NetworkBehaviour
                     var newObject = Runner.Spawn(sink.networkPrefabRef);
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
-                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += sink.position;
                     newObject.transform.Rotate(sink.rotation.eulerAngles);
@@ -123,7 +120,6 @@ public class RoomManager : NetworkBehaviour
                     var newObject = Runner.Spawn(casher.networkPrefabRef);
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
-                    // newObject.transform.SetParent(grandChild.transform);
 
                     // The position of the storage is in the center
                     Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
@@ -144,11 +140,17 @@ public class RoomManager : NetworkBehaviour
                     var newObject = Runner.Spawn(ingredients.networkPrefabRef);
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
-                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += ingredients.position;
                     newObject.transform.Rotate(ingredients.rotation.eulerAngles);
                     newObject.transform.localScale *= ingredients.scale;
+
+                    // HACK
+                    if (newObject.TryGetComponent(out IngredientSpawner ingredientSpawner))
+                    {
+                        ingredientSpawner.SpawnChildObject();
+                    }
+
                     Debug.Log("[Debug] Ingredients spawned");
                 }
                 if (grandChild.gameObject.name == "FLOOR_EffectMesh")
@@ -158,7 +160,6 @@ public class RoomManager : NetworkBehaviour
                     var newObject = Runner.Spawn(pole.networkPrefabRef);
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
-                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += pole.position;
                     newObject.transform.Rotate(pole.rotation.eulerAngles);
@@ -172,7 +173,6 @@ public class RoomManager : NetworkBehaviour
                     var newObject = Runner.Spawn(delivery_ring.networkPrefabRef);
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
-                    // newObject.transform.SetParent(grandChild.transform);
 
                     newObject.transform.position += delivery_ring.position;
                     newObject.transform.Rotate(delivery_ring.rotation.eulerAngles);

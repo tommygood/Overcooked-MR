@@ -346,11 +346,38 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: Flags
+      value: 262145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: SortKey
+      value: 331527434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: NetworkedBehaviours.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 1199802768}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+--- !u!114 &1199802768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8935095007432578709, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+  m_PrefabInstance: {fileID: 1199802767}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982853e400aa945f5a3d95de7aff14d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1708456851
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5377836329353887490, guid: 3243d0c285e16be45b0e6d0fb59cca3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8176417671946333448, guid: 3243d0c285e16be45b0e6d0fb59cca3f, type: 3}
       propertyPath: m_Name
       value: CarController
@@ -589,10 +620,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5377836329353887490, guid: 3243d0c285e16be45b0e6d0fb59cca3f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3243d0c285e16be45b0e6d0fb59cca3f, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
