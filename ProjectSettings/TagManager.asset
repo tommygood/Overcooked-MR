@@ -43,6 +43,7 @@ TagManager:
   - Cookable_Steakcut
   - Cookable_Turkeycut
   - Cookable_Steak
+  - Cookable_Burgermeat
   layers:
   - Default
   - TransparentFX

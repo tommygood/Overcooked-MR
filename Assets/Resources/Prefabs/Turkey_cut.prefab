@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4236850345148483574}
   m_Layer: 0
   m_Name: Turkey_cut
-  m_TagString: Turkey_cut
+  m_TagString: Cookable_Turkeycut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

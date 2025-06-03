@@ -264,7 +264,7 @@ GameObject:
   - component: {fileID: 1818304306601240611}
   m_Layer: 0
   m_Name: Steak_cut
-  m_TagString: Steak_cut
+  m_TagString: Cookable_Steakcut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
