@@ -21,7 +21,18 @@ public class GameManager : MonoBehaviour
 
         Order top = FindTopIngredientOnPlate(nearestPlate.transform);
         if (top != null)
-        {
+        {   
+            // 印出堆疊內容
+            Debug.Log("堆疊內容：");
+            Order current = top;
+            int level = 1;
+            while (current != null)
+            {
+                Debug.Log($"  {level}：{current.tag}");
+                current = current.belowIngredient;
+                level++;
+            }
+
             bool isCorrect = nearestPlate.CheckRecipeFromTop(top, foodId);
             Debug.Log("是否正確組合：" + isCorrect);
         }

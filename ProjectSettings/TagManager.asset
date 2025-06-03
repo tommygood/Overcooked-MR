@@ -36,6 +36,13 @@ TagManager:
   - Cookable_Chicken
   - Cooked_Chicken
   - Cooked_Pork
+  - Apple_cut
+  - Pumpkin_Soup
+  - Carrot_Soup
+  - Steak_cut
+  - Cookable_Steakcut
+  - Cookable_Turkeycut
+  - Cookable_Steak
   layers:
   - Default
   - TransparentFX

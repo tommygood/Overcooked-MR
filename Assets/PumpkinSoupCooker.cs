@@ -6,6 +6,7 @@ public class PumpkinSoupCooker : MonoBehaviour
     public Slider cookProgressSlider;
     public GameObject stirPromptText;
     public GameObject pumpkinSoupPrefab;
+    public GameObject carrotSoupPrefab;
 
     public AudioClip startBoilSound;
     public AudioClip boilFinishSound;
@@ -26,6 +27,9 @@ public class PumpkinSoupCooker : MonoBehaviour
     private bool boilSoundPlayed = false;
     private AudioSource audioSource;
 
+    private enum SoupType { None, Pumpkin, Carrot }
+    private SoupType currentSoupType = SoupType.None;
+    
     void Start()
     {
         if (cookProgressSlider != null)
