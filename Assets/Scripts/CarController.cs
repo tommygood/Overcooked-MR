@@ -63,6 +63,8 @@ public class CarController : MonoBehaviour
             prometeoCarController.GoForward();
             yield return null;
         }
+
+        SoundManager.Instance.PlaySFX(SoundRegistry.SoundID.CarCrash, car.transform.position);
         car.transform.position = carPosition;
         car.transform.rotation = carRotation;
         car.SetActive(false);

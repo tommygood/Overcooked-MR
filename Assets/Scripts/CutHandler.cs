@@ -129,6 +129,8 @@ public class CutHandler : MonoBehaviour
 
                     Debug.Log($"Cut from {(isLeftSide ? "left" : "right")} at localX={localPoint.x:F3}, new width={newWidth:F3}");
                     cut_num_current += 1;
+
+                    SoundManager.Instance.PlaySFX(SoundRegistry.SoundID.Chop, transform.position);
                 }
 
                 if (cut_num_current >= cut_num_need)

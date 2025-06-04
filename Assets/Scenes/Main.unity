@@ -546,6 +546,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 935426788455836500, guid: ebc5a63df534b6f46ad328b478f4cf19, type: 3}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[7].scale
       value: 1
       objectReference: {fileID: 0}
@@ -555,19 +559,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[7].rotation.w
-      value: 1
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[7].rotation.x
-      value: 0
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[7].rotation.y
-      value: 0
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[7].rotation.z
-      value: 0
+      value: 0.49999997
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[5].networkPrefabRef.RawGuidValue.Array.data[0]
@@ -636,6 +640,10 @@ PrefabInstance:
     - target: {fileID: 6810049428011808553, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: m_Name
       value: RoomManagerBundle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630897491990000363, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: hideMesh
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -922,7 +930,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1268824806833325158, guid: 3243d0c285e16be45b0e6d0fb59cca3f, type: 3}
       propertyPath: interval
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1268824806833325158, guid: 3243d0c285e16be45b0e6d0fb59cca3f, type: 3}
       propertyPath: position.x
