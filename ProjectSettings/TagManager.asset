@@ -48,6 +48,7 @@ TagManager:
   - Tomato_cut
   - Lettuce_cut
   - Pot
+  - Cooked_Steak
   layers:
   - Default
   - TransparentFX

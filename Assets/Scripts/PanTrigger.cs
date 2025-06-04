@@ -70,7 +70,7 @@ public class PanTrigger : MonoBehaviour
             if (stirUIPanel != null)
                 stirUIPanel.SetActive(false);
 
-            rend = currentCube.GetComponent<Renderer>();
+            rend = currentCube.GetComponentInChildren<Renderer>();
             if (rend != null)
                 rend.material.color = Color.white;
 

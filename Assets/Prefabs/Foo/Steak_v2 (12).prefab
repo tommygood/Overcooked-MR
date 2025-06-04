@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5038696980521588688}
   - component: {fileID: 4115008061858809969}
   - component: {fileID: -7630211336304841511}
+  - component: {fileID: 30899511101357776}
   m_Layer: 0
   m_Name: Steak_v2 (12)
   m_TagString: Cookable_Steak
@@ -178,6 +179,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &30899511101357776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2845246510882048309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d928d39530f0d07458a3dfb8f896d3f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
 --- !u!1 &3514834409293472627
 GameObject:
   m_ObjectHideFlags: 0
