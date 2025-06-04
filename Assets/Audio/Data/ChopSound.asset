@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7751b59445c9774d9769268de752d08, type: 3}
+  m_Name: ChopSound
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: 9aeeb267a1c86b041a91094c8e804281, type: 3}
+  - {fileID: 8300000, guid: 12a48cf9fb794404299b19ce8a27d349, type: 3}
+  - {fileID: 8300000, guid: b4c1fa4ad1549f7469ac0e131a45572d, type: 3}
+  - {fileID: 8300000, guid: 4c7a342a10456994f822786d3ff07ce5, type: 3}
+  - {fileID: 8300000, guid: 1080ce00fc82e2c46a9a2de07c353880, type: 3}
+  - {fileID: 8300000, guid: afade02ba5cb73b4abee91e9fb254300, type: 3}
+  - {fileID: 8300000, guid: ee7fe3071d0fc11429b9ab2c281037c3, type: 3}
+  - {fileID: 8300000, guid: 628b5345b3147c844bb6b1b6900ae482, type: 3}
+  Volume: 1
+  VolumeVariation: 0
+  Pitch: 1
+  PitchVariation: 0
+  SpatialBlend: 1
+  Loop: 0
+  MinDistance: 1
+  MaxDistance: 50
