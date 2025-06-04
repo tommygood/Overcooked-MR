@@ -81,7 +81,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5817006066425079060}
@@ -172,6 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   photoTaker: {fileID: 3069807421030854166}
   uploadUrl: https://mixed-restaurant.bogay.me/api/upload
+  autoGradeUrl: https://mixed-restaurant.bogay.me/api/cartItem/auto-grade
+  cleanDelay: 5
 --- !u!114 &2131539562623850162
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -49,6 +49,9 @@ TagManager:
   - Lettuce_cut
   - Pot
   - Cooked_Steak
+  - Cooked_Steskcut
+  - Cookeed_Turkeycut
+  - Cooked_Burgermeat
   layers:
   - Default
   - TransparentFX
