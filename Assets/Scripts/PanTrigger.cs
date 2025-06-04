@@ -55,6 +55,8 @@ public class PanTrigger : MonoBehaviour
     {
         string tag = other.gameObject.tag;
 
+        Debug.Log("[PanTrigger] OnTriggerEnter: " + other.name);
+
         // ✅ 只允許 tag 以 Cookable_ 開頭的進鍋煮
         if (tag.StartsWith("Cookable_"))
         {

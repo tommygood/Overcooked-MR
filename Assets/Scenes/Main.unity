@@ -900,6 +900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shared Building Blocks
       objectReference: {fileID: 0}
+    - target: {fileID: 4260831910104748037, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
       propertyPath: Flags
       value: 262145

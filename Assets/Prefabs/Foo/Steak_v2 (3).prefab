@@ -156,9 +156,10 @@ GameObject:
   - component: {fileID: 4321994979446156796}
   - component: {fileID: 6782708751384559703}
   - component: {fileID: 2274214912445719561}
+  - component: {fileID: -6516835268633561511}
   m_Layer: 0
   m_Name: Steak_v2 (3)
-  m_TagString: Steak
+  m_TagString: Cookable_Steak
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,6 +298,27 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &-6516835268633561511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6295185618703936445}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6860848026701744805
 GameObject:
   m_ObjectHideFlags: 0
