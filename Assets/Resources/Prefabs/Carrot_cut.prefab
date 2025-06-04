@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7726817545361809024}
   - component: {fileID: 9142511611598032248}
   - component: {fileID: 1619877187473659433}
+  - component: {fileID: 2279224971139848298}
   m_Layer: 0
   m_Name: Food_Chopped Carrot
   m_TagString: Untagged
@@ -106,6 +107,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -7843121632000567495, guid: 4da0378f7ef66e4418f70191f50e3050, type: 3}
+--- !u!65 &2279224971139848298
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2806634055861616817}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.31424677, y: 0.08471266, z: 0.07937091}
+  m_Center: {x: -0.023914762, y: 0.041093048, z: 0.0026275143}
 --- !u!1 &3266398825412073134
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: 87473677-7621-466c-b8f5-0af94f95b5ff
+  instanceId: 37953ccd-54a7-406c-a69f-07afb6bb5e4d
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
@@ -310,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 9fae6b27-ee94-4605-862d-8e0dabd06b41
+  instanceId: e848e346-622d-45d1-8983-c14fb7d1a76d
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8

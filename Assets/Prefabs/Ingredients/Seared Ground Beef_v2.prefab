@@ -309,6 +309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Seared Ground Beef
       objectReference: {fileID: 0}
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_TagString
+      value: Cookable_Burgermeat
+      objectReference: {fileID: 0}
     - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

@@ -44,6 +44,10 @@ TagManager:
   - Cookable_Turkeycut
   - Cookable_Steak
   - Cookable_Burgermeat
+  - Carrot_cut
+  - Tomato_cut
+  - Lettuce_cut
+  - Pot
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 416057459514615593}
   - component: {fileID: 5164434771503406564}
   - component: {fileID: 4737864997610032226}
+  - component: {fileID: 7523866339884435976}
   m_Layer: 0
   m_Name: Food_Chopped Lettuce
   m_TagString: Untagged
@@ -106,6 +107,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -8775840353042319581, guid: 8ff312420ed65474da93634aceceefc1, type: 3}
+--- !u!65 &7523866339884435976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296752432270572484}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29179525, y: 0.13218822, z: 0.17655088}
+  m_Center: {x: 0.0045761093, y: 0.054207228, z: -0.000000007450581}
 --- !u!1 &6241606389648322960
 GameObject:
   m_ObjectHideFlags: 0

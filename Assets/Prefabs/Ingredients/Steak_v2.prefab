@@ -309,6 +309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Steak
       objectReference: {fileID: 0}
+    - target: {fileID: 489988740328440923, guid: 15450fd19e095584987b1f9a54dc8cac, type: 3}
+      propertyPath: m_TagString
+      value: Cookable_Steak
+      objectReference: {fileID: 0}
     - target: {fileID: 7226814519542103644, guid: 15450fd19e095584987b1f9a54dc8cac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

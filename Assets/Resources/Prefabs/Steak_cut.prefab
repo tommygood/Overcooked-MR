@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 08b52860-fd61-4df6-9d40-710ac9086f43
+  instanceId: 016117be-5d56-4490-b60a-badfa94d66ed
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -153,9 +153,10 @@ GameObject:
   - component: {fileID: 1012001610965615830}
   - component: {fileID: 1193430648726271590}
   - component: {fileID: 5578804190200092053}
+  - component: {fileID: 8444665729170492773}
   m_Layer: 0
   m_Name: Food_Cooked Steak
-  m_TagString: Untagged
+  m_TagString: Cookable_Steakcut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,6 +248,27 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9063445836887604998, guid: f7a36aafea962f840b77c29aef6e7f42, type: 3}
+--- !u!65 &8444665729170492773
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5669779600681911688}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.26262015, y: 0.09387103, z: 0.25204402}
+  m_Center: {x: 0.0043822825, y: 0.032749206, z: -0.0005078688}
 --- !u!1 &7107179580374430478
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: 3ffee389-194c-4135-924e-c4d1e07dcdd5
+  instanceId: f5db1b60-c720-405f-a585-358bf32310c9
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
