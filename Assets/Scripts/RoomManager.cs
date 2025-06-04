@@ -79,11 +79,7 @@ public class RoomManager : NetworkBehaviour
                     newObject.transform.Rotate(gas_stove_set.rotation.eulerAngles);
                     newObject.transform.localScale *= gas_stove_set.scale;
 
-                    foreach (Transform c in newObject.gameObject.transform)
-                    {
-                        c.SetParent(null);
-                    }
-
+                    this.unparenting(newObject);
                     /*
                     // HACK
                     if (newObject.TryGetComponent(out StoveSetSpawner stoveSetSpawner))
@@ -152,11 +148,7 @@ public class RoomManager : NetworkBehaviour
                     newObject.transform.Rotate(ingredients.rotation.eulerAngles);
                     newObject.transform.localScale *= ingredients.scale;
 
-                    foreach (Transform c in newObject.gameObject.transform)
-                    {
-                        c.SetParent(null);
-                    }
-
+                    this.unparenting(newObject);
                     /*
                     // HACK
                     if (newObject.TryGetComponent(out IngredientSpawner ingredientSpawner))
@@ -198,6 +190,40 @@ public class RoomManager : NetworkBehaviour
                 }
             }
 
+        }
+    }
+
+    private void unparenting(NetworkObject networkObject)
+    {
+        StartCoroutine(this._unparenting(networkObject));
+    }
+
+    private IEnumerator _unparenting(NetworkObject networkObject)
+    {
+        yield return new WaitForSeconds(1);
+        foreach (Transform c in networkObject.gameObject.transform)
+        {
+            if (!c.gameObject.activeInHierarchy)
+            {
+                continue;
+            }
+
+            if (c.TryGetComponent(out NetworkObject no))
+            {
+                var originalScale = c.lossyScale;
+                var ingredientObject = Runner.Spawn(
+                    no,
+                    c.position,
+                    c.rotation
+                );
+                // Runner.Despawn(no);
+                no.gameObject.SetActive(false);
+                ingredientObject.transform.localScale = originalScale;
+            }
+            else
+            {
+                Debug.LogWarning("NetworkObject not found on: " + c.name);
+            }
         }
     }
 
