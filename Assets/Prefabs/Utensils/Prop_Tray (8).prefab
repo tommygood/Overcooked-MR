@@ -303,10 +303,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af824d7b770b39641aa0c9d8f6839667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _CleanProgress: 0
-  _IsClean: 0
-  cleanMaterial: {fileID: 7482458864665612751, guid: c6984c48aed9a154294088f4265d8478, type: 3}
-  dirtyMaterial: {fileID: 2100000, guid: 0b1b8e8b7ef044258a1056e614ded274, type: 2}
+  _CleanProgress: 100
+  _IsClean: 1
+  cleanMaterial: {fileID: 2100000, guid: 9866fda0e61a7904087eb0ec5ab17e03, type: 2}
+  dirtyMaterial: {fileID: 2100000, guid: f52d0efc106b6a14cbb2349d580e195e, type: 2}
 --- !u!114 &3259320973444339629
 MonoBehaviour:
   m_ObjectHideFlags: 0
