@@ -10,6 +10,19 @@ public class PhotoShotManager : MonoBehaviour
     public int resolutionHeight = 1080;
     public string uploadUrl = "https://mixed-restaurant.bogay.me/api/upload";
 
+    void Awake()
+    {
+        if (photoCamera == null)
+        {
+            // Find the camera tagged as MainCamera
+            photoCamera = Camera.main;
+            if (photoCamera == null)
+            {
+                Debug.LogError("No camera with the 'MainCamera' tag found in the scene.");
+            }
+        }
+    }
+
     public IEnumerator TakePhotoAndUpload(string uploadUrl, string filename)
     {
         // Create render texture and capture image

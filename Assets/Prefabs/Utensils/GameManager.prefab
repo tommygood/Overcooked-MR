@@ -307,7 +307,7 @@ MonoBehaviour:
   menuPanel: {fileID: 363795950626247855}
   startButton: {fileID: 4103210026607894613}
   gameStarted: 0
-  total_game_time: 1
+  total_game_time: 3
   currentGameTime: 0
   orderController: {fileID: 0}
 --- !u!1 &3867483788237377655

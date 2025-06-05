@@ -262,6 +262,8 @@ GameObject:
   - component: {fileID: 8864355395645974651}
   - component: {fileID: 5581048516944290670}
   - component: {fileID: 1769762769829191078}
+  - component: {fileID: 6779832095989165940}
+  - component: {fileID: -3236104622158495814}
   m_Layer: 0
   m_Name: Cheese_v2 (52)
   m_TagString: Cheese
@@ -403,3 +405,37 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &6779832095989165940
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7415827755674783026}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16499226, y: 0.35033065, z: 0.10817512}
+  m_Center: {x: -0.07817185, y: -0.2202495, z: 0.101860404}
+--- !u!114 &-3236104622158495814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7415827755674783026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41e0b322cae849269d7e489a24b1b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  belowIngredient: {fileID: 0}

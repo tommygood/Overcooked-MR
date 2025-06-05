@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 4680658726551084937}
   - component: {fileID: 3475477407329847726}
   - component: {fileID: 1625369599703395847}
+  - component: {fileID: -5201332236286174071}
+  - component: {fileID: 1597919008463936412}
   m_Layer: 0
   m_Name: Bread_v2
   m_TagString: Toast
@@ -156,6 +158,40 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &-5201332236286174071
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3722999352443300942}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16886154, y: 0.07201707, z: 0.07897096}
+  m_Center: {x: 0.031975783, y: 0.060379554, z: 0.0076672793}
+--- !u!114 &1597919008463936412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3722999352443300942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41e0b322cae849269d7e489a24b1b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  belowIngredient: {fileID: 0}
 --- !u!1 &5067667099465308223
 GameObject:
   m_ObjectHideFlags: 0
