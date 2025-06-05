@@ -788,6 +788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Breed
       objectReference: {fileID: 0}
+    - target: {fileID: 1146523635829546176, guid: 56c89c76e7cee044c82aeea51c7aa245, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2801770925047509804, guid: 56c89c76e7cee044c82aeea51c7aa245, type: 3}
       propertyPath: cut_delay
       value: 1
@@ -939,6 +943,10 @@ PrefabInstance:
     - target: {fileID: 4780664987781517037, guid: 096a91d4f74b2d145a9bf8d8e5ded053, type: 3}
       propertyPath: m_Name
       value: Carrot_v2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780664987781517037, guid: 096a91d4f74b2d145a9bf8d8e5ded053, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4849445876901185885, guid: 096a91d4f74b2d145a9bf8d8e5ded053, type: 3}
       propertyPath: m_Constraints
@@ -1188,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8176417671946333448, guid: 3243d0c285e16be45b0e6d0fb59cca3f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

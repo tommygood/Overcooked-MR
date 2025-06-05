@@ -156,6 +156,8 @@ GameObject:
   - component: {fileID: 2860504044786098807}
   - component: {fileID: 2752960684727344318}
   - component: {fileID: 3661009653047316291}
+  - component: {fileID: -4279690349139649405}
+  - component: {fileID: 1959758338751920929}
   m_Layer: 0
   m_Name: Lettuce_v2 (33)
   m_TagString: Lettuce
@@ -261,6 +263,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 2752960684727344318}
   - {fileID: 3661009653047316291}
+  - {fileID: -4279690349139649405}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &2752960684727344318
 MonoBehaviour:
@@ -297,6 +300,43 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &-4279690349139649405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548160740355021889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f729b916775664b980d6908f91ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutter_duration: 0.5
+  cut_num_need: 1
+  cut_delay: 1
+  cutRegistry: {fileID: 11400000, guid: 891230a75407a144c95515eb77b62d30, type: 2}
+--- !u!65 &1959758338751920929
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6548160740355021889}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.30018425, y: 0.22803815, z: 0.26771855}
+  m_Center: {x: -0.003607273, y: 0.064931385, z: 0.0018036366}
 --- !u!1 &8286240269094220777
 GameObject:
   m_ObjectHideFlags: 0
