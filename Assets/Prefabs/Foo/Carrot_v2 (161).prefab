@@ -262,6 +262,8 @@ GameObject:
   - component: {fileID: 7521395206074434791}
   - component: {fileID: 4780542302428632703}
   - component: {fileID: 2862682657656347283}
+  - component: {fileID: 8143217454520925757}
+  - component: {fileID: 5708564807579741431}
   m_Layer: 0
   m_Name: Carrot_v2 (161)
   m_TagString: Carrot
@@ -367,6 +369,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 4780542302428632703}
   - {fileID: 2862682657656347283}
+  - {fileID: 5708564807579741431}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &4780542302428632703
 MonoBehaviour:
@@ -403,3 +406,40 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &8143217454520925757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5235116217481114551}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.38891697, y: 0.17484276, z: 0.170951}
+  m_Center: {x: 0.040868565, y: 0.04281477, z: -0.056437597}
+--- !u!114 &5708564807579741431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5235116217481114551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f729b916775664b980d6908f91ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutter_duration: 0.5
+  cut_num_need: 1
+  cut_delay: 1
+  cutRegistry: {fileID: 0}

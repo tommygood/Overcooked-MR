@@ -262,6 +262,8 @@ GameObject:
   - component: {fileID: 8376655230979695490}
   - component: {fileID: 9127606606632839080}
   - component: {fileID: 6698759366407996127}
+  - component: {fileID: 6433859092678141268}
+  - component: {fileID: -1880989454217150805}
   m_Layer: 0
   m_Name: Apple_v2 (84)
   m_TagString: Apple
@@ -367,6 +369,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 9127606606632839080}
   - {fileID: 6698759366407996127}
+  - {fileID: 6433859092678141268}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &9127606606632839080
 MonoBehaviour:
@@ -403,3 +406,40 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &6433859092678141268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8284005700102875145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f729b916775664b980d6908f91ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutter_duration: 0.5
+  cut_num_need: 1
+  cut_delay: 1
+  cutRegistry: {fileID: 11400000, guid: 891230a75407a144c95515eb77b62d30, type: 2}
+--- !u!65 &-1880989454217150805
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8284005700102875145}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.25268817, y: 0.2760418, z: 0.23322737}
+  m_Center: {x: 0.011676511, y: 0.085629486, z: -0.005838275}

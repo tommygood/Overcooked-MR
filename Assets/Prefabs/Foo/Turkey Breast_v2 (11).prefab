@@ -262,6 +262,8 @@ GameObject:
   - component: {fileID: 4417302926769041668}
   - component: {fileID: 9156218391733759996}
   - component: {fileID: 27735839968198330}
+  - component: {fileID: 6690269977600855890}
+  - component: {fileID: 8234282923059166094}
   m_Layer: 0
   m_Name: Turkey Breast_v2 (11)
   m_TagString: Turkey
@@ -367,6 +369,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 9156218391733759996}
   - {fileID: 27735839968198330}
+  - {fileID: 6690269977600855890}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &9156218391733759996
 MonoBehaviour:
@@ -403,3 +406,40 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &6690269977600855890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5970125949329236501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f729b916775664b980d6908f91ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutter_duration: 0.5
+  cut_num_need: 1
+  cut_delay: 1
+  cutRegistry: {fileID: 11400000, guid: 891230a75407a144c95515eb77b62d30, type: 2}
+--- !u!65 &8234282923059166094
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5970125949329236501}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.19819698, z: 0.2799347}
+  m_Center: {x: 0, y: 0.066168234, z: 0.0019462805}
