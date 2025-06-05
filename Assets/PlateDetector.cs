@@ -23,6 +23,7 @@ public class PlateDetector : MonoBehaviour
 
         if (other.CompareTag("Order"))
         {
+            SoundManager.Instance.PlaySFX(SoundRegistry.SoundID.BowlCleaned, transform.position);
             if (photoTaker != null)
             {
                 string filename = null;
