@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using Fusion;
 
-public class PumpkinSoupCooker : MonoBehaviour
+public class PumpkinSoupCooker : NetworkBehaviour, IAfterSpawned
 {
     public Slider cookProgressSlider;
     public GameObject stirPromptText;
-    public GameObject pumpkinSoupPrefab;
-    public GameObject carrotSoupPrefab;
+    public NetworkPrefabRef pumpkinSoupPrefab;
+    public NetworkPrefabRef carrotSoupPrefab;
 
     public AudioClip startBoilSound;
     public AudioClip boilFinishSound;
@@ -16,7 +17,7 @@ public class PumpkinSoupCooker : MonoBehaviour
 
     public float boilTime = 10f;
     public float stirTime = 10f;
-    public int requiredStirs = 3;
+    public int requiredStirs = 1;
 
     private GameObject currentBowl;
     private GameObject waterInBowl;
@@ -28,7 +29,7 @@ public class PumpkinSoupCooker : MonoBehaviour
     private AudioSource audioSource;
 
     
-    void Start()
+    public void AfterSpawned()
     {
         if (cookProgressSlider != null)
             cookProgressSlider.gameObject.SetActive(false);
@@ -141,11 +142,11 @@ public class PumpkinSoupCooker : MonoBehaviour
             stirPromptText.SetActive(false);
 
         Vector3 spawnPosition = currentBowl.transform.position + Vector3.up * 0.2f;
-        GameObject soup = Instantiate(pumpkinSoupPrefab, spawnPosition, Quaternion.identity);
+        var soup = Runner.Spawn(pumpkinSoupPrefab, spawnPosition, Quaternion.identity);
 
         if (!success)
         {
-            Renderer[] renderers = soup.GetComponentsInChildren<Renderer>();
+            Renderer[] renderers = soup.gameObject.GetComponentsInChildren<Renderer>();
             foreach (Renderer rend in renderers)
             {
                 foreach (Material mat in rend.materials)

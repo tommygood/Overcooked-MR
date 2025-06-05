@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8354037107017276290}
   - component: {fileID: 2631866592129135994}
   - component: {fileID: 7406982175525647466}
+  - component: {fileID: -7116143906578690445}
   m_Layer: 0
   m_Name: Pumpkin_v2 (1)
   m_TagString: Pumpkin
@@ -156,6 +157,27 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &-7116143906578690445
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463267277086620594}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.08585021, y: 0.081158794, z: 0.08153795}
+  m_Center: {x: -0.001824958, y: 0.027945468, z: -0.0007246307}
 --- !u!1 &2473692816552518950
 GameObject:
   m_ObjectHideFlags: 0

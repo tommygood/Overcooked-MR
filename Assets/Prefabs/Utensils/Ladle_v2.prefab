@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 1339206883877974957}
   - component: {fileID: 5096908236653027831}
   - component: {fileID: 6832564783941645716}
+  - component: {fileID: 3970678075035798238}
   m_Layer: 0
   m_Name: Ladle_v2
-  m_TagString: Untagged
+  m_TagString: Spoon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: b7eabf7a-f82e-4f03-9ac2-36cc11546879
+  instanceId: 22c33c6b-7839-4555-8637-09eaca5f81d6
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
@@ -156,6 +157,27 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &3970678075035798238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3166540361854458230}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.19274727, y: 0.24797557, z: 0.4705655}
+  m_Center: {x: 0.00949752, y: 0.013583608, z: -0.1539649}
 --- !u!1 &9026108640503329813
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: b257d035-6b78-42db-b03c-743670ff41c1
+  instanceId: 5e555cf5-35fe-4adc-aacc-3b3e80744898
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8

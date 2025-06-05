@@ -510,6 +510,18 @@ PrefabInstance:
       propertyPath: SortKey
       value: 3896934407
       objectReference: {fileID: 0}
+    - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+      propertyPath: NetworkedBehaviours.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[2]
+      value: 
+      objectReference: {fileID: 4833452431473741472}
+    - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[3]
+      value: 
+      objectReference: {fileID: 4923242572680042451}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -529,6 +541,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4833452431473741472 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 346826307663545891, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+  m_PrefabInstance: {fileID: 5171244875113711747}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc02f83b20a15e41963d51327eeb24d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4923242572680042451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 257035967680667472, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+  m_PrefabInstance: {fileID: 5171244875113711747}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07847673e2f1493a826fa7de0227662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &7951711401813171826
@@ -621,7 +655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
       propertyPath: NetworkedBehaviours.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
       propertyPath: NetworkedBehaviours.Array.data[0]
@@ -631,6 +665,14 @@ PrefabInstance:
       propertyPath: NetworkedBehaviours.Array.data[1]
       value: 
       objectReference: {fileID: 836396595756466044}
+    - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[2]
+      value: 
+      objectReference: {fileID: 7676961518465095761}
+    - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[3]
+      value: 
+      objectReference: {fileID: 7911430064324313378}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -707,6 +749,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a591d221a634417e9827eb58e17de84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7676961518465095761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 346826307663545891, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+  m_PrefabInstance: {fileID: 7951711401813171826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bc02f83b20a15e41963d51327eeb24d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7911430064324313378 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 257035967680667472, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
+  m_PrefabInstance: {fileID: 7951711401813171826}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07847673e2f1493a826fa7de0227662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8964431178699064216

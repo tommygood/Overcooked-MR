@@ -17,7 +17,10 @@ public class PlateController : MonoBehaviour
     {
         Debug.Log("頂部食材為 null");
         return false;
-    }
+    } else
+        {
+
+        }
 
     // 單層
     Dictionary<int, string> singleItemRecipes = new Dictionary<int, string>
@@ -30,18 +33,11 @@ public class PlateController : MonoBehaviour
     };
 
     if (singleItemRecipes.ContainsKey(foodId))
-    {
-        string expectedTag = singleItemRecipes[foodId];
-        string actualTag = topIngredient.tag;
-
-        if (actualTag == expectedTag)
         {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+            string expectedTag = singleItemRecipes[foodId];
+            string actualTag = topIngredient.tag;
+            Debug.Log($"檢查單層食物 ID {foodId}： {expectedTag} == {actualTag}");
+            return actualTag == expectedTag;
     }
 
     // 多層
