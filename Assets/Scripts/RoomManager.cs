@@ -172,6 +172,19 @@ public class RoomManager : NetworkBehaviour
                     newObject.transform.localScale *= pole.scale;
                     Debug.Log("[Debug] Pole spawned");
                 }
+                if (grandChild.gameObject.name == "FLOOR_EffectMesh")
+                {
+                    // pole
+                    PrefabWithTransform floor = utensils.Find(x => x.name == "Floor");
+                    var newObject = Runner.Spawn(floor.networkPrefabRef);
+                    newObject.transform.position = grandChild.gameObject.transform.position;
+                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+
+                    newObject.transform.position += floor.position;
+                    newObject.transform.Rotate(floor.rotation.eulerAngles);
+                    newObject.transform.localScale *= floor.scale;
+                    Debug.Log("[Debug] Floor spawned");
+                }
                 if (grandChild.gameObject.name == "TABLE_EffectMesh")
                 {
                     // Place a delivery ring on the table

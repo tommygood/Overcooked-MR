@@ -43,6 +43,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 6223885308696273180}
     m_Modifications:
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
+      propertyPath: utensils.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
+      propertyPath: utensils.Array.data[11].name
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
+      propertyPath: utensils.Array.data[11].scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[3].position.y
       value: -0.35
       objectReference: {fileID: 0}
@@ -159,6 +171,18 @@ PrefabInstance:
       value: 0.70710677
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
+      propertyPath: utensils.Array.data[11].position.y
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
+      propertyPath: utensils.Array.data[11].rotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
+      propertyPath: utensils.Array.data[11].rotation.x
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[0].networkPrefabRef.RawGuidValue.Array.data[0]
       value: 8373763535687445614
       objectReference: {fileID: 0}
@@ -245,6 +269,14 @@ PrefabInstance:
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[10].networkPrefabRef.RawGuidValue.Array.data[1]
       value: -5971256186591082581
+      objectReference: {fileID: 0}
+    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
+      propertyPath: utensils.Array.data[11].networkPrefabRef.RawGuidValue.Array.data[0]
+      value: -2007340094311592249
+      objectReference: {fileID: 0}
+    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
+      propertyPath: utensils.Array.data[11].networkPrefabRef.RawGuidValue.Array.data[1]
+      value: -7601913294259059766
       objectReference: {fileID: 0}
     - target: {fileID: 3708549950554371197, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: m_Name

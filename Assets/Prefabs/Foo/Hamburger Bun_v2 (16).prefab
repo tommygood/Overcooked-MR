@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6583408916306247929}
   - component: {fileID: 6895753199715674326}
   - component: {fileID: 2946941940470978455}
+  - component: {fileID: -6934848600221139375}
   m_Layer: 0
   m_Name: Hamburger Bun_v2 (16)
   m_TagString: Bread
@@ -156,6 +157,27 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &-6934848600221139375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1511115521336255206}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5826333260028547013
 GameObject:
   m_ObjectHideFlags: 0

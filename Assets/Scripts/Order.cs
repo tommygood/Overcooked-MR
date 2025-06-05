@@ -21,6 +21,7 @@ public class Order : MonoBehaviour
             new Vector3(-0.05f, 0, -0.05f)           
         };
 
+        /*
         foreach (Vector3 offset in offsets)
         {
             Vector3 origin = transform.position + offset + Vector3.up * 0.01f;
@@ -28,6 +29,19 @@ public class Order : MonoBehaviour
             {
                 if (TryDetectBelow(hit.collider)) return;
             }
+        }
+        */
+
+        if (Physics.BoxCast(
+            transform.position + Vector3.up * 0.01f,
+            Vector3.one * 0.2f,
+            Vector3.down,
+            out RaycastHit hit,
+            Quaternion.identity,
+            maxDistance: 0.2f
+        ))
+        {
+            if (TryDetectBelow(hit.collider)) return;
         }
 
         // 補一次 OverlapSphere 檢查
@@ -45,7 +59,7 @@ public class Order : MonoBehaviour
 
     private bool TryDetectBelow(Collider col)
     {
-        
+        Debug.Log("[Order] Detect obj name: " + col.name);
         Order lower = col.GetComponent<Order>();
         if (lower != null && lower != this)
         {
