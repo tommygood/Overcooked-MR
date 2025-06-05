@@ -1,11 +1,13 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class RealGameManager : MonoBehaviour
 {
     public GameObject menuPanel;      // Reference to the Menu UI Panel
     public Button startButton;        // Reference to the Start Button
+    public TMP_Text gameOverText;
     public bool gameStarted = false;  // Whether the game has started or not
     public int total_game_time = 3;   // Total game time in minutes
     public float currentGameTime;     // The current game time (in seconds)
@@ -22,6 +24,7 @@ public class RealGameManager : MonoBehaviour
         // Initialize the current game time to the total game time in seconds.
         currentGameTime = total_game_time * 60f; // Convert minutes to seconds
         //gameOverPanel.SetActive(false);  // Hide Game Over panel at the start
+        gameOverText.gameObject.SetActive(false);
     }
 
     void Update()
@@ -63,13 +66,14 @@ public class RealGameManager : MonoBehaviour
             orderController.start_ordering = false;
 
             // Start Ordering again to record the grade history of this game
-            StartCoroutine(orderController.StartOrdering()); 
+            StartCoroutine(orderController.StartOrdering());
 
             // Show the Game Over panel/UI
             //gameOverPanel.SetActive(true);
             //gameOverText.text = "Game Over! Your time is up.";
 
             // Optionally, you can stop any further updates or logic here.
+            gameOverText.gameObject.SetActive(true);
         }
     }
 }

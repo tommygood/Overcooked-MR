@@ -5,10 +5,11 @@ public class PlateController : MonoBehaviour
 {
     private Dictionary<int, List<string>> recipes = new Dictionary<int, List<string>>
     {
-        { 51, new List<string> { "Bread", "Tomato_cut", "Cheese", "Lettuce_cut", "Cooked_Burger_Meat", "Bread" } }, // hamburger
+        { 50, new List<string> { "Bread", "Tomato_cut", "Cheese", "Lettuce_cut", "Cooked_Burger_Meat", "Bread" } }, // hamburger
         { 52, new List<string> { "Toast", "Cheese" ,"Cooked_Tuekeycut","Toast"} },                                   // sandwich
         { 55, new List<string> { "Tortilla", "Cooked_Steakcut", "Lettuce_cut"} },                            // Taco
-        { 50, new List<string> { "Toast", "Cheese" } }                           // Sushi
+        { 51, new List<string> { "Toast", "Cheese" } },                           // Sushi
+        { 57, new List<string> { "Lettuce_cut", "Tomato_cut" }}
     };
 
     public bool CheckRecipeFromTop(Order topIngredient, int foodId)
@@ -28,7 +29,6 @@ public class PlateController : MonoBehaviour
         { 53, "Pumpkin_Soup" },
         { 54, "Carrot_Soup" },
         { 56, "Apple_cut" },
-        { 57, "Salad" },
         { 58, "Cooked_Steak" }
     };
 
