@@ -263,20 +263,12 @@ PrefabInstance:
       value: -1330200091000767190
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
-      propertyPath: utensils.Array.data[10].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: -7733090582311694454
-      objectReference: {fileID: 0}
-    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
-      propertyPath: utensils.Array.data[10].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: -5971256186591082581
-      objectReference: {fileID: 0}
-    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[11].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: -2007340094311592249
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[11].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: -7601913294259059766
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3708549950554371197, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: m_Name

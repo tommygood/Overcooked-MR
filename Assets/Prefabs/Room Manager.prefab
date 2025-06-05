@@ -48,57 +48,68 @@ MonoBehaviour:
   tables: []
   utensils:
   - name: Pan
-    prefab: {fileID: 355813265084280375, guid: 93ec6de690bea9340be31773cffd4971, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 0, y: 0.1, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1.25
   - name: Pot
-    prefab: {fileID: 4675444758142019369, guid: 0b8d85411e1c226429dccfef28b46b51, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1.25
   - name: Ladle
-    prefab: {fileID: 1080709905087527617, guid: de6a5c81566c2fc459329833b2bae21d, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
     scale: 1
   - name: Sink
-    prefab: {fileID: 8249027947088598663, guid: 5fbfba11a02d1bf4997edecff0f3c9be, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 0, y: 0, z: 0}
     rotation: {x: -0.00000003090862, y: -0.70710677, z: -0.70710677, w: 0.00000003090862}
     scale: 0.75
   - name: Cutting_Plate
-    prefab: {fileID: 7647832688476776876, guid: ab7b96caac20f924da88b5b371079247, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1.75
   - name: Gas_Stove_Set
-    prefab: {fileID: 8804210176625436853, guid: 6cd36c00add46e74f867f48d1b8b242a, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0.70710677, y: 0.70710677, z: -0.00000003090862, w: -0.00000003090862}
     scale: 1
   - name: Casher
-    prefab: {fileID: 3715936666322222693, guid: 89ff6b01ad6a062438293a977239572f, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 4, y: -2.2, z: -2}
     rotation: {x: 0.49999997, y: 0.49999997, z: -0.49999997, w: -0.49999997}
     scale: 0.5
   - name: Ingredients
-    prefab: {fileID: 935426788455836500, guid: ebc5a63df534b6f46ad328b478f4cf19, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0.49999997, y: 0.49999997, z: 0.49999997, w: 0.49999997}
     scale: 0.075
   - name: Pole
-    prefab: {fileID: 8302728930736148258, guid: a73a0d107d355a840a65519fcd526816, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 1.75, y: 2, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 1}
     scale: 3
   - name: Car
-    prefab: {fileID: 642287924342879162, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 1}
     scale: 1
   - name: Delivery_Ring
-    prefab: {fileID: 5299391815395610904, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
+    networkPrefabRef:
+      RawGuidValue: 7dbad7407db026b43b424dbca295914a
     position: {x: 0, y: 0.05, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1
