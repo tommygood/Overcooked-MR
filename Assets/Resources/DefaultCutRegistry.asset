@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124073ce8af18f64fb43602fee83dbf9, type: 3}
+  m_Name: DefaultCutRegistry
+  m_EditorClassIdentifier: 
+  All:
+  - Name: Apple
+    Prefab:
+      RawGuidValue: 073320238f7764c4faca6fd23ce5055d
+  - Name: Carrot
+    Prefab:
+      RawGuidValue: 845b63554e1b1436191f65fd6a3f4535
+  - Name: Lettuce
+    Prefab:
+      RawGuidValue: f7f3ca83e11e64ccab7b99c932b49964
+  - Name: Steak
+    Prefab:
+      RawGuidValue: 6382dd8c072bd488dbf186d0c1f83488
+  - Name: Turkey
+    Prefab:
+      RawGuidValue: 443eb3e51c41a490dbeab6e0787492fb
+  - Name: Tomato
+    Prefab:
+      RawGuidValue: 60b4e361891d346aa9d94ff13882a3f0

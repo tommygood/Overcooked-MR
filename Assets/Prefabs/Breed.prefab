@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: 479096fd-1deb-4731-97dc-e12bdea31a06
+  instanceId: 920bbb12-b835-4a75-a589-ebf338a46b98
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
@@ -143,6 +143,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 505642520806261596}
   - {fileID: 3815644912833540446}
+  - {fileID: 2801770925047509804}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &505642520806261596
 MonoBehaviour:
@@ -193,6 +194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutter_duration: 5
   cut_num_need: 5
+  cut_delay: 1
+  cutRegistry: {fileID: 0}
 --- !u!1 &3547538785371340105
 GameObject:
   m_ObjectHideFlags: 0
@@ -496,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: aa143a29-ac96-43e3-8089-34d1d044132a
+  instanceId: e6d3bb70-e057-4708-838a-3eb572a1f37d
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8

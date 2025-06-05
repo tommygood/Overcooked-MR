@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
 [System.Serializable]
 public class CutMapping
@@ -15,24 +16,27 @@ public class CutMapping
     }
 }
 
-public class CutHandler : MonoBehaviour
+public class CutHandler : NetworkBehaviour, IAfterSpawned
 {
     private GameObject LeftHandAnchor;
     private bool is_cutter_gesture = false;
-    public float cutter_duration = 5f;
+    public float cutter_duration = 0.5f;
     private float cutter_duration_passed = 0f;
 
     public int cut_num_need = 1;
     private int cut_num_current = 0;
 
-    public int cut_delay = 2; // delay for next cut detection
-    private float cut_delay_passed = 2f;
+    public float cut_delay = 1; // delay for next cut detection
+    private float cut_delay_passed = 1;
 
     //[Header("Cut Mapping Settings")]
     //public List<CutMapping> cutMappings;
     private List<CutMapping> cutMappings = new List<CutMapping>();
 
-    void Start()
+    [SerializeField]
+    private CutRegistry cutRegistry;
+
+    public void AfterSpawned()
     {
         // Find the left hand anchor by name at the start
         LeftHandAnchor = GameObject.Find("LeftHandAnchor");
@@ -40,12 +44,12 @@ public class CutHandler : MonoBehaviour
         {
             Debug.LogError("LeftHandAnchor not found! Make sure it's named correctly in the scene.");
         }
-        cutMappings.Add(new CutMapping("Apple", Resources.Load<GameObject>("Prefabs/Apple_cut")));
-        cutMappings.Add(new CutMapping("Carrot", Resources.Load<GameObject>("Prefabs/Carrot_cut")));
-        cutMappings.Add(new CutMapping("Lettuce", Resources.Load<GameObject>("Prefabs/Lettuce_cut")));
-        cutMappings.Add(new CutMapping("Steak", Resources.Load<GameObject>("Prefabs/Steak_cut")));
-        cutMappings.Add(new CutMapping("Turkey", Resources.Load<GameObject>("Prefabs/Turkey_cut")));
-        cutMappings.Add(new CutMapping("Tomato", Resources.Load<GameObject>("Prefabs/Tomato_cut")));
+
+        if(this.cutRegistry == null)
+        {
+            // HACK: hard-coded name
+            this.cutRegistry = Resources.Load<CutRegistry>("DefaultCutRegistry");
+        }
     }
 
     void Update()
@@ -85,24 +89,28 @@ public class CutHandler : MonoBehaviour
                 is_cutter_gesture = false;
                 cutter_duration_passed = 0f;
             }
-
-            if (cut_delay_passed >= cut_delay)
-            {
-                cut_delay_passed = 0f; // Reset delay after gesture detected
-            }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (cut_delay_passed < cut_delay)
+        {
+            return;
+        }
         if (other.name == "TipCollider" || other.name == "FingerTrackingHandCollider")
         {
-            Debug.Log("Left hand has entered the trigger!");
+            Debug.Log("Left hand has entered the trigger!" + other.name);
 
             if (is_cutter_gesture)
             {
                 Debug.Log("Cutter Detection !!!");
-
+                string parent_name = GetParentObjectName(other);
+                if (!parent_name.Contains("Left"))
+                {
+                    return;
+                }
+                Debug.Log("[Parent name]" + parent_name);
                 // Get the world contact point and convert it to local space
                 Vector3 contactPoint = other.ClosestPointOnBounds(transform.position);
                 Vector3 localPoint = transform.InverseTransformPoint(contactPoint);
@@ -138,37 +146,63 @@ public class CutHandler : MonoBehaviour
                     Debug.Log("Meet the need for cutting number ! Enable the cut model.");
                     ReplaceWithCutObject();
                 }
+                cut_delay_passed = 0f;
             }
         }
     }
 
+    private string GetParentObjectName(Collider other)
+    {
+        // 1. Get the GameObject associated with the collider that triggered the event.
+        //    'other' is the Collider component itself.
+        GameObject colliderGameObject = other.gameObject;
+
+        // 2. Get the Transform component of that GameObject.
+        Transform colliderTransform = colliderGameObject.transform;
+
+        // 3. Get the parent Transform.
+        Transform parentTransform = colliderTransform.parent;
+
+        // 4. Get the parent GameObject from its Transform.
+        GameObject parentGameObject = null;
+        if (parentTransform != null) // Always check if a parent exists
+        {
+            parentGameObject = parentTransform.gameObject;
+        }
+
+        // Now you have the parent GameObject! You can do various things with it.
+        return parentGameObject.name;
+
+    }
+
     private void ReplaceWithCutObject()
     {
-        GameObject cutPrefab = GetCutPrefabByName();
-        if (cutPrefab != null)
+        if (TryGetCutPrefabByName(out NetworkPrefabRef cutPrefab))
         {
-            Instantiate(cutPrefab, transform.position, transform.rotation);
-            Debug.Log("replace with cutPrefab: " + cutPrefab.name);
+            var no = Runner.Spawn(cutPrefab, transform.position, transform.rotation);
+            Debug.Log("replace with cutPrefab: " + no.gameObject.name);
         }
         else
         {
             Debug.LogWarning($"No cutPrefab mapping found for object: {gameObject.name}");
         }
 
-        Destroy(gameObject);
+        Runner.Despawn(Object);
         Debug.Log("CutHandler: Object replaced with cut prefab and original destroyed.");
     }
 
-    private GameObject GetCutPrefabByName()
+    private bool TryGetCutPrefabByName(out NetworkPrefabRef prefabRef)
     {
-        foreach (var mapping in cutMappings)
+        foreach (var entry in this.cutRegistry.All)
         {
-            if (gameObject.name.ToLower().Contains(mapping.originalName.ToLower()))
+            if (gameObject.name.ToLower().Contains(entry.Name.ToLower()))
             {
-                Debug.Log($"Found cut mapping for {gameObject.name}: {mapping.cutPrefab.name}");
-                return mapping.cutPrefab;
+                Debug.Log($"Found cut mapping for {gameObject.name}: {entry.Name}");
+                prefabRef = entry.Prefab;
+                return true;
             }
         }
-        return null;
+        prefabRef = default;
+        return false;
     }
 }
