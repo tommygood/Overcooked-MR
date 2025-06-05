@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 854294292975777862}
   - component: {fileID: 7556365254890099942}
   - component: {fileID: 2980628269654878267}
+  - component: {fileID: 6441295238756988058}
+  - component: {fileID: 3444761495266024808}
   m_Layer: 0
   m_Name: DeliveryRing_v3
   m_TagString: Untagged
@@ -87,7 +89,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &4456857300071180380
 MonoBehaviour:
@@ -117,8 +119,7 @@ MonoBehaviour:
   SortKey: 2231992908
   ObjectInterest: 1
   Flags: 524289
-  NestedObjects:
-  - {fileID: 4945620539106180115}
+  NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 7556365254890099942}
   - {fileID: 2980628269654878267}
@@ -158,6 +159,45 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!136 &6441295238756988058
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571539716073954787}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.441327
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.78415364, z: 0}
+--- !u!114 &3444761495266024808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571539716073954787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e128a452c96873347ae3e142b49c2a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  photoTaker: {fileID: 8335254475535582391}
+  uploadUrl: https://mixed-restaurant.bogay.me/api/upload
+  autoGradeUrl: https://mixed-restaurant.bogay.me/api/cartItem/auto-grade
+  cleanDelay: 5
 --- !u!1 &1835158508485950485
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6579463706471573554
 Transform:
   m_ObjectHideFlags: 0
@@ -366,7 +406,6 @@ GameObject:
   - component: {fileID: 7078757155240014775}
   - component: {fileID: 2622663930633760649}
   - component: {fileID: 792140614377454866}
-  - component: {fileID: 1502590868894415002}
   m_Layer: 0
   m_Name: Capsule (1)
   m_TagString: Untagged
@@ -386,8 +425,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 9.51, z: 0}
   m_LocalScale: {x: 0.5, y: 10, z: 0.5}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 231083459944556410}
+  m_Children: []
   m_Father: {fileID: 2278255898117814798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2622663930633760649
@@ -440,29 +478,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1502590868894415002
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175365841877592359}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2668350021926627071
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,54 +800,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &6686377026403383004
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 231083459944556410}
-  - component: {fileID: 4428482050089311314}
-  m_Layer: 0
-  m_Name: PhotoShotManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &231083459944556410
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6686377026403383004}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -0.296, y: -0.8919, z: 0.01886715}
-  m_LocalScale: {x: 0.14711021, y: 0.013838889, z: 0.011386895}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7078757155240014775}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4428482050089311314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6686377026403383004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4804e1adad78d6f44aba310732a914b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  photoCamera: {fileID: 0}
-  resolutionWidth: 1920
-  resolutionHeight: 1080
-  uploadUrl: https://mixed-restaurant.bogay.me/api/upload
 --- !u!1001 &6428572209055165089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -901,7 +868,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeliveryRing (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -3918816707547321589, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
+    - {fileID: -3958595327231678891, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
+    - {fileID: 2131539562623850162, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
+    - {fileID: 6639866318458636230, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
+    - {fileID: 1517109193035745820, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5092196746598961327, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
@@ -917,14 +889,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5092196746598961327, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
   m_PrefabInstance: {fileID: 6428572209055165089}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4945620539106180115 stripped
+--- !u!114 &8335254475535582391 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2131539562623850162, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3069807421030854166, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
   m_PrefabInstance: {fileID: 6428572209055165089}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Script: {fileID: 11500000, guid: 4804e1adad78d6f44aba310732a914b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

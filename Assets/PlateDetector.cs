@@ -19,6 +19,8 @@ public class PlateDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("[PlateDetector] OnTriggerEnter: " + other.name);
+
         if (other.CompareTag("Order"))
         {
             if (photoTaker != null)

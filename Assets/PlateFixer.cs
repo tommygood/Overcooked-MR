@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlateFixer : MonoBehaviour
 {
     // Define the allowed tags
-    private HashSet<string> allowedTags = new HashSet<string> { "Cheese", "Toast" };
+    private HashSet<string> allowedTags = new HashSet<string> { "Cheese", "Toast", "Cooked_Steak", "Bread" };
 
     // Correct Unity method signature (note: capital 'T' in OnTriggerEnter)
     void OnTriggerEnter(Collider other)
