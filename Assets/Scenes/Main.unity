@@ -678,6 +678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredients_v5
       objectReference: {fileID: 0}
+    - target: {fileID: 7840231069070645613, guid: 7d8e6b9e0fa52634c8feb0c00d225eed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7894435262844076487, guid: 7d8e6b9e0fa52634c8feb0c00d225eed, type: 3}
       propertyPath: SortKey
       value: 2574095322
@@ -949,50 +953,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[7].scale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[3].rotation.w
-      value: 0.00000003090862
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[3].rotation.x
-      value: -0.00000003090862
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[3].rotation.y
-      value: -0.70710677
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[3].rotation.z
-      value: -0.70710677
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[7].position.y
-      value: -0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[7].position.z
-      value: 1.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[8].rotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[8].rotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[7].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: 3757872425588199037
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: utensils.Array.data[7].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: -1342598196447084856
-      objectReference: {fileID: 0}
     - target: {fileID: 6223885308696273180, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

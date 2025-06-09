@@ -56,6 +56,8 @@ public class RoomManager : NetworkBehaviour
 
     private void SetupRoom()
     {
+        // HACK: de-deup
+        bool deliveryDetectorSpawned = false;
         foreach (Transform child in room.gameObject.transform)
         {
             Debug.Log("[Debug] " + child.gameObject.name);
@@ -200,6 +202,27 @@ public class RoomManager : NetworkBehaviour
                     // Add the table to the table list
                     tables.Add(grandChild.gameObject);
                     Debug.Log("[Debug] Delivery_Ring spawned");
+                }
+
+                if (grandChild.gameObject.name == "DOOR_FRAME_EffectMesh")
+                {
+                    var collider = grandChild.gameObject.GetComponent<BoxCollider>();
+                    Destroy(collider);
+                }
+
+                if (grandChild.gameObject.name == "DOOR_FRAME_EffectMesh" && !deliveryDetectorSpawned)
+                {
+                    deliveryDetectorSpawned = true;
+
+                    PrefabWithTransform deliveryDetector = utensils.Find(x => x.name == "DeliveryDetector");
+                    var newObject = Runner.Spawn(deliveryDetector.networkPrefabRef);
+                    newObject.transform.position = grandChild.gameObject.transform.position;
+                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+
+                    newObject.transform.position += deliveryDetector.position;
+                    newObject.transform.Rotate(deliveryDetector.rotation.eulerAngles);
+                    newObject.transform.localScale *= deliveryDetector.scale;
+                    Debug.Log("[Debug] DeliveryDetector spawned");
                 }
             }
 
