@@ -49,61 +49,61 @@ MonoBehaviour:
   utensils:
   - name: Pan
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
+      RawGuidValue: 6eecc4d191953574ca4033c91be6072d
     position: {x: 0, y: 0.1, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1.25
   - name: Pot
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
+      RawGuidValue: 55bbac0fff4f8fa46a8c0a705bfc7ad2
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1.25
   - name: Ladle
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
+      RawGuidValue: 9094529596b7d5143bb3a8ac25ef07e7
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
     scale: 1
   - name: Sink
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
-    position: {x: 0, y: 0, z: 0}
-    rotation: {x: -0.00000003090862, y: -0.70710677, z: -0.70710677, w: 0.00000003090862}
+      RawGuidValue: 5fbfba11a02d1bf4997edecff0f3c9be
+    position: {x: 0, y: -0.35, z: 0}
+    rotation: {x: 0.49999997, y: 0.49999997, z: 0.49999997, w: 0.49999997}
     scale: 0.75
   - name: Cutting_Plate
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
+      RawGuidValue: 9b51c606f4d95984596a8ec6dd275966
     position: {x: 0, y: 0, z: 0}
-    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    rotation: {x: 0.70492697, y: -0.05547905, z: 0.05547905, w: 0.70492697}
     scale: 1.75
   - name: Gas_Stove_Set
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
-    position: {x: 0, y: 0, z: 0}
+      RawGuidValue: 54dd11a33698b7e47ad9892d51978891
+    position: {x: 0, y: 0.5, z: 0}
     rotation: {x: 0.70710677, y: 0.70710677, z: -0.00000003090862, w: -0.00000003090862}
     scale: 1
   - name: Casher
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
-    position: {x: 4, y: -2.2, z: -2}
-    rotation: {x: 0.49999997, y: 0.49999997, z: -0.49999997, w: -0.49999997}
+      RawGuidValue: 89ff6b01ad6a062438293a977239572f
+    position: {x: 0, y: -1.5, z: 0}
+    rotation: {x: 0.49999997, y: 0.49999997, z: 0.49999997, w: 0.49999997}
     scale: 0.5
   - name: Ingredients
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
+      RawGuidValue: 7d8e6b9e0fa52634c8feb0c00d225eed
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0.49999997, y: 0.49999997, z: 0.49999997, w: 0.49999997}
-    scale: 0.075
+    scale: 1
   - name: Pole
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
-    position: {x: 1.75, y: 2, z: 0}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
+      RawGuidValue: a73a0d107d355a840a65519fcd526816
+    position: {x: 0, y: 2, z: 0.5}
+    rotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
     scale: 3
   - name: Car
     networkPrefabRef:
-      RawGuidValue: 00000000000000000000000000000000
+      RawGuidValue: 79d0ca8b77e301442afdb49f102e8aed
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 1}
     scale: 1
@@ -111,5 +111,11 @@ MonoBehaviour:
     networkPrefabRef:
       RawGuidValue: 7dbad7407db026b43b424dbca295914a
     position: {x: 0, y: 0.05, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: Floor
+    networkPrefabRef:
+      RawGuidValue: c78e28cfd17e24e4ca835eb222948096
+    position: {x: 0, y: -0.5, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1
