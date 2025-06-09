@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: f8a51c1a-4715-4488-a968-8792ee55c264
+  instanceId: 3810d2ab-3e2b-4f3e-8730-9f5dd52d8256
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -156,7 +156,6 @@ GameObject:
   - component: {fileID: 3148788599070866127}
   - component: {fileID: 118132420287713213}
   - component: {fileID: 5605954151250440109}
-  - component: {fileID: 5211025578824413111}
   m_Layer: 0
   m_Name: Tray_v2
   m_TagString: Untagged
@@ -174,8 +173,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7040424790497474205}
   - {fileID: 8311780714196306981}
@@ -194,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: 43a53f81-059c-4a1c-86a9-6f857e64e85c
+  instanceId: 014faafb-4e40-4084-83c4-b17507e88d48
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
@@ -298,20 +297,6 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
---- !u!114 &5211025578824413111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8046084946161875792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: b449ebe51d53d9740a0a1cd124c175a9
 --- !u!1001 &8815973794566082188
 PrefabInstance:
   m_ObjectHideFlags: 0

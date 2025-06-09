@@ -330,7 +330,6 @@ GameObject:
   - component: {fileID: 3148168629641841807}
   - component: {fileID: 3087400936033822842}
   - component: {fileID: 633814785422628434}
-  - component: {fileID: 2089819997775638805}
   - component: {fileID: 7343161092444852210}
   m_Layer: 0
   m_Name: TheRealBowl
@@ -349,8 +348,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.5489296, y: 0.629, z: -1.345}
-  m_LocalScale: {x: 0.31604, y: 0.1, z: 0.1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.663684, y: 0.21, z: 0.21}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8120901274386986965}
   - {fileID: 2689485573344874371}
@@ -527,20 +526,6 @@ MonoBehaviour:
   _IsClean: 0
   cleanMaterial: {fileID: 2100000, guid: 9866fda0e61a7904087eb0ec5ab17e03, type: 2}
   dirtyMaterial: {fileID: 2100000, guid: f52d0efc106b6a14cbb2349d580e195e, type: 2}
---- !u!114 &2089819997775638805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6611198103999468284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: 4c9e0f8d98a3a2040a12aa66d26619c9
 --- !u!114 &7343161092444852210
 MonoBehaviour:
   m_ObjectHideFlags: 0

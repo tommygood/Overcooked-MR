@@ -148,7 +148,7 @@ public class RoomManager : NetworkBehaviour
                     newObject.transform.Rotate(ingredients.rotation.eulerAngles);
                     newObject.transform.localScale *= ingredients.scale;
 
-                    this.unparenting(newObject);
+                    // this.unparenting(newObject);
                     /*
                     // HACK
                     if (newObject.TryGetComponent(out IngredientSpawner ingredientSpawner))

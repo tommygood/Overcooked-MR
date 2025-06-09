@@ -9,11 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 252614806492332420}
-  - component: {fileID: 1261476644149580549}
   - component: {fileID: 741690302965089610}
-  - component: {fileID: 4456857300071180380}
   - component: {fileID: 854294292975777862}
-  - component: {fileID: 7556365254890099942}
   - component: {fileID: 2980628269654878267}
   - component: {fileID: 6441295238756988058}
   - component: {fileID: 3444761495266024808}
@@ -42,28 +39,6 @@ Transform:
   - {fileID: 2278255898117814798}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1261476644149580549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571539716073954787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: 2576eef8-67ba-41e7-b065-176febc16102
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
-    _installationVariants:
-    - _memberName: _useGravity
-      _value: '{}'
-    - _memberName: installAutoMatchmaking
-      _value: '{}'
 --- !u!54 &741690302965089610
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -91,19 +66,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &4456857300071180380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571539716073954787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 413bd4e9cbbc96b46ac5a1d62a4105d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UseGravity: 0
 --- !u!114 &854294292975777862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,21 +83,8 @@ MonoBehaviour:
   Flags: 524289
   NestedObjects: []
   NetworkedBehaviours:
-  - {fileID: 7556365254890099942}
   - {fileID: 2980628269654878267}
   ForceRemoteRenderTimeframe: 0
---- !u!114 &7556365254890099942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1571539716073954787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b72e9ba2c21430c818f53e1079c2a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2980628269654878267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +100,7 @@ MonoBehaviour:
   _stateAuthorityChangeErrorCorrectionDelta: 0
   SyncScale: 0
   SyncParent: 1
-  _interpolationTarget: {fileID: 3507808250305263337}
+  _interpolationTarget: {fileID: 2278255898117814798}
   UsePreciseRotation: 0
   UseRenderSleepThresholds: 1
   RenderThresholds:
@@ -866,7 +815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5299391815395610904, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}
       propertyPath: m_Name
-      value: DeliveryRing (1)
+      value: DeliveryRing
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -3918816707547321589, guid: 8a8f6449168bae94ab8762a722d621ad, type: 3}

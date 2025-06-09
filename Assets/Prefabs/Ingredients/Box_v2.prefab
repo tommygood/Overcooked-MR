@@ -32,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2014590939545784449}
   - {fileID: 9012331021142034998}
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: a5e87b37-36a3-40ee-897f-1026b66f1141
+  instanceId: d050376b-1e18-44a1-9a83-fbc524435b10
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
@@ -83,8 +83,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 5680f0b4-1fcf-4ef3-8efe-78ebad9497a3
+  instanceId: cb476a1d-e3b8-4cfa-82e9-b722fcc206ad
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -305,6 +305,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6473803950908294752}
     m_Modifications:
+    - target: {fileID: 876900367308489533, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003359352123603718, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4260185842030837783, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4822593147410876769, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -345,9 +357,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5217141045834169502, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5880360728933987488, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
       propertyPath: m_Name
       value: Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 6038639221539163853, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6202144355288309889, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563130381942566601, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563130381942566601, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092415963305595565, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2259878120296359186, guid: d58044ede19b0084c8b31be6f390a9da, type: 3}

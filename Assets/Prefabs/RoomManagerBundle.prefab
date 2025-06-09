@@ -51,6 +51,10 @@ PrefabInstance:
       value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
+      propertyPath: utensils.Array.data[7].scale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[11].scale
       value: 1
       objectReference: {fileID: 0}
@@ -140,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[7].position.y
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[8].position.x
@@ -240,11 +244,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[7].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: 0
+      value: 3757872425588199037
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[7].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: 0
+      value: -1342598196447084856
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[8].networkPrefabRef.RawGuidValue.Array.data[0]
@@ -261,14 +265,6 @@ PrefabInstance:
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[9].networkPrefabRef.RawGuidValue.Array.data[1]
       value: -1330200091000767190
-      objectReference: {fileID: 0}
-    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
-      propertyPath: utensils.Array.data[11].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
-      propertyPath: utensils.Array.data[11].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3708549950554371197, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: m_Name
@@ -466,7 +462,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2296141232796561049, guid: 37c47f9928e3fef4bb9a9ffaafab5526, type: 3}
       propertyPath: hideMesh
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2296141232796561049, guid: 37c47f9928e3fef4bb9a9ffaafab5526, type: 3}
       propertyPath: Colliders
