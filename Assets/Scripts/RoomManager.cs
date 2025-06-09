@@ -203,6 +203,13 @@ public class RoomManager : NetworkBehaviour
                     tables.Add(grandChild.gameObject);
                     Debug.Log("[Debug] Delivery_Ring spawned");
                 }
+
+                if (grandChild.gameObject.name == "DOOR_FRAME_EffectMesh")
+                {
+                    var collider = grandChild.gameObject.GetComponent<BoxCollider>();
+                    Destroy(collider);
+                }
+
                 if (grandChild.gameObject.name == "DOOR_FRAME_EffectMesh" && !deliveryDetectorSpawned)
                 {
                     deliveryDetectorSpawned = true;
