@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 7116888341012679415}
   - component: {fileID: 1905719440229407838}
   - component: {fileID: 2615264556771083918}
-  - component: {fileID: 2140505135907666192}
   m_Layer: 0
   m_Name: Container
   m_TagString: Untagged
@@ -33,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0919999, y: 1.0919999, z: 1.0919999}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5636305986331491008}
@@ -53,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: f6d69b12-0daf-47eb-9fbd-98139ea5354e
+  instanceId: 47c9860c-e737-4438-8a4e-81b05a68512c
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
@@ -157,20 +156,6 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
---- !u!114 &2140505135907666192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3381556966317512421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: 14cefdd6a1474b140bd5ffbb3fcd1e9f
 --- !u!1 &8634438695092842172
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 984d3f8b-a2e1-43da-969f-ffabbc9efcc5
+  instanceId: 44df761e-bf70-4959-9db1-c4dfba8ee0ef
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -320,6 +305,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2283642908436879177}
     m_Modifications:
+    - target: {fileID: 1350974639075089458, guid: 422b0cab86b487749aaebedc0e2fd602, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1793227233948744242, guid: 422b0cab86b487749aaebedc0e2fd602, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5153985
