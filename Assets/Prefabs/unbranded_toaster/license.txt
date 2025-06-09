@@ -1,0 +1,8 @@
+Model Information:
+* title:	Unbranded Toaster
+* source:	https://sketchfab.com/3d-models/unbranded-toaster-705609b334df4ed08add7e1a3a35700e
+* author:	assetfactory (https://sketchfab.com/assetfactory)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
