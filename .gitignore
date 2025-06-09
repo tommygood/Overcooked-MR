@@ -18,3 +18,5 @@ UserSettings/
 .vs/
 
 obj/
+
+*.apk
