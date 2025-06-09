@@ -5550,6 +5550,7 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 5591972506078657017}
+  - {fileID: 3496389984507912648}
   ForceRemoteRenderTimeframe: 0
 --- !u!54 &1266013152881535089
 Rigidbody:
@@ -81149,6 +81150,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6077825517818676015, guid: 4b12b415f689c64439a7d22f043b91db, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5458702407299688332}
+    - targetCorrespondingSourceObject: {fileID: 6077825517818676015, guid: 4b12b415f689c64439a7d22f043b91db, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3496389984507912648}
   m_SourcePrefab: {fileID: 100100000, guid: 4b12b415f689c64439a7d22f043b91db, type: 3}
 --- !u!4 &6958244457245752544 stripped
 Transform:
@@ -81187,6 +81191,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3496389984507912648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7771936265813288538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a591d221a634417e9827eb58e17de84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stateAuthorityChangeErrorCorrectionDelta: 0
+  SyncScale: 0
+  SyncParent: 1
+  _interpolationTarget: {fileID: 0}
+  UsePreciseRotation: 0
+  UseRenderSleepThresholds: 1
+  RenderThresholds:
+    UseEnergy: 1
+    Position: 0.01
+    Rotation: 0.01
+    Scale: 0.01
 --- !u!1001 &4579195506242858103
 PrefabInstance:
   m_ObjectHideFlags: 0
