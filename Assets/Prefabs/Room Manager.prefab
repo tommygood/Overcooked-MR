@@ -69,7 +69,7 @@ MonoBehaviour:
     networkPrefabRef:
       RawGuidValue: 5fbfba11a02d1bf4997edecff0f3c9be
     position: {x: 0, y: -0.35, z: 0}
-    rotation: {x: 0.49999997, y: 0.49999997, z: 0.49999997, w: 0.49999997}
+    rotation: {x: -0.00000003090862, y: -0.70710677, z: -0.70710677, w: 0.00000003090862}
     scale: 0.75
   - name: Cutting_Plate
     networkPrefabRef:
@@ -92,14 +92,14 @@ MonoBehaviour:
   - name: Ingredients
     networkPrefabRef:
       RawGuidValue: 7d8e6b9e0fa52634c8feb0c00d225eed
-    position: {x: 0, y: 0, z: 0}
+    position: {x: 0, y: -0.8, z: 1.9}
     rotation: {x: 0.49999997, y: 0.49999997, z: 0.49999997, w: 0.49999997}
     scale: 1
   - name: Pole
     networkPrefabRef:
       RawGuidValue: a73a0d107d355a840a65519fcd526816
     position: {x: 0, y: 2, z: 0.5}
-    rotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
     scale: 3
   - name: Car
     networkPrefabRef:
@@ -118,4 +118,10 @@ MonoBehaviour:
       RawGuidValue: c78e28cfd17e24e4ca835eb222948096
     position: {x: 0, y: -0.5, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: DeliveryDetector
+    networkPrefabRef:
+      RawGuidValue: 00000000000000000000000000000000
+    position: {x: 0, y: -0.5, z: -1.3}
+    rotation: {x: 0.70710677, y: 0.70710677, z: 0, w: 0.70710677}
     scale: 1
