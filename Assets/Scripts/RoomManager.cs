@@ -290,7 +290,7 @@ public class RoomManager : NetworkBehaviour
 
                 if (grandChild.gameObject.name == "DOOR_FRAME_EffectMesh")
                 {
-                    var collider = grandChild.gameObject.GetComponent<BoxCollider>();
+                    var collider = grandChild.gameObject.GetComponent<Collider>();
                     Destroy(collider);
                 }
 
