@@ -156,6 +156,8 @@ GameObject:
   - component: {fileID: 936835509891026192}
   - component: {fileID: 2815102358014998626}
   - component: {fileID: 7745815308115728498}
+  - component: {fileID: 5907586273155036720}
+  - component: {fileID: 623580035364790027}
   m_Layer: 0
   m_Name: Tortilla Tray
   m_TagString: Untagged
@@ -297,6 +299,41 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &5907586273155036720
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267979846540414095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.33990774, y: 0.014176428, z: 0.24590759}
+  m_Center: {x: 0.0005654037, y: 0.005801845, z: -0.00080051424}
+--- !u!114 &623580035364790027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5267979846540414095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918aecc46a0d0f0469401f669f716f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+    RawGuidValue: 00000000000000000000000000000000
 --- !u!1001 &1116256702465525180
 PrefabInstance:
   m_ObjectHideFlags: 0

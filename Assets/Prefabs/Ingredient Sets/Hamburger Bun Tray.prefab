@@ -156,6 +156,8 @@ GameObject:
   - component: {fileID: 938364060918316007}
   - component: {fileID: 2816072924037418645}
   - component: {fileID: 7744883152254201477}
+  - component: {fileID: 7102982900985036137}
+  - component: {fileID: -2188174493230490232}
   m_Layer: 0
   m_Name: Hamburger Bun Tray
   m_TagString: Untagged
@@ -297,6 +299,41 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &7102982900985036137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268767399476525688}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3422752, y: 0.029928451, z: 0.24685268}
+  m_Center: {x: 0.00067250134, y: 0.013812343, z: 0.000007987022}
+--- !u!114 &-2188174493230490232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5268767399476525688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918aecc46a0d0f0469401f669f716f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+    RawGuidValue: 00000000000000000000000000000000
 --- !u!1001 &635955899853836644
 PrefabInstance:
   m_ObjectHideFlags: 0

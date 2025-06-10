@@ -156,6 +156,8 @@ GameObject:
   - component: {fileID: 293035316851587532}
   - component: {fileID: 3314680465805987006}
   - component: {fileID: 7093157337733967022}
+  - component: {fileID: 6628807440956526828}
+  - component: {fileID: -7027719495304828059}
   m_Layer: 0
   m_Name: Seared Ground Beef Tray
   m_TagString: Untagged
@@ -297,6 +299,41 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &6628807440956526828
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614715438300313683}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.01737724, z: 0.24526165}
+  m_Center: {x: 0, y: 0.009289563, z: -0.00000013113022}
+--- !u!114 &-7027719495304828059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4614715438300313683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918aecc46a0d0f0469401f669f716f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+    RawGuidValue: 00000000000000000000000000000000
 --- !u!1001 &333414200009056564
 PrefabInstance:
   m_ObjectHideFlags: 0

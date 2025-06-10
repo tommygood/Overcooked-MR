@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5333293460610480111}
   - component: {fileID: 3653993401681568070}
   - component: {fileID: 904281632040909718}
+  - component: {fileID: 2275117766153393141}
+  - component: {fileID: 2010793372672028908}
   m_Layer: 0
   m_Name: Pumpkin Box
   m_TagString: Untagged
@@ -156,6 +158,41 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &2275117766153393141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444266733431008253}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9999999, y: 0.46314865, z: 0.602009}
+  m_Center: {x: 0, y: 0.23747748, z: -0.0021645166}
+--- !u!114 &2010793372672028908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444266733431008253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918aecc46a0d0f0469401f669f716f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+    RawGuidValue: 00000000000000000000000000000000
 --- !u!1 &6851204452810134436
 GameObject:
   m_ObjectHideFlags: 0

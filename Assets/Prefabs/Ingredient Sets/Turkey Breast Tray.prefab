@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 8405725665781650833}
   - component: {fileID: 6824691445917769955}
   - component: {fileID: 1358334329302745331}
+  - component: {fileID: 3317159608360969476}
+  - component: {fileID: 534294046190192517}
   m_Layer: 0
   m_Name: Turkey Breast Tray
   m_TagString: Untagged
@@ -156,6 +158,41 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &3317159608360969476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511949925136929806}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.34225127, y: 0.048251648, z: 0.24903198}
+  m_Center: {x: 0.00000006556511, y: 0.021900771, z: -0.000699234}
+--- !u!114 &534294046190192517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3511949925136929806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918aecc46a0d0f0469401f669f716f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+    RawGuidValue: 00000000000000000000000000000000
 --- !u!1 &7887968366005143150
 GameObject:
   m_ObjectHideFlags: 0

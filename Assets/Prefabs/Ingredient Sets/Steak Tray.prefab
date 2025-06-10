@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5098125843843864084}
   - component: {fileID: 7841083827854418790}
   - component: {fileID: 2359544689118331766}
+  - component: {fileID: 2593451480926672112}
+  - component: {fileID: -398984023175826034}
   m_Layer: 0
   m_Name: Steak Tray
   m_TagString: Untagged
@@ -156,6 +158,41 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &2593451480926672112
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206038983115724683}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.34217808, y: 0.025319371, z: 0.24698924}
+  m_Center: {x: 0.000057423116, y: 0.011782991, z: 0.00026739837}
+--- !u!114 &-398984023175826034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206038983115724683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918aecc46a0d0f0469401f669f716f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+    RawGuidValue: 00000000000000000000000000000000
 --- !u!1 &6850183851411539435
 GameObject:
   m_ObjectHideFlags: 0

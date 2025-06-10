@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6030687412417438671}
   - component: {fileID: 8764075779862582973}
   - component: {fileID: 3877503806280054445}
+  - component: {fileID: 6764084393021896774}
+  - component: {fileID: 1219236569680455110}
   m_Layer: 0
   m_Name: Cheese Tray
   m_TagString: Untagged
@@ -156,6 +158,41 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &6764084393021896774
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705350313948226128}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.34182188, y: 0.021370342, z: 1}
+  m_Center: {x: -0.00081093906, y: 0.008340202, z: 0}
+--- !u!114 &1219236569680455110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705350313948226128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918aecc46a0d0f0469401f669f716f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+    RawGuidValue: 00000000000000000000000000000000
 --- !u!1 &5359808732480041008
 GameObject:
   m_ObjectHideFlags: 0

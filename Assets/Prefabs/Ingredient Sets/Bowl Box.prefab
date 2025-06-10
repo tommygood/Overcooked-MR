@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 7700237561138735258}
   - component: {fileID: 1327014623836864051}
   - component: {fileID: 3194090336538846435}
+  - component: {fileID: 2839213218947546058}
+  - component: {fileID: -548456363837725634}
   m_Layer: 0
   m_Name: Bowl Box
   m_TagString: Untagged
@@ -156,6 +158,41 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!65 &2839213218947546058
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807234999747556488}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9999999, y: 0.4756277, z: 0.6024366}
+  m_Center: {x: 0, y: 0.23819467, z: 0}
+--- !u!114 &-548456363837725634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2807234999747556488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 918aecc46a0d0f0469401f669f716f28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab:
+    RawGuidValue: 00000000000000000000000000000000
 --- !u!1 &9208534402617838801
 GameObject:
   m_ObjectHideFlags: 0

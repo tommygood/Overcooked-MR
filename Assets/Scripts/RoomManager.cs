@@ -205,6 +205,8 @@ public class RoomManager : NetworkBehaviour
                                 break;
                         }
 
+                        Debug.Log(ingredient.name);
+
                         ingredientIndex++;
 
                         var newObject = Runner.Spawn(ingredient.networkPrefabRef);
