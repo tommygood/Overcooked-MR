@@ -1,12 +1,18 @@
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Networking;
 using System.Linq; // Required for FirstOrDefault
+using UnityEngine.UI;
 
 
 public class OrderController : MonoBehaviour
 {
+  public GameObject imagePrefab; // Assign your UI Image prefab
+  public List<string> imageNames; // List of image names in Resources folder
+
+
   public RectTransform contentParent;         // Scroll View Content
   public GameObject textItemPrefab;           // Text prefab (TextMeshProUGUI)
   public GameObject casher;
@@ -290,6 +296,13 @@ public class OrderController : MonoBehaviour
                     }
                 }
                 orderAnimator.DisplayText($"{foodName}\n{foodDesc}\n\nOrder Info:\ntable={orderB.table_id}, food={orderB.food_id}, user={orderB.user_id}");
+
+                GameObject newImage = Instantiate(imagePrefab);
+                newImage.transform.SetParent(newOrderGO.transform, false); // Makes it a child of the specified GameObject
+                Debug.Log($"Loading image for food: {foodName} {orderB.food_id} {newImage.name}");
+                newImage.GetComponentInChildren<Image>().sprite = Resources.Load<Sprite>(foodName);
+                TMP_Text tmpComponent = newImage.GetComponentInChildren<TMP_Text>();
+                tmpComponent.text = $"{foodName}\n{foodDesc}"; // Set the text content
                 newOrderGO.name = $"Order_{orderB.cart_id}";
                 orderAnimator.Up();
             }
