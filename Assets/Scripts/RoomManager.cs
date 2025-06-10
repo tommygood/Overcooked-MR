@@ -22,6 +22,9 @@ public class RoomManager : NetworkBehaviour
 
     public List<PrefabWithTransform> utensils;
 
+    private int ingredientIndex = 0;
+    public int ingredientNum;
+
     /*
         3D Furniture:
         COUCH - COUCH_EffectMesh
@@ -74,7 +77,7 @@ public class RoomManager : NetworkBehaviour
                     // The position of the couch is in the center
                     Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
                     Vector3 size = bounds.size;
-                    Vector3 offset = new Vector3(0, size.y / 2f, 0);
+                    Vector3 offset = new Vector3(0, size.y / 3f, 0);
                     newObject.transform.position += offset;
 
                     newObject.transform.position += gas_stove_set.position;
@@ -113,6 +116,22 @@ public class RoomManager : NetworkBehaviour
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
 
+                    // Place sink on the floor
+                    Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
+                    Vector3 size = bounds.size;
+                    Vector3 offset = new Vector3(0, size.y, 0);
+                    newObject.transform.position -= offset;
+
+                    float objectHeight = 0;
+                    foreach (Transform c in newObject.transform)
+                    {
+                        if (c.gameObject.name == "Prop_Sink_02")
+                        {
+                            objectHeight = c.GetComponent<Renderer>().bounds.size.y;
+                        }
+                    }
+                    newObject.transform.position += new Vector3(0, objectHeight / 2, 0);
+
                     newObject.transform.position += sink.position;
                     newObject.transform.Rotate(sink.rotation.eulerAngles);
                     newObject.transform.localScale *= sink.scale;
@@ -126,12 +145,6 @@ public class RoomManager : NetworkBehaviour
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
 
-                    // The position of the storage is in the center
-                    Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
-                    Vector3 size = bounds.size;
-                    Vector3 offset = new Vector3(0, size.y / 2f, 0);
-                    newObject.transform.position += offset;
-
                     newObject.transform.position += casher.position;
                     newObject.transform.Rotate(casher.rotation.eulerAngles);
                     newObject.transform.localScale *= casher.scale;
@@ -140,26 +153,95 @@ public class RoomManager : NetworkBehaviour
                 if (grandChild.gameObject.name == "LAMP_EffectMesh")
                 {
                     Destroy(grandChild.gameObject.GetComponent<BoxCollider>());
-                    // ingredients
-                    PrefabWithTransform ingredients = utensils.Find(x => x.name == "Ingredients");
-                    var newObject = Runner.Spawn(ingredients.networkPrefabRef);
-                    newObject.transform.position = grandChild.gameObject.transform.position;
-                    newObject.transform.rotation = grandChild.gameObject.transform.rotation;
 
-                    newObject.transform.position += ingredients.position;
-                    newObject.transform.Rotate(ingredients.rotation.eulerAngles);
-                    newObject.transform.localScale *= ingredients.scale;
-
-                    // this.unparenting(newObject);
-                    /*
-                    // HACK
-                    if (newObject.TryGetComponent(out IngredientSpawner ingredientSpawner))
+                    if (ingredientIndex < ingredientNum)
                     {
-                        ingredientSpawner.SpawnChildObject();
-                    }
-                    */
+                        // ingredients
+                        PrefabWithTransform ingredient = null;
 
-                    Debug.Log("[Debug] Ingredients spawned");
+                        switch (ingredientIndex)
+                        {
+                            case 0:
+                                ingredient = utensils.Find(x => x.name == "AppleBox");
+                                break;
+                            case 1:
+                                ingredient = utensils.Find(x => x.name == "BowlBox");
+                                break;
+                            case 2:
+                                ingredient = utensils.Find(x => x.name == "BreadTray");
+                                break;
+                            case 3:
+                                ingredient = utensils.Find(x => x.name == "CarrotBox");
+                                break;
+                            case 4:
+                                ingredient = utensils.Find(x => x.name == "CheeseTray");
+                                break;
+                            case 5:
+                                ingredient = utensils.Find(x => x.name == "HamburgerBunTray");
+                                break;
+                            case 6:
+                                ingredient = utensils.Find(x => x.name == "LettuceBox");
+                                break;
+                            case 7:
+                                ingredient = utensils.Find(x => x.name == "PlateBox");
+                                break;
+                            case 8:
+                                ingredient = utensils.Find(x => x.name == "PumpkinBox");
+                                break;
+                            case 9:
+                                ingredient = utensils.Find(x => x.name == "SearedGroundBeefTray");
+                                break;
+                            case 10:
+                                ingredient = utensils.Find(x => x.name == "SteakTray");
+                                break;
+                            case 11:
+                                ingredient = utensils.Find(x => x.name == "TomatoBox");
+                                break;
+                            case 12:
+                                ingredient = utensils.Find(x => x.name == "TortillaTray");
+                                break;
+                            case 13:
+                                ingredient = utensils.Find(x => x.name == "TrykeyBreastTray");
+                                break;
+                        }
+
+                        ingredientIndex++;
+
+                        var newObject = Runner.Spawn(ingredient.networkPrefabRef);
+                        newObject.transform.position = grandChild.gameObject.transform.position;
+                        newObject.transform.rotation = grandChild.gameObject.transform.rotation;
+
+                        // Place ingredient on the floor
+                        Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
+                        Vector3 size = bounds.size;
+                        Vector3 offset = new Vector3(0, size.y, 0);
+                        newObject.transform.position -= offset;
+
+                        float objectHeight = 0;
+                        foreach (Transform c in newObject.transform)
+                        {
+                            if (c.gameObject.name == "Container_C")
+                            {
+                                objectHeight = c.GetComponent<Renderer>().bounds.size.y;
+                            }
+                        }
+                        // newObject.transform.position += new Vector3(0, objectHeight / 2, 0);
+
+                        newObject.transform.position += ingredient.position;
+                        newObject.transform.Rotate(ingredient.rotation.eulerAngles);
+                        newObject.transform.localScale *= ingredient.scale;
+
+                        // this.unparenting(newObject);
+                        /*
+                        // HACK
+                        if (newObject.TryGetComponent(out IngredientSpawner ingredientSpawner))
+                        {
+                            ingredientSpawner.SpawnChildObject();
+                        }
+                        */
+
+                        Debug.Log("[Debug] " + ingredient.name + " spawned");
+                    }
                 }
                 if (grandChild.gameObject.name == "FLOOR_EffectMesh")
                 {
