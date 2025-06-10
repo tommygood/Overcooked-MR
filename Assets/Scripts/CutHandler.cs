@@ -45,7 +45,7 @@ public class CutHandler : NetworkBehaviour, IAfterSpawned
             Debug.LogError("LeftHandAnchor not found! Make sure it's named correctly in the scene.");
         }
 
-        if(this.cutRegistry == null)
+        if (this.cutRegistry == null)
         {
             // HACK: hard-coded name
             this.cutRegistry = Resources.Load<CutRegistry>("DefaultCutRegistry");
@@ -123,19 +123,32 @@ public class CutHandler : NetworkBehaviour, IAfterSpawned
 
                 // How much to keep
                 float cutRatio = Mathf.Clamp01(Mathf.Abs(localPoint.x) / (0.5f * totalWidth));
-                float newWidth = totalWidth * cutRatio;
+
+                float newWidth = totalWidth * (1 - cutRatio);
+
+                Debug.Log($"Cutting ratio: {cutRatio:F3} at localX={localPoint.x:F3}, totalWidth={totalWidth:F3}, contactPoint={contactPoint}, newWidth={newWidth:F3}");
 
                 if (newWidth > 0.01f)
                 {
+                    // Apply the new width to the object
+                    /*
+                    Vector3 newScale = transform.localScale;
+                    newScale.x = newWidth;
+                    transform.localScale = newScale;
+                    */
+
                     Vector3 newScale = transform.localScale;
                     newScale.x = newWidth;
                     transform.localScale = newScale;
 
                     Vector3 shiftDirection = isLeftSide ? transform.right : -transform.right;
-                    float shiftAmount = (totalWidth - newWidth) * 0.5f;
+                    float shiftAmount = (totalWidth - newWidth) * 0.1f;
                     transform.position += shiftDirection * shiftAmount;
 
                     Debug.Log($"Cut from {(isLeftSide ? "left" : "right")} at localX={localPoint.x:F3}, new width={newWidth:F3}");
+
+                    Debug.Log($"New scale after cut: {newScale}");
+
                     cut_num_current += 1;
 
                     SoundManager.Instance.PlaySFX(SoundRegistry.SoundID.Chop, transform.position);
@@ -148,6 +161,11 @@ public class CutHandler : NetworkBehaviour, IAfterSpawned
                 }
                 cut_delay_passed = 0f;
             }
+        }
+        else
+        {
+            // not a left hand collider, ignore
+            Debug.Log("Not a left hand collider, ignoring: " + other.name);
         }
     }
 
