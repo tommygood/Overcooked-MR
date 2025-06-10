@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
+using Fusion;
 
-public class PlateDetector : MonoBehaviour
+public class PlateDetector : NetworkBehaviour
 {
+    [SerializeField]
+    private NetworkPrefabRef deliveryPrefab;
+
     public PhotoShotManager photoTaker; // Assign this in the Inspector
     public string uploadUrl = "https://your-api-endpoint.com/upload"; // Replace with your actual API URL
 
@@ -78,7 +82,8 @@ public class PlateDetector : MonoBehaviour
                         Debug.LogWarning("No plate found nearby!");
                         return;
                     }
-                    StartCoroutine(CleanPlateAfterDelay(nearestPlate, cleanDelay));
+
+                    // Check if the plate has a correct combination of ingredients
                     PlateController plate_controller = nearestPlate.GetComponent<PlateController>();
                     Debug.Log("最近的盤子：" + nearestPlate.name);
                     Order top = FindTopIngredientOnPlate(nearestPlate.transform);
@@ -88,17 +93,31 @@ public class PlateDetector : MonoBehaviour
                         return;
                     }
                     bool isCorrect = plate_controller.CheckRecipeFromTop(top, food_id);
+                    float thisCleanDelay = cleanDelay;
+                    float thisDeactivateDelay = 5f;
+
+                    if(this.isTakeout(table_id))
+                    {
+                        thisCleanDelay = 0f;
+                        thisDeactivateDelay = 0f;
+                        Runner.Spawn(
+                            deliveryPrefab,
+                            nearestPlate.transform.position + Vector3.up * 0.5f,
+                            nearestPlate.transform.rotation);
+                    }
+
                     if (isCorrect)
                     {
-                        Debug.Log("PP組合正確！");
+                        Debug.Log("[PlateDetector] 組合正確！");
                         StartCoroutine(SendAutoGradeRequest(autoGradeUrl, food_id.ToString(), user_id.ToString(), table_id.ToString(), "1"));
                     }
                     else
                     {
-                        Debug.Log("PP組合錯誤！");
+                        Debug.Log("[PlateDetector] 組合錯誤！");
                     }
-                    Debug.Log("PP是否正確組合：" + isCorrect);
-                    StartCoroutine(DeactivateIngredientsAfterDelay(5f));
+
+                    StartCoroutine(CleanPlateAfterDelay(nearestPlate, thisCleanDelay));
+                    StartCoroutine(DeactivateIngredientsAfterDelay(thisDeactivateDelay));
                 }
             }
             else
@@ -107,6 +126,8 @@ public class PlateDetector : MonoBehaviour
             }
         }
     }
+
+    private bool isTakeout(int tableId) => tableId > 2;
 
     private IEnumerator SendAutoGradeRequest(string url, string foodId, string userId, string tableId, string autoGrade, System.Action<string> onSuccess = null, System.Action<string> onError = null)
     {
@@ -221,6 +242,7 @@ public class PlateDetector : MonoBehaviour
         }
         return nearestPlate;
     }
+
     private (int, int, int) ExtractIds(string rawText)
     {
         // Example input: "Neww Order: table=1, food=1, user=1"
