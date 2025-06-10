@@ -68,7 +68,7 @@ public class StoveControl : NetworkBehaviour
         if (other.CompareTag("Water_T") && isOnFire)
         {
             Debug.Log("碰到Water");
-            this.waterTimer = TickTimer.CreateFromSeconds(Runner, 3f);
+            this.waterTimer = TickTimer.CreateFromSeconds(Runner, 2f);
         }
     }
 

@@ -84,51 +84,53 @@ public class CarrotSoupCooker : NetworkBehaviour, IAfterSpawned
     }
 
     void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Plate") && currentBowl == null && !isBoiling && !isStirring)
-        {
-            currentBowl = other.gameObject;
-
-            foreach (Transform child in currentBowl.transform)
+    {   
+        if (other.CompareTag("Pot")) // 確保只有 Pot 進入觸發區域後才執行其他邏輯
+            Debug.Log("pot in");
+            if (other.CompareTag("Plate") && currentBowl == null && !isBoiling && !isStirring)
             {
-                if (child.CompareTag("Water_T"))
+                currentBowl = other.gameObject;
+
+                foreach (Transform child in currentBowl.transform)
                 {
-                    waterInBowl = child.gameObject;
-                    break;
+                    if (child.CompareTag("Water_T"))
+                    {
+                        waterInBowl = child.gameObject;
+                        break;
+                    }
+                }
+
+                if (waterInBowl == null)
+                {
+                    currentBowl = null;
                 }
             }
 
-            if (waterInBowl == null)
+            if (other.CompareTag("Carrot_cut") && currentBowl != null && waterInBowl != null && !isBoiling && !isStirring)
             {
-                currentBowl = null;
-            }
-        }
+                Destroy(other.gameObject);
+                isBoiling = true;
+                timer = 0f;
+                boilSoundPlayed = false;
 
-        if (other.CompareTag("Carrot_cut") && currentBowl != null && waterInBowl != null && !isBoiling && !isStirring)
-        {
-            Destroy(other.gameObject);
-            isBoiling = true;
-            timer = 0f;
-            boilSoundPlayed = false;
+                if (cookProgressSlider != null)
+                {
+                    cookProgressSlider.value = 0f;
+                    cookProgressSlider.gameObject.SetActive(true);
+                }
 
-            if (cookProgressSlider != null)
-            {
-                cookProgressSlider.value = 0f;
-                cookProgressSlider.gameObject.SetActive(true);
+                if (stirPromptText != null)
+                    stirPromptText.SetActive(false);
             }
 
-            if (stirPromptText != null)
-                stirPromptText.SetActive(false);
-        }
+            if (other.CompareTag("Spoon") && isStirring)
+            {
+                stirCount++;
+                if (stirSound != null)
+                    audioSource.PlayOneShot(stirSound);
 
-        if (other.CompareTag("Spoon") && isStirring)
-        {
-            stirCount++;
-            if (stirSound != null)
-                audioSource.PlayOneShot(stirSound);
-
-            Debug.Log("攪拌次數：" + stirCount);
-        }
+                Debug.Log("攪拌次數：" + stirCount);
+            }
     }
 
 
@@ -140,7 +142,7 @@ public class CarrotSoupCooker : NetworkBehaviour, IAfterSpawned
         if (stirPromptText != null)
             stirPromptText.SetActive(false);
 
-        Vector3 spawnPosition = currentBowl.transform.position + Vector3.up * 0.2f;
+        Vector3 spawnPosition = currentBowl.transform.position + Vector3.up * 0.1f;
         var soup = Runner.Spawn(carrotSoupPrefab, spawnPosition, Quaternion.identity);
 
         if (!success)
