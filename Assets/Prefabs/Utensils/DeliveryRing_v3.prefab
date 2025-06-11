@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deliveryPrefab:
-    RawGuidValue: 9121a682d336fd24380696826df7173e
+    RawGuidValue: 00000000000000000000000000000000
   photoTaker: {fileID: 8335254475535582391}
   uploadUrl: https://mixed-restaurant.bogay.me/api/upload
   autoGradeUrl: https://mixed-restaurant.bogay.me/api/cartItem/auto-grade

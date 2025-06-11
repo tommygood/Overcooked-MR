@@ -27,7 +27,12 @@ public class IngredientGrabController : MonoBehaviour
 
             if (runner != null)
             {
-                runner.Spawn(prefab);
+                var newObject = runner.Spawn(prefab);
+                newObject.transform.position = transform.position;
+                newObject.transform.rotation = transform.rotation;
+                Vector3 size = gameObject.GetComponent<Renderer>().bounds.size;
+                Vector3 offset = new Vector3(0, size.y, 0);
+                newObject.transform.position += offset;
             }
             else
             {
