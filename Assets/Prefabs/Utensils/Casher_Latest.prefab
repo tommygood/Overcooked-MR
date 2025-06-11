@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 3fcc0b10-0e46-4818-9628-daa2a5a2874a
+  instanceId: 60ba47d6-5ea3-40c4-bc10-97d57b9728e0
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 3a23ba6b-2aa2-4633-934d-ea6a1b02cc0c
+  instanceId: 6cfe63d6-ab6f-444c-9a7f-abd0e8cc73d2
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -1130,7 +1130,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5309645549251463316}
   m_LocalRotation: {x: -0.006574811, y: 0.98677707, z: -0.15655826, w: -0.041440677}
-  m_LocalPosition: {x: 0, y: 0, z: -1.2}
+  m_LocalPosition: {x: 0, y: 0, z: -0.37}
   m_LocalScale: {x: 1.428571, y: 0.7142857, z: 1.428571}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1138,7 +1138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 18.03, y: -175.19, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.29, y: 3.75}
+  m_AnchoredPosition: {x: -0.219, y: 1.196}
   m_SizeDelta: {x: 0.8, y: 0.62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2790248675607855752
@@ -1793,7 +1793,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1769527196737657409, guid: 74dcf05b7e7610445a7e0d7f07c0e36a, type: 3}
       propertyPath: instanceId
-      value: 8b6e9582-1799-4068-90cf-6ba81c055068
+      value: 71e56dd6-6f49-408e-bb8f-09ff43a448f7
       objectReference: {fileID: 0}
     - target: {fileID: 2817526428594360443, guid: 74dcf05b7e7610445a7e0d7f07c0e36a, type: 3}
       propertyPath: m_Name
@@ -1889,7 +1889,7 @@ PrefabInstance:
       objectReference: {fileID: 7451065823795572413}
     - target: {fileID: 7063625471216904903, guid: 74dcf05b7e7610445a7e0d7f07c0e36a, type: 3}
       propertyPath: instanceId
-      value: 2de9de4e-e701-4b56-a775-c6e1ef829b4d
+      value: 3d394eb7-d0ea-4ae6-aeb9-7a508c1eba00
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
