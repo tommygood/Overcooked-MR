@@ -381,7 +381,7 @@ MonoBehaviour:
   _twoGrabTransformer: {fileID: 0}
   _targetTransform: {fileID: 8449687403757468593}
   _maxGrabPoints: -1
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 8881671823478499716}
   _kinematicWhileSelected: 1
   _throwWhenUnselected: 1
 --- !u!114 &1927727663160339223
@@ -442,7 +442,7 @@ MonoBehaviour:
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
   _pointableElement: {fileID: 3802512411895733016}
-  _rigidbody: {fileID: 0}
+  _rigidbody: {fileID: 8881671823478499716}
   _grabSource: {fileID: 0}
   _useClosestPointAsGrabSource: 0
   _releaseDistance: 0

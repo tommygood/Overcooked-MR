@@ -647,10 +647,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
-      propertyPath: ingredientNum
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[13].networkPrefabRef.RawGuidValue.Array.data[0]
       value: 6108183486235638221
       objectReference: {fileID: 0}
