@@ -13,8 +13,10 @@ public class Delivery : NetworkBehaviour
 
     private Rigidbody rb;
 
-    private void Start()
+    public override void Spawned()
     {
+        base.Spawned();
+        Debug.Log("[Delivery] Delivery spawned: " + gameObject.name);
         this.rb = GetComponent<Rigidbody>();
         StartCoroutine(WaitForDelivery());
     }
@@ -27,7 +29,6 @@ public class Delivery : NetworkBehaviour
         {
             yield return new WaitForFixedUpdate();
         }
-        // TODO: spawn courier
         Debug.Log("[Delivery] Courier is being spawned.");
         var anchor = FindObjectsByType<CourierAnchor>(FindObjectsSortMode.None)
             .FirstOrDefault(a => a.Ty == CourierAnchor.Type.Start);
@@ -45,7 +46,7 @@ public class Delivery : NetworkBehaviour
         {
             Debug.LogError("[Delivery] No courier found on prefab");
         }
-        courier.SetDestination(anchor.transform);
-        Debug.Log("[Delivery] Courier destination set to: " + anchor.name);
+        courier.SetDestination(transform);
+        Debug.Log("[Delivery] Courier destination set to: " + gameObject.name);
     }
 }
