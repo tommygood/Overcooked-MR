@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -486,6 +486,17 @@ MonoBehaviour:
     _installationVariants:
     - _memberName: mode
       _value: '{"value__":0}'
+--- !u!114 &1317124707 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8935095007432578709, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+  m_PrefabInstance: {fileID: 5695954941417865055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 982853e400aa945f5a3d95de7aff14d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1375242464
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +690,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1470886269414586446, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: SortKey
+      value: 2867371570
+      objectReference: {fileID: 0}
     - target: {fileID: 6223885308696273180, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -931,6 +946,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shared Building Blocks
       objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: Flags
+      value: 262145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: SortKey
+      value: 3771194100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: NetworkedBehaviours.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+      propertyPath: NetworkedBehaviours.Array.data[0]
+      value: 
+      objectReference: {fileID: 1317124707}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

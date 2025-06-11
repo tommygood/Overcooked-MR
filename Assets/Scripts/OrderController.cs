@@ -334,6 +334,20 @@ public class OrderController : MonoBehaviour
       }
 
       GameObject newTextItem = Instantiate(textItemPrefab, contentParent);
+      // set the material for newTextItem to yellow when the user_id is 1
+      if (order.user_id == 1)
+      {
+        Renderer renderer = newTextItem.GetComponent<Renderer>(); // Get the Renderer component
+        if (renderer != null)
+        {
+          Debug.Log("Setting material color to yellow for user_id 1");
+          renderer.material.color = Color.yellow; // Set material color to yellow
+        }
+        else
+        {
+          Debug.LogError("Renderer component not found!");
+        }
+      }
       TMP_Text textComponent = newTextItem.GetComponent<TMP_Text>();
       if (textComponent != null)
       {

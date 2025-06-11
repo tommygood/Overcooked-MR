@@ -59,7 +59,6 @@ public class Order : MonoBehaviour
 
     private bool TryDetectBelow(Collider col)
     {
-        Debug.Log("[Order] Detect obj name: " + col.name);
         Order lower = col.GetComponent<Order>();
         if (lower != null && lower != this)
         {
