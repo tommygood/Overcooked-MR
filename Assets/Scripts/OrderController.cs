@@ -305,6 +305,19 @@ public class OrderController : MonoBehaviour
                 tmpComponent.text = $"{foodName}\n{foodDesc}"; // Set the text content
                 newOrderGO.name = $"Order_{orderB.cart_id}";
                 orderAnimator.Up();
+                // set the material for newOrderGO to yellow when the user_id is 1
+                if (orderB.user_id != 1)
+                {
+                  Renderer renderer = newOrderGO.GetComponent<Renderer>(); // Get the Renderer component
+                  if (renderer != null)
+                  {
+                    renderer.material.color = new Color(233f / 255f, 122f / 255f, 180f / 255f);; // Set material color to 233, 122, 180
+                  }
+                  else
+                  {
+                    Debug.LogError("Renderer component not found!");
+                  }
+                }
             }
         }
 

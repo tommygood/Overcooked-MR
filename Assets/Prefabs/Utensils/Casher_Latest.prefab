@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: a7f48c64-c814-4380-8037-d931e7da06aa
+  instanceId: 3fcc0b10-0e46-4818-9628-daa2a5a2874a
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8
@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 4731cd55-5482-445a-ae2c-018b0c6c75f2
+  instanceId: 3a23ba6b-2aa2-4633-934d-ea6a1b02cc0c
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -1793,7 +1793,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1769527196737657409, guid: 74dcf05b7e7610445a7e0d7f07c0e36a, type: 3}
       propertyPath: instanceId
-      value: 583404d2-5382-4b27-8fbb-cbff1dfa0af8
+      value: 8b6e9582-1799-4068-90cf-6ba81c055068
       objectReference: {fileID: 0}
     - target: {fileID: 2817526428594360443, guid: 74dcf05b7e7610445a7e0d7f07c0e36a, type: 3}
       propertyPath: m_Name
@@ -1889,7 +1889,7 @@ PrefabInstance:
       objectReference: {fileID: 7451065823795572413}
     - target: {fileID: 7063625471216904903, guid: 74dcf05b7e7610445a7e0d7f07c0e36a, type: 3}
       propertyPath: instanceId
-      value: b0d810da-087c-4a03-8f1a-3768b2b30142
+      value: 2de9de4e-e701-4b56-a775-c6e1ef829b4d
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
