@@ -145,6 +145,22 @@ public class RoomManager : NetworkBehaviour
                     newObject.transform.position = grandChild.gameObject.transform.position;
                     newObject.transform.rotation = grandChild.gameObject.transform.rotation;
 
+                    // Place ingredient on the floor
+                    Bounds bounds = grandChild.GetComponent<Renderer>().bounds;
+                    Vector3 size = bounds.size;
+                    Vector3 offset = new Vector3(0, size.y / 2, 0);
+                    newObject.transform.position += offset;
+
+                    float objectHeight = 0;
+                    foreach (Transform c in newObject.transform)
+                    {
+                        if (c.gameObject.name == "Container_C")
+                        {
+                            objectHeight = c.GetComponent<Renderer>().bounds.size.y;
+                        }
+                    }
+                    // newObject.transform.position += new Vector3(0, objectHeight / 2, 0);
+
                     newObject.transform.position += casher.position;
                     newObject.transform.Rotate(casher.rotation.eulerAngles);
                     newObject.transform.localScale *= casher.scale;

@@ -663,6 +663,26 @@ PrefabInstance:
       value: -0.00000003090862
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[6].position.y
+      value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[6].rotation.w
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[6].rotation.x
+      value: 0.70710677
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[6].rotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
+      propertyPath: utensils.Array.data[6].rotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[14].rotation.w
       value: 0.70710677
       objectReference: {fileID: 0}

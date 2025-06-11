@@ -86,8 +86,8 @@ public class PumpkinSoupCooker : NetworkBehaviour, IAfterSpawned
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Pot")) // 確保只有 Pot 進入觸發區域後才執行其他邏輯
-            Debug.Log("pot in");
+        //if (other.CompareTag("Pot")) // 確保只有 Pot 進入觸發區域後才執行其他邏輯
+        //    Debug.Log("pot in");
             if (other.CompareTag("Plate") && currentBowl == null && !isBoiling && !isStirring)
             {
                 currentBowl = other.gameObject;
@@ -110,8 +110,9 @@ public class PumpkinSoupCooker : NetworkBehaviour, IAfterSpawned
 
                 if (other.CompareTag("Pumpkin") && currentBowl != null && waterInBowl != null && !isBoiling && !isStirring)
                 {
-                    
-                    Destroy(other.gameObject);
+
+            //Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
                     isBoiling = true;
                     timer = 0f;
                     boilSoundPlayed = false;
@@ -174,7 +175,8 @@ public class PumpkinSoupCooker : NetworkBehaviour, IAfterSpawned
 
         // ✅ 碗與水一併刪除
         if (currentBowl != null)
-            Destroy(currentBowl);
+            //Destroy(currentBowl);
+            currentBowl.SetActive(false);
 
         currentBowl = null;
         waterInBowl = null;

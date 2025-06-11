@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 7066145882985103102}
   - component: {fileID: 502362614829984685}
   - component: {fileID: 7530939081557756753}
+  - component: {fileID: 9130576983259765678}
   m_Layer: 0
   m_Name: Tomato_cut
   m_TagString: Tomato_cut
@@ -297,6 +298,19 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &9130576983259765678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297865451198608056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41e0b322cae849269d7e489a24b1b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  belowIngredient: {fileID: 0}
 --- !u!1 &8068181703300038639
 GameObject:
   m_ObjectHideFlags: 0

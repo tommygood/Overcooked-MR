@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5164434771503406564}
   - component: {fileID: 4737864997610032226}
   - component: {fileID: 7523866339884435976}
+  - component: {fileID: 7678698058578708587}
   m_Layer: 0
   m_Name: Food_Chopped Lettuce
-  m_TagString: Untagged
+  m_TagString: Lettuce_cut
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +129,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.29179525, y: 0.13218822, z: 0.17655088}
   m_Center: {x: 0.0045761093, y: 0.054207228, z: -0.000000007450581}
+--- !u!114 &7678698058578708587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2296752432270572484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41e0b322cae849269d7e489a24b1b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  belowIngredient: {fileID: 0}
 --- !u!1 &6241606389648322960
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +157,7 @@ GameObject:
   - component: {fileID: 1583099294517979463}
   - component: {fileID: 3253050528477355991}
   - component: {fileID: 3856942624623586119}
+  - component: {fileID: 6606999354117221594}
   m_Layer: 0
   m_Name: Lettuce_cut
   m_TagString: Lettuce_cut
@@ -284,6 +299,19 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &6606999354117221594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6241606389648322960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41e0b322cae849269d7e489a24b1b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  belowIngredient: {fileID: 0}
 --- !u!1 &7261524136911755318
 GameObject:
   m_ObjectHideFlags: 0

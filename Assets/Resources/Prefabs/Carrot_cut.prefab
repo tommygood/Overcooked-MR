@@ -143,6 +143,7 @@ GameObject:
   - component: {fileID: 3581070669565696416}
   - component: {fileID: 7334109419814029071}
   - component: {fileID: 8245508023026167720}
+  - component: {fileID: 6929981204159172887}
   m_Layer: 0
   m_Name: Carrot_cut
   m_TagString: Carrot_cut
@@ -284,6 +285,19 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &6929981204159172887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3266398825412073134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41e0b322cae849269d7e489a24b1b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  belowIngredient: {fileID: 0}
 --- !u!1 &3864690762093997110
 GameObject:
   m_ObjectHideFlags: 0

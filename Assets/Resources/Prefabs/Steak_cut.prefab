@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 3417215701127492674}
   - component: {fileID: 2035934264901987322}
   - component: {fileID: 1818304306601240611}
+  - component: {fileID: 3624235264379383497}
   m_Layer: 0
   m_Name: Steak_cut
   m_TagString: Cookable_Steakcut
@@ -425,3 +426,16 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &3624235264379383497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107179580374430478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41e0b322cae849269d7e489a24b1b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  belowIngredient: {fileID: 0}

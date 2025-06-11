@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8507829691646798299}
   - component: {fileID: 8166722376166847815}
   - component: {fileID: 1968181681178095183}
+  - component: {fileID: -5680702314010163371}
   m_Layer: 0
   m_Name: Apple_cut
   m_TagString: Apple_cut
@@ -156,6 +157,19 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &-5680702314010163371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330819508356008920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c41e0b322cae849269d7e489a24b1b7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  belowIngredient: {fileID: 0}
 --- !u!1 &6256715738659844627
 GameObject:
   m_ObjectHideFlags: 0

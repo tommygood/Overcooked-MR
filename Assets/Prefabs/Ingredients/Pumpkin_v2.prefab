@@ -349,6 +349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pumpkin
       objectReference: {fileID: 0}
+    - target: {fileID: 2228433725948662635, guid: 21d56fbbbd46a944182a2a71b45306de, type: 3}
+      propertyPath: m_TagString
+      value: Pumpkin
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4389683876424655291, guid: 21d56fbbbd46a944182a2a71b45306de, type: 3}
     - {fileID: 6060907549485942924, guid: 21d56fbbbd46a944182a2a71b45306de, type: 3}

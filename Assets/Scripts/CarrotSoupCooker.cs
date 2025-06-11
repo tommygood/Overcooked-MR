@@ -85,8 +85,8 @@ public class CarrotSoupCooker : NetworkBehaviour, IAfterSpawned
 
     void OnTriggerEnter(Collider other)
     {   
-        if (other.CompareTag("Pot")) // 確保只有 Pot 進入觸發區域後才執行其他邏輯
-            Debug.Log("pot in");
+        //if (other.CompareTag("Pot")) // 確保只有 Pot 進入觸發區域後才執行其他邏輯
+            //Debug.Log("pot in");
             if (other.CompareTag("Plate") && currentBowl == null && !isBoiling && !isStirring)
             {
                 currentBowl = other.gameObject;
