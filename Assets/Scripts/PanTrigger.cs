@@ -1,14 +1,18 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PanTrigger : MonoBehaviour
 {
     public float cookTime = 30f;
     public float brownDuration = 15f;
+    public float cookingGracePeriod = 1f; // 離鍋後延遲時間
+
     public AudioClip bellSound;
     public AudioClip meatDropSound;
     public AudioClip successSound;
     public AudioClip failSound;
+
     public Slider progressBar;
     public GameObject stirUIPanel;
 
@@ -20,6 +24,8 @@ public class PanTrigger : MonoBehaviour
     private AudioSource audioSource;
     private Renderer rend;
     private bool hasBeenCooked = false;
+
+    private Coroutine stopCookingCoroutine;
 
     void Start()
     {
@@ -33,31 +39,22 @@ public class PanTrigger : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject == currentCube)
-        {
-            isCooking = false;
-            timer = 0f;
-            stirCount = 0;
-            isStirred = false;
-            currentCube = null;
-
-            if (stirUIPanel != null)
-                stirUIPanel.SetActive(false);
-
-            if (progressBar != null)
-                progressBar.value = 0f;
-        }
-    }
-
     void OnTriggerEnter(Collider other)
     {
         string tag = other.gameObject.tag;
 
         Debug.Log("[PanTrigger] OnTriggerEnter: " + other.name);
 
-        // ✅ 只允許 tag 以 Cookable_ 開頭的進鍋煮
+        // 若是同一塊肉重新回鍋，取消延遲停止
+        if (other.gameObject == currentCube && stopCookingCoroutine != null)
+        {
+            StopCoroutine(stopCookingCoroutine);
+            stopCookingCoroutine = null;
+            isCooking = true;
+            Debug.Log("[PanTrigger] 回鍋，繼續計時");
+            return;
+        }
+
         if (tag.StartsWith("Cookable_"))
         {
             currentCube = other.gameObject;
@@ -93,12 +90,52 @@ public class PanTrigger : MonoBehaviour
         }
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == currentCube)
+        {
+            Debug.Log("[PanTrigger] 離鍋，啟動延遲停止計時");
+
+            // 啟動延遲停止協程
+            if (stopCookingCoroutine != null)
+                StopCoroutine(stopCookingCoroutine);
+
+            stopCookingCoroutine = StartCoroutine(StopCookingAfterDelay());
+        }
+    }
+
+    IEnumerator StopCookingAfterDelay()
+    {
+        yield return new WaitForSeconds(cookingGracePeriod);
+
+        // 確認肉仍未回鍋
+        if (!isCooking)
+            yield break;
+
+        Debug.Log("[PanTrigger] 延遲時間結束，停止計時");
+
+        isCooking = false;
+        timer = 0f;
+        stirCount = 0;
+        isStirred = false;
+        currentCube = null;
+
+        if (stirUIPanel != null)
+            stirUIPanel.SetActive(false);
+
+        if (progressBar != null)
+            progressBar.value = 0f;
+
+        stopCookingCoroutine = null;
+    }
+
     void Update()
     {
         if (isCooking && currentCube != null)
         {
             timer += Time.deltaTime;
 
+            // 顏色漸變
             if (timer <= brownDuration)
             {
                 float t = timer / brownDuration;
@@ -109,6 +146,7 @@ public class PanTrigger : MonoBehaviour
                 }
             }
 
+            // 中間提醒攪拌
             if (timer >= brownDuration && timer < brownDuration + Time.deltaTime)
             {
                 if (stirUIPanel != null)
@@ -117,12 +155,13 @@ public class PanTrigger : MonoBehaviour
                     audioSource.PlayOneShot(bellSound);
             }
 
+            // 完成烹飪
             if (timer >= cookTime && !hasBeenCooked)
             {
                 hasBeenCooked = true;
 
-                string oldTag = currentCube.tag;  // e.g., Cookable_Beef
-                string type = oldTag.Substring("Cookable_".Length); // e.g., Beef
+                string oldTag = currentCube.tag;
+                string type = oldTag.Substring("Cookable_".Length);
 
                 if (rend != null)
                 {
