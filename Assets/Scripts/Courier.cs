@@ -44,8 +44,25 @@ public class Courier : MonoBehaviour
         }
         Debug.Log("Courier reached the destination: " + destination.name);
 
-        // TODO: pick up the delivery
+        // Pick up the delivery
         Debug.Log("Courier picking up delivery at: " + destination.name);
+        Collider[] colliders = Physics.OverlapSphere(destination.position, 0.5f);
+        Delivery delivery = null;
+        foreach (var collider in colliders)
+        {
+            delivery = collider.GetComponent<Delivery>();
+            if (delivery != null)
+            {
+                Debug.Log("Courier found delivery: " + delivery.name);
+                break;
+            }
+        }
+        if (delivery.gameObject.TryGetComponent<Rigidbody>(out var rb))
+        {
+            // rb.isKinematic = true; // Prevent physics interactions while moving
+            Destroy(rb);
+        }
+        delivery.transform.SetParent(transform);
 
         while (Vector3.Distance(transform.position, endPoint.position) > 0.1f)
         {
