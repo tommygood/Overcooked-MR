@@ -648,15 +648,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: ingredientNum
-      value: 1
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[13].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: -3137522546430124789
+      value: 6108183486235638221
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[13].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: 3880161462194451306
+      value: -3330465185572347464
       objectReference: {fileID: 0}
     - target: {fileID: 831040580218982544, guid: a76c66128f1c9a246a6723b32817ca0c, type: 3}
       propertyPath: utensils.Array.data[14].networkPrefabRef.RawGuidValue.Array.data[0]

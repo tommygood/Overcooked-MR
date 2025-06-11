@@ -98,7 +98,7 @@ public class CutHandler : NetworkBehaviour, IAfterSpawned
         {
             return;
         }
-        if (other.name == "TipCollider" || other.name == "FingerTrackingHandCollider")
+        if (other.name == "TipCollider" || other.name == "FingerTrackingHandCollider" || other.name == "Collider")
         {
             Debug.Log("Left hand has entered the trigger!" + other.name);
 
@@ -108,7 +108,7 @@ public class CutHandler : NetworkBehaviour, IAfterSpawned
                 string parent_name = GetParentObjectName(other);
                 if (!parent_name.Contains("Left"))
                 {
-                    return;
+                    //return;
                 }
                 Debug.Log("[Parent name]" + parent_name);
                 // Get the world contact point and convert it to local space

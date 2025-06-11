@@ -309,6 +309,7 @@ public class OrderController : MonoBehaviour
                 if (orderB.user_id != 1)
                 {
                   Renderer renderer = newOrderGO.GetComponent<Renderer>(); // Get the Renderer component
+                    Debug.Log("User id is not 1 ");
                   if (renderer != null)
                   {
                     renderer.material.color = new Color(233f / 255f, 122f / 255f, 180f / 255f);; // Set material color to 233, 122, 180
