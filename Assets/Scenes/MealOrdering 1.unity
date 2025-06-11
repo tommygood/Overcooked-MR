@@ -47263,9 +47263,17 @@ PrefabInstance:
       propertyPath: instanceId
       value: da0742e0-6a63-45ef-be29-1f9dd1a9a594
       objectReference: {fileID: 0}
+    - target: {fileID: 6037666882654108674, guid: 89ff6b01ad6a062438293a977239572f, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7541193511507154422, guid: 89ff6b01ad6a062438293a977239572f, type: 3}
       propertyPath: instanceId
       value: d5192466-4837-4c9a-84e0-e23384f14a24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8803711790438163223, guid: 89ff6b01ad6a062438293a977239572f, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8985486015551869600, guid: 89ff6b01ad6a062438293a977239572f, type: 3}
       propertyPath: m_LocalPosition.x
