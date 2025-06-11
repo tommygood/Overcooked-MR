@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 107561086707399516}
   - component: {fileID: 7161001793078909509}
   - component: {fileID: 4645720018015512950}
+  - component: {fileID: 2291067449142451274}
   m_Layer: 0
   m_Name: Apple_v2
   m_TagString: Apple
@@ -261,6 +262,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 7161001793078909509}
   - {fileID: 4645720018015512950}
+  - {fileID: 2291067449142451274}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &7161001793078909509
 MonoBehaviour:
@@ -297,6 +299,22 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &2291067449142451274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471191380529159878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f729b916775664b980d6908f91ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutter_duration: 0.5
+  cut_num_need: 5
+  cut_delay: 1
+  cutRegistry: {fileID: 0}
 --- !u!1001 &7154623054565991477
 PrefabInstance:
   m_ObjectHideFlags: 0

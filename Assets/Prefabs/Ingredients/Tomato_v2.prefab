@@ -156,6 +156,8 @@ GameObject:
   - component: {fileID: 5749645268151900688}
   - component: {fileID: 5749971070542834943}
   - component: {fileID: 4726111711587558455}
+  - component: {fileID: 8968996002677917581}
+  - component: {fileID: 8476704043117300742}
   m_Layer: 0
   m_Name: Tomato_v2
   m_TagString: Tomato
@@ -261,6 +263,8 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 5749971070542834943}
   - {fileID: 4726111711587558455}
+  - {fileID: 8968996002677917581}
+  - {fileID: 8476704043117300742}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &5749971070542834943
 MonoBehaviour:
@@ -297,6 +301,38 @@ MonoBehaviour:
     Position: 0.01
     Rotation: 0.01
     Scale: 0.01
+--- !u!114 &8968996002677917581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417173210051914547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f729b916775664b980d6908f91ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutter_duration: 0.5
+  cut_num_need: 1
+  cut_delay: 1
+  cutRegistry: {fileID: 0}
+--- !u!114 &8476704043117300742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417173210051914547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f729b916775664b980d6908f91ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutter_duration: 0.5
+  cut_num_need: 5
+  cut_delay: 1
+  cutRegistry: {fileID: 0}
 --- !u!1001 &8138053137322418298
 PrefabInstance:
   m_ObjectHideFlags: 0
