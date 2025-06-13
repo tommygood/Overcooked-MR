@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7686319868787038925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5358193110386776828}
+  - component: {fileID: 490511674014242210}
+  m_Layer: 0
+  m_Name: SinglePlayerRoomManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5358193110386776828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7686319868787038925}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.26665223, y: 0, z: -2.5796797}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &490511674014242210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7686319868787038925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757651cf9fc280648a6e21ba60d882be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  room: {fileID: 0}
+  tables: []
+  utensils:
+  - name: CuttingPlate
+    prefab: {fileID: 5204684328843844922, guid: 7a96f0f4c78032e44819f2d31c8ee004, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1.75
+  - name: GasStoveSet
+    prefab: {fileID: 6336623710687341707, guid: 0d5d04fd768d1c14ea41b5251dfb44a9, type: 3}
+    position: {x: 0, y: 0.1, z: 0}
+    rotation: {x: 0.49999997, y: -0.49999997, z: -0.49999997, w: 0.49999997}
+    scale: 1
+  - name: Sink
+    prefab: {fileID: 4139472504296835130, guid: 01b2ba01fc292e7489f607e7bd97c8aa, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.49999997, y: 0.49999997, z: 0.49999997, w: 0.49999997}
+    scale: 0.75
+  - name: Casher
+    prefab: {fileID: 4585976740206670111, guid: a52005440d90e424fbc87f80d92ed880, type: 3}
+    position: {x: 4.5, y: -1.9, z: -0.9}
+    rotation: {x: 0.49999997, y: 0.49999997, z: -0.49999997, w: -0.49999997}
+    scale: 0.5
+  - name: DeliveryRing
+    prefab: {fileID: 3011525087247244208, guid: 49b969dae5eadce4db282385d9c69d1b, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: Floor
+    prefab: {fileID: 5156511677125116127, guid: c78e28cfd17e24e4ca835eb222948096, type: 3}
+    position: {x: 0, y: -0.5, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: AppleBox
+    prefab: {fileID: 6491044387830547790, guid: 959497786dfb13149b9d01e9e00bd5ca, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: BowlBox
+    prefab: {fileID: 4669671394458861330, guid: c84ac9fb9b766d94d85aa6915a78b654, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: BreadTray
+    prefab: {fileID: 5969516349305627975, guid: fc1fc560294400a49aa2685992f6eccd, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: CarrotBox
+    prefab: {fileID: 7145663414220592096, guid: 9b19e70388bc892419c5f97997185eaa, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: CheeseTray
+    prefab: {fileID: 3419683993622410055, guid: 9b1957906399e994aa3c7bb3dfd664b2, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: HamburgerBunTray
+    prefab: {fileID: 7689888986270179151, guid: 3e18f9deae519794e9bbf1f139ec9595, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: LettuceBox
+    prefab: {fileID: 1366439052539113569, guid: 4ed9febbd4114244699bcc1c94ca6cc0, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: PlateBox
+    prefab: {fileID: 5571601302330471930, guid: 9212079c145d39444b7ef09809b342c7, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: PumpkinBox
+    prefab: {fileID: 8629391992586875311, guid: 8cccc342f4117b54c933ac411f44b1a5, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: SearedGroundBeefTray
+    prefab: {fileID: 1548775245221144402, guid: 44c9939cd6ff5ad4ab792a430290ebc0, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: SteakTray
+    prefab: {fileID: 7979099121428452933, guid: 4f2c5b17a131cb64683467df3ffb74b4, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: TomatoBox
+    prefab: {fileID: 4757890487783347679, guid: 6c9cd4df3a252974b8a8ab6c0f44a324, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: TortillaTray
+    prefab: {fileID: 2887040897203602358, guid: 22c3f715e82336a4cabe311643c90483, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: TurkeyBreastTray
+    prefab: {fileID: 2082483893918499108, guid: c6ab67ce51a0ad540b7ab9772781a817, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  ingredientNum: 14

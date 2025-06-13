@@ -1,0 +1,1451 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1548775245221144402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2682261976172299977}
+  - component: {fileID: 4253499159573675894}
+  - component: {fileID: 8494283808006110629}
+  - component: {fileID: 7331348961303529671}
+  - component: {fileID: 8748202379932004970}
+  - component: {fileID: 6267912839038836883}
+  - component: {fileID: 5084802497779985116}
+  m_Layer: 0
+  m_Name: SearedGroundBeefTray_sp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2682261976172299977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548775245221144402}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1952841908504916319}
+  - {fileID: 4888580744097209746}
+  - {fileID: 5049875766796512811}
+  - {fileID: 8701189232509770104}
+  - {fileID: 5667012660829458762}
+  - {fileID: 3858007853426658077}
+  - {fileID: 8736617281728073459}
+  - {fileID: 5208656694129254115}
+  - {fileID: 529911557951784689}
+  - {fileID: 3550356019854283406}
+  - {fileID: 4583503899182104945}
+  - {fileID: 3627561280211260059}
+  - {fileID: 212273329415758255}
+  - {fileID: 4990668236258443478}
+  - {fileID: 338220864478911371}
+  - {fileID: 7339657437365846958}
+  - {fileID: 9128464973539307236}
+  - {fileID: 5035360659812966664}
+  - {fileID: 6731604945056561905}
+  - {fileID: 4828229942088665146}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4253499159573675894
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548775245221144402}
+  m_Mesh: {fileID: 1323717645442401462, guid: b1d1d7d16b265a44b85768ec30574e69, type: 3}
+--- !u!23 &8494283808006110629
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548775245221144402}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9866fda0e61a7904087eb0ec5ab17e03, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7331348961303529671
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548775245221144402}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3376708, y: 0.015278438, z: 0.24273255}
+  m_Center: {x: 0, y: 0.007639219, z: 0}
+--- !u!65 &8748202379932004970
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548775245221144402}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3376708, y: 0.0148421945, z: 0.24273255}
+  m_Center: {x: 0, y: 0.0074210973, z: 0}
+--- !u!114 &6267912839038836883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548775245221144402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d057e7e9b0fcec4683ba8b5214d4735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8419082188531956682, guid: 37f46a6775e973545b9c9336e0171b91, type: 3}
+--- !u!54 &5084802497779985116
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548775245221144402}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1001 &264728105350045952
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0018999893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.028200015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &5208656694129254115 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 264728105350045952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &378610888709172905
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.115200005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08420002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &5667012660829458762 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 378610888709172905}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &591070155237352049
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05919999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08420002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &4888580744097209746 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 591070155237352049}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &640932715291670489
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.115200005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.085699975
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &4828229942088665146 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 640932715291670489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1004476597114835400
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0018999893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08420002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &5049875766796512811 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 1004476597114835400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1010333207332888299
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0018999893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.085699975
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &5035360659812966664 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 1010333207332888299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1055591860048363317
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.056000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.028399974
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &4990668236258443478 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 1055591860048363317}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1625564641056818450
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.056000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.085699975
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &6731604945056561905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 1625564641056818450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3332644933047008333
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1165
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0857
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &7339657437365846958 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 3332644933047008333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3664503224994083088
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05919999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.028200015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &8736617281728073459 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 3664503224994083088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3685220908144371355
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.056000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08420002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &8701189232509770104 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 3685220908144371355}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3840039836863729927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05919999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.085699975
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &9128464973539307236 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 3840039836863729927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5266528834721078860
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0018999893
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02839998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &212273329415758255 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 5266528834721078860}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5530071404737493266
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.056000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.028200021
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &529911557951784689 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 5530071404737493266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5716694586154247272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.115200005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02839998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &338220864478911371 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 5716694586154247272}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5836029852772535996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1165
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08420002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &1952841908504916319 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 5836029852772535996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8394637028308123282
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1165
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.028399989
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &4583503899182104945 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 8394637028308123282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8769619695273733496
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.05919999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02839998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &3627561280211260059 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 8769619695273733496}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8836406172827184493
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.115200005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.028200015
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &3550356019854283406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 8836406172827184493}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &9110281589062022398
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2682261976172299977}
+    m_Modifications:
+    - target: {fileID: 2304595966658665443, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_Name
+      value: Seared Ground Beef (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1165
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.028200014
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8204112150895447538, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+--- !u!4 &3858007853426658077 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5468598538122002403, guid: 59fccaa350b5b5843b7c969b4db172c0, type: 3}
+  m_PrefabInstance: {fileID: 9110281589062022398}
+  m_PrefabAsset: {fileID: 0}

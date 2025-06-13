@@ -336,11 +336,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[18].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: 7220423970585963714
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[18].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: -1100352845373014263
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[19].networkPrefabRef.RawGuidValue.Array.data[0]
@@ -360,19 +360,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[21].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: -4287137199941733344
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[21].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: 40604569528230808
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[22].networkPrefabRef.RawGuidValue.Array.data[0]
-      value: -2015950368493276244
+      value: -4287137199941733344
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[22].networkPrefabRef.RawGuidValue.Array.data[1]
-      value: 1167132977157668264
+      value: 40604569528230808
       objectReference: {fileID: 0}
     - target: {fileID: 486814494821628301, guid: 2263277f98b1fa543a4ef670f7cf4096, type: 3}
       propertyPath: utensils.Array.data[23].networkPrefabRef.RawGuidValue.Array.data[0]
