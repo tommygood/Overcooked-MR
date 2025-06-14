@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Courier : MonoBehaviour
 {
+    public float speed = 0.5f;
+
     private bool hasDestination = false;
 
     public void SetDestination(Transform destination)
@@ -39,7 +41,7 @@ public class Courier : MonoBehaviour
     {
         while (Vector3.Distance(transform.position, destination.position) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination.position, Time.deltaTime * 5f);
+            transform.position = Vector3.MoveTowards(transform.position, destination.position, Time.deltaTime * this.speed);
             yield return null;
         }
         Debug.Log("Courier reached the destination: " + destination.name);
@@ -59,14 +61,14 @@ public class Courier : MonoBehaviour
         }
         if (delivery.gameObject.TryGetComponent<Rigidbody>(out var rb))
         {
-            // rb.isKinematic = true; // Prevent physics interactions while moving
-            Destroy(rb);
+            rb.isKinematic = true; // Prevent physics interactions while moving
+            // Destroy(rb);
         }
         delivery.transform.SetParent(transform);
 
         while (Vector3.Distance(transform.position, endPoint.position) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, endPoint.position, Time.deltaTime * 5f);
+            transform.position = Vector3.MoveTowards(transform.position, endPoint.position, Time.deltaTime * this.speed);
             yield return null;
         }
         Debug.Log("Courier reached the end point: " + endPoint.name);

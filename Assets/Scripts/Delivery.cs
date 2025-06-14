@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Delivery : NetworkBehaviour
 {
+    [Networked]
     public bool IsReadyForDelivery { get; set; } = false;
     // TODO: DI
     [SerializeField]
