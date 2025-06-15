@@ -101,7 +101,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 5740761151927835696}
   - component: {fileID: 2371731692820515968}
   - component: {fileID: -3398328894252871416}
-  - component: {fileID: -4467542601878001524}
+  - component: {fileID: 227169888434833290}
   m_Layer: 0
   m_Name: Cheese_v2 (26)
   m_TagString: Cheese
@@ -138,7 +138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314503133129550979}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -1.239999, y: 0.010000001, z: 0.36249995}
   m_LocalScale: {x: 0.75, y: 0.25, z: 0.75}
   m_ConstrainProportionsScale: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: 3d4cf2a3-3e89-4c51-9215-8d74297c24d1
+  instanceId: e3eb4104-1401-4b18-b4e5-4599912d911b
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
@@ -192,7 +192,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -283,9 +283,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.16499226, y: 0.35033065, z: 0.10817512}
-  m_Center: {x: -0.07817185, y: -0.2202495, z: 0.101860404}
---- !u!114 &-4467542601878001524
+  m_Size: {x: 0.16670641, y: 0.12983322, z: 0.18436591}
+  m_Center: {x: 0.00087690353, y: 0.057550907, z: 0.0010264715}
+--- !u!114 &227169888434833290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -346,7 +346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: f7a57d8d-3005-4c27-9b67-cfda37a65539
+  instanceId: 77b99d10-0fa8-4f97-8f58-686c986d7c84
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8

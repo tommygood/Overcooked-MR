@@ -7,40 +7,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
 {
-    if (Input.GetKeyDown(KeyCode.Z))
-    {
-        Debug.Log("Z按下，找最近的盤子或碗");
-
-        PlateController nearestPlate = FindNearestPlateOrBowl();
-        if (nearestPlate == null)
-        {
-            Debug.Log("找不到盤子或碗！");
-            return;
-        }
-
-
-        Order top = FindTopIngredientOnPlate(nearestPlate.transform);
-        if (top != null)
-        {   
-            // 印出堆疊內容
-            Debug.Log("堆疊內容：");
-            Order current = top;
-            int level = 1;
-            while (current != null)
-            {
-                Debug.Log($"  {level}：{current.tag}");
-                current = current.belowIngredient;
-                level++;
-            }
-
-            bool isCorrect = nearestPlate.CheckRecipeFromTop(top, foodId);
-            Debug.Log("是否正確組合：" + isCorrect);
-        }
-        else
-        {
-            Debug.Log("上面沒有食材！");
-        }
-    } 
+    
 } 
 
     private PlateController FindNearestPlateOrBowl()

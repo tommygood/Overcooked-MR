@@ -5,14 +5,13 @@ public class PlateController : MonoBehaviour
 {
     private Dictionary<int, List<string>> recipes = new Dictionary<int, List<string>>
     {
-        { 50, new List<string> { "Bread", "Tomato_cut", "Cheese", "Lettuce_cut", "Cooked_Burger_Meat", "Bread" } }, // hamburger
-        { 52, new List<string> { "Toast", "Cheese" ,"Cooked_Tuekeycut","Toast"} },                                   // sandwich
+        { 51, new List<string> { "Bread", "Tomato_cut", "Cheese", "Lettuce_cut", "Bread" } }, // hamburger
+        { 52, new List<string> { "Toast", "Cheese", "Toast"} },                                   // sandwich
         { 55, new List<string> { "Tortilla", "Cooked_Steakcut", "Lettuce_cut"} },                            // Taco
-        { 51, new List<string> { "Toast", "Cheese" } },                           // Sushi
         { 57, new List<string> { "Lettuce_cut", "Tomato_cut" }}
     };
 
-    public bool CheckRecipeFromTop(Order topIngredient, int foodId)
+    public bool CheckRecipeFromTop(Order topIngredient, int foodId, GameObject[] on_plate_ingredients)
 {
     if (topIngredient == null)
     {
@@ -20,7 +19,7 @@ public class PlateController : MonoBehaviour
         return false;
     } else
         {
-
+            Debug.Log("頂部食材為" + topIngredient.name);
         }
 
     // 單層
@@ -47,15 +46,14 @@ public class PlateController : MonoBehaviour
     }
 
     List<string> currentOrder = new List<string>();
-    Order current = topIngredient;
 
-    while (current != null)
+    foreach (GameObject ingredient in on_plate_ingredients)
     {
-        currentOrder.Add(current.tag);
-        current = current.belowIngredient;
+        if (ingredient != null)
+        {
+            currentOrder.Add(ingredient.tag);
+        }
     }
-
-    currentOrder.Reverse(); // 由下往上
 
     Debug.Log($"檢查多層食物 ID {foodId} 的堆疊順序：");
     for (int i = 0; i < currentOrder.Count; i++)
@@ -80,11 +78,18 @@ public class PlateController : MonoBehaviour
 
     private bool MatchRecipe(List<string> current, List<string> recipe)
     {
-        if (current.Count != recipe.Count) return false;
+        if (current.Count != recipe.Count)
+        {
+            Debug.Log("[Food Order Not Matched]: the food number not matched. Expected to be " + recipe.Count + ", but found " + current.Count);
+            return false;
+        }
         for (int i = 0; i < recipe.Count; i++)
         {
             if (current[i] != recipe[i])
+            {
+                Debug.Log("[Food Order Not Matched]: the food object not matched. Expected to be " + recipe[i] + ", but found " + current[i]);
                 return false;
+            }
         }
         return true;
     }

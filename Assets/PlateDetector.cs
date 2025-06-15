@@ -91,7 +91,7 @@ public class PlateDetector : MonoBehaviour
                         Debug.LogWarning("No top ingredient found on the plate!");
                         return;
                     }
-                    bool isCorrect = plate_controller.CheckRecipeFromTop(top, food_id);
+                    bool isCorrect = plate_controller.CheckRecipeFromTop(top, food_id, on_plate_ingredients);
                     float thisCleanDelay = cleanDelay;
                     float thisDeactivateDelay = 5f;
 
@@ -170,15 +170,29 @@ public class PlateDetector : MonoBehaviour
                 float y = col.transform.position.y;
                 if (y > highestY)
                 {
+                    Debug.Log("[Heighest food]: " + ord.name + highestY + y);
                     highestY = y;
                     top = ord;
                 }
-            }
 
-            if (col.gameObject != null)
-            {
-                topIngredients.Add(col.gameObject);
+                if (col.gameObject != null)
+                {
+                    topIngredients.Add(col.gameObject);
+                }
             }
+        }
+        // Sort topIngredients based on the Y position of each GameObject's collider
+        topIngredients.Sort((go1, go2) =>
+        {
+            float y1 = go1.transform.position.y;
+            float y2 = go2.transform.position.y;
+            return y1.CompareTo(y2); // Sort in ascending order (smallest to largest Y)
+        });
+
+        // After sorting, you can process the topIngredients list as needed
+        foreach (GameObject ingredient in topIngredients)
+        {
+            Debug.Log("Ingredient sorted by Y: " + ingredient.name + " Position: " + ingredient.transform.position.y);
         }
         on_plate_ingredients = topIngredients.ToArray();
 
