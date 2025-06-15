@@ -572,10 +572,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookProgressSlider: {fileID: 4457447728777500213}
   stirPromptText: {fileID: 4821277715624941867}
-  pumpkinSoupPrefab:
-    RawGuidValue: 9d8d2f6d2c3253840921a824a0873370
-  carrotSoupPrefab:
-    RawGuidValue: c5abd4a21084784489f2823785ddd6ae
+  pumpkinSoupPrefab: {fileID: 1300199336844320618, guid: 9d8d2f6d2c3253840921a824a0873370, type: 3}
+  carrotSoupPrefab: {fileID: 6757265173559157499, guid: c5abd4a21084784489f2823785ddd6ae, type: 3}
   startBoilSound: {fileID: 8300000, guid: 1fe61354d4ad1aa4f880a1b309f59ef5, type: 3}
   boilFinishSound: {fileID: 8300000, guid: 67a9a981591be9346929dd83e7cad0bf, type: 3}
   stirSound: {fileID: 8300000, guid: 8942a63937c143b4582bb2ae315586c2, type: 3}
@@ -598,10 +596,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookProgressSlider: {fileID: 4457447728777500213}
   stirPromptText: {fileID: 4821277715624941867}
-  pumpkinSoupPrefab:
-    RawGuidValue: 9d8d2f6d2c3253840921a824a0873370
-  carrotSoupPrefab:
-    RawGuidValue: c5abd4a21084784489f2823785ddd6ae
+  pumpkinSoupPrefab: {fileID: 1300199336844320618, guid: 9d8d2f6d2c3253840921a824a0873370, type: 3}
+  carrotSoupPrefab: {fileID: 6757265173559157499, guid: c5abd4a21084784489f2823785ddd6ae, type: 3}
   startBoilSound: {fileID: 8300000, guid: 1fe61354d4ad1aa4f880a1b309f59ef5, type: 3}
   boilFinishSound: {fileID: 8300000, guid: 67a9a981591be9346929dd83e7cad0bf, type: 3}
   stirSound: {fileID: 8300000, guid: 8942a63937c143b4582bb2ae315586c2, type: 3}

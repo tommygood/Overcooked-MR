@@ -1,17 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Fusion;
 
-public class WashPlate : NetworkBehaviour
+public class WashPlate : MonoBehaviour
 {
-    [Networked]
-    [OnChangedRender(nameof(OnCleanProgressChanged))]
-    public int CleanProgress { get; set; } = 100;
+    public int CleanProgress
+    {
+        get => cleanProgress;
+        set
+        {
+            cleanProgress = Mathf.Clamp(value, 0, 100);
+            OnCleanProgressChanged();
+        }
+    }
+    private int cleanProgress = 100;
 
-    [Networked]
-    [OnChangedRender(nameof(OnIsCleanChanged))]
-    public bool IsClean { get; set; } = true;
+    public bool IsClean
+    {
+        get => isClean;
+        set
+        {
+            isClean = value;
+            OnIsCleanChanged();
+        }
+    }
+    private bool isClean = true;
 
     [SerializeField]
     private Material cleanMaterial;
@@ -28,7 +41,6 @@ public class WashPlate : NetworkBehaviour
     public void OnCleanProgressChanged()
     {
         Debug.Log($"Plate clean progress updated: {CleanProgress}% - IsClean: {IsClean}");
-        if (!Object.HasStateAuthority) return;
 
         if (CleanProgress >= 100)
         {

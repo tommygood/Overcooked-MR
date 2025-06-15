@@ -1,11 +1,11 @@
 using UnityEngine;
-using Fusion;
+using System.Collections;
 using System.Collections.Generic;
 
-public class HandWashingController : NetworkBehaviour
+public class HandWashingController : MonoBehaviour
 {
     [SerializeField]
-    private NetworkPrefabRef dishPrefab;
+    private GameManager dishPrefab;
 
     [SerializeField]
     private GameObject debugVisual;
@@ -13,9 +13,17 @@ public class HandWashingController : NetworkBehaviour
     [SerializeField]
     private GameObject debugPlateVisual;
 
-    [Networked]
-    [OnChangedRender(nameof(updateDebugVisual))]
-    public bool IsHandInZone { get; set; } = false;
+    public bool IsHandInZone
+    {
+        get => isHandInZone;
+        set
+        {
+            isHandInZone = value;
+            updateDebugVisual();
+        }
+    }
+
+    private bool isHandInZone = false;
 
     private List<WashPlate> platesInZone = new List<WashPlate>();
 
@@ -35,21 +43,8 @@ public class HandWashingController : NetworkBehaviour
         this.debugVisual.SetActive(IsHandInZone);
     }
 
-    public override void Spawned()
-    {
-        // TODO: remove debug code
-        Runner.Spawn(dishPrefab, transform.position + Vector3.up * 1, Quaternion.identity, Object.InputAuthority, (runner, obj) =>
-        {
-            // This is where you can initialize the dish if needed
-            Debug.Log($"[Network] Dish spawned with ID: {obj.Id}");
-        });
-        Debug.Log($"[Network] HandWashingController spawned with ID: {Object.Id}");
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (Object == null || !Object.HasStateAuthority) return;
-
         if (this.isHand(other.gameObject))
         {
             IsHandInZone = true;
@@ -71,8 +66,6 @@ public class HandWashingController : NetworkBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (Object == null || !Object.HasStateAuthority) return;
-
         if (this.isHand(other.gameObject))
         {
             IsHandInZone = false;
@@ -92,15 +85,21 @@ public class HandWashingController : NetworkBehaviour
         }
     }
 
-    public override void FixedUpdateNetwork()
+    private IEnumerator updateCleanProgress()
     {
-        if (!Object.HasStateAuthority) return;
-        // this.debugPlateVisual?.SetActive(false);
-
-        foreach (var plate in this.platesInZone)
+        while (true)
         {
-            plate.CleanProgress = Mathf.Min(plate.CleanProgress + 1, 100);
-            // this.debugPlateVisual?.SetActive(true);
+            yield return new WaitForSeconds(1f);
+            if (!IsHandInZone)
+            {
+                // this.debugPlateVisual?.SetActive(false);
+                continue;
+            }
+            foreach (var plate in this.platesInZone)
+            {
+                plate.CleanProgress = Mathf.Min(plate.CleanProgress + 1, 100);
+                // this.debugPlateVisual?.SetActive(true);
+            }
         }
     }
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Fusion;
 using UnityEngine;
 
-public class StoveSetSpawner : NetworkBehaviour
+public class StoveSetSpawner : MonoBehaviour
 {
 
     [System.Serializable]
@@ -12,7 +12,7 @@ public class StoveSetSpawner : NetworkBehaviour
         public Vector3 position;
         public Vector3 rotationEuler;
         public Vector3 scale;
-        public NetworkPrefabRef prefabRef;
+        public GameObject prefabRef;
     }
 
     [SerializeField]
@@ -22,7 +22,7 @@ public class StoveSetSpawner : NetworkBehaviour
     {
         foreach (var stoveData in stoveSetTransformData)
         {
-            var stoveObject = Runner.Spawn(stoveData.prefabRef);
+            var stoveObject = Instantiate(stoveData.prefabRef);
 
             stoveObject.transform.position = transform.position;
             stoveObject.transform.rotation = transform.rotation;

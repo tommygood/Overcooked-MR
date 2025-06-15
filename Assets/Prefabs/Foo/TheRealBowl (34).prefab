@@ -148,8 +148,6 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 8289100930072572671}
   - {fileID: 298862325191388693}
-  - {fileID: 2732548874718752606}
-  - {fileID: 977103718370485924}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &8289100930072572671
 MonoBehaviour:
@@ -210,8 +208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af824d7b770b39641aa0c9d8f6839667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _CleanProgress: 0
-  _IsClean: 0
   cleanMaterial: {fileID: 2100000, guid: 9866fda0e61a7904087eb0ec5ab17e03, type: 2}
   dirtyMaterial: {fileID: 2100000, guid: f52d0efc106b6a14cbb2349d580e195e, type: 2}
 --- !u!114 &977103718370485924

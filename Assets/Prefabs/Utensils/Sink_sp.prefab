@@ -64,7 +64,6 @@ GameObject:
   - component: {fileID: 5851315555584775781}
   - component: {fileID: 8486857738961331027}
   - component: {fileID: 555664704409946807}
-  - component: {fileID: 440048506290469987}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -137,24 +136,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &440048506290469987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1908701820656427351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SortKey: 307002465
-  ObjectInterest: 1
-  Flags: 262145
-  NestedObjects: []
-  NetworkedBehaviours: []
-  ForceRemoteRenderTimeframe: 0
 --- !u!1 &1961522750697863760
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,11 +417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d263cf4f1039945b1407ca05859de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dishPrefab:
-    RawGuidValue: c9e1ce2bb68fafb48b2e4bf2d1588384
+  dishPrefab: {fileID: 0}
   debugVisual: {fileID: 1908701820656427351}
   debugPlateVisual: {fileID: 4797435430100489868}
-  _IsHandInZone: 0
 --- !u!1 &4139472504296835130
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +429,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8977797233483164759}
-  - component: {fileID: 6630449684138264761}
   m_Layer: 0
   m_Name: Sink_sp
   m_TagString: Untagged
@@ -474,20 +452,6 @@ Transform:
   - {fileID: 4601234461050539685}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6630449684138264761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4139472504296835130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: 5fbfba11a02d1bf4997edecff0f3c9be
 --- !u!1 &4250709740506936450
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +583,6 @@ GameObject:
   - component: {fileID: 5236205159898239179}
   - component: {fileID: 8346212702047845371}
   - component: {fileID: 6934150326206612287}
-  - component: {fileID: 5343602314868496035}
   m_Layer: 0
   m_Name: DebugPlateVisual
   m_TagString: Untagged
@@ -692,24 +655,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &5343602314868496035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4797435430100489868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SortKey: 3275047127
-  ObjectInterest: 1
-  Flags: 1
-  NestedObjects: []
-  NetworkedBehaviours: []
-  ForceRemoteRenderTimeframe: 0
 --- !u!1 &6041379979195110255
 GameObject:
   m_ObjectHideFlags: 0

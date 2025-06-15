@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Fusion;
 
 [System.Serializable]
 public class CutMapping
@@ -16,7 +15,7 @@ public class CutMapping
     }
 }
 
-public class CutHandler : NetworkBehaviour, IAfterSpawned
+public class CutHandler : MonoBehaviour
 {
     private GameObject LeftHandAnchor;
     private bool is_cutter_gesture = false;
@@ -195,9 +194,9 @@ public class CutHandler : NetworkBehaviour, IAfterSpawned
 
     private void ReplaceWithCutObject()
     {
-        if (TryGetCutPrefabByName(out NetworkPrefabRef cutPrefab))
+        if (TryGetCutPrefabByName(out var cutPrefab))
         {
-            var no = Runner.Spawn(cutPrefab, transform.position, transform.rotation);
+            var no = Instantiate(cutPrefab, transform.position, transform.rotation);
             Debug.Log("replace with cutPrefab: " + no.gameObject.name);
         }
         else
@@ -205,11 +204,10 @@ public class CutHandler : NetworkBehaviour, IAfterSpawned
             Debug.LogWarning($"No cutPrefab mapping found for object: {gameObject.name}");
         }
 
-        Runner.Despawn(Object);
         Debug.Log("CutHandler: Object replaced with cut prefab and original destroyed.");
     }
 
-    private bool TryGetCutPrefabByName(out NetworkPrefabRef prefabRef)
+    private bool TryGetCutPrefabByName(out GameObject prefabRef)
     {
         foreach (var entry in this.cutRegistry.All)
         {

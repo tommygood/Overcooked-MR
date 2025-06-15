@@ -14,20 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   All:
   - Name: Apple
-    Prefab:
-      RawGuidValue: 073320238f7764c4faca6fd23ce5055d
+    Prefab: {fileID: 5330819508356008920, guid: 073320238f7764c4faca6fd23ce5055d, type: 3}
   - Name: Carrot
-    Prefab:
-      RawGuidValue: 845b63554e1b1436191f65fd6a3f4535
+    Prefab: {fileID: 3266398825412073134, guid: 845b63554e1b1436191f65fd6a3f4535, type: 3}
   - Name: Lettuce
-    Prefab:
-      RawGuidValue: f7f3ca83e11e64ccab7b99c932b49964
+    Prefab: {fileID: 6241606389648322960, guid: f7f3ca83e11e64ccab7b99c932b49964, type: 3}
   - Name: Steak
-    Prefab:
-      RawGuidValue: 6382dd8c072bd488dbf186d0c1f83488
+    Prefab: {fileID: 7107179580374430478, guid: 6382dd8c072bd488dbf186d0c1f83488, type: 3}
   - Name: Turkey
-    Prefab:
-      RawGuidValue: 443eb3e51c41a490dbeab6e0787492fb
+    Prefab: {fileID: 476899580167195466, guid: 443eb3e51c41a490dbeab6e0787492fb, type: 3}
   - Name: Tomato
-    Prefab:
-      RawGuidValue: 60b4e361891d346aa9d94ff13882a3f0
+    Prefab: {fileID: 3297865451198608056, guid: 69ee8d644471e4ab1808c6fad7c5a674, type: 3}

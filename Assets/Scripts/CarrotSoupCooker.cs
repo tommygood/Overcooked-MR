@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using Fusion;
 
-public class CarrotSoupCooker : NetworkBehaviour, IAfterSpawned
+public class CarrotSoupCooker : MonoBehaviour
 {
     public Slider cookProgressSlider;
     public GameObject stirPromptText;
-    public NetworkPrefabRef pumpkinSoupPrefab;
-    public NetworkPrefabRef carrotSoupPrefab;
+    public GameObject pumpkinSoupPrefab;
+    public GameObject carrotSoupPrefab;
 
     public AudioClip startBoilSound;
     public AudioClip boilFinishSound;
@@ -28,7 +27,7 @@ public class CarrotSoupCooker : NetworkBehaviour, IAfterSpawned
     private bool boilSoundPlayed = false;
     private AudioSource audioSource;
     
-    public void AfterSpawned()
+    public void Start()
     {
         if (cookProgressSlider != null)
             cookProgressSlider.gameObject.SetActive(false);
@@ -143,7 +142,7 @@ public class CarrotSoupCooker : NetworkBehaviour, IAfterSpawned
             stirPromptText.SetActive(false);
 
         Vector3 spawnPosition = currentBowl.transform.position + Vector3.up * 0.1f;
-        var soup = Runner.Spawn(carrotSoupPrefab, spawnPosition, Quaternion.identity);
+        var soup = Instantiate(carrotSoupPrefab, spawnPosition, Quaternion.identity);
 
         if (!success)
         {

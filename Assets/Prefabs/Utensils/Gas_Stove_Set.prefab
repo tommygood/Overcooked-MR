@@ -63,7 +63,6 @@ MonoBehaviour:
   - {fileID: 6628922824478527474}
   NetworkedBehaviours:
   - {fileID: 3433356599052341072}
-  - {fileID: 2755988757456448770}
   ForceRemoteRenderTimeframe: 0
 --- !u!54 &-2820752025864031668
 Rigidbody:
@@ -131,8 +130,7 @@ MonoBehaviour:
   - position: {x: 0.247, y: 0, z: 0}
     rotationEuler: {x: 0, y: 0, z: 0}
     scale: {x: 0, y: 0, z: 0}
-    prefabRef:
-      RawGuidValue: 00000000000000000000000000000000
+    prefabRef: {fileID: 0}
 --- !u!1001 &773283555994509881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -215,7 +213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
       propertyPath: NetworkedBehaviours.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
       propertyPath: NetworkedBehaviours.Array.data[0]
@@ -606,7 +604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
       propertyPath: NetworkedBehaviours.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7761638289486086780, guid: a5f19644d6529714c9c48a4373650b7a, type: 3}
       propertyPath: NetworkedBehaviours.Array.data[0]

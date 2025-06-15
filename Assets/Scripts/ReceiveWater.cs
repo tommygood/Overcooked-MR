@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 
-public class ReceiveWater : NetworkBehaviour
+public class ReceiveWater : MonoBehaviour
 {
     [SerializeField]
     private GameObject waterEffect;
-    [Networked]
-    [OnChangedRender(nameof(OnHasWaterChanged))]
-    private bool hasWater { get; set; } = false;
 
-    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
-    public void Rpc_ReceiveWaterFromFaucet()
+    private bool hasWater 
+    {
+        get => _hasWater;
+        set
+        {
+            _hasWater = value;
+            OnHasWaterChanged();
+        }
+    }
+    private bool _hasWater = false;
+
+    public void ReceiveWaterFromFaucet()
     {
         this.hasWater = true;
     }
