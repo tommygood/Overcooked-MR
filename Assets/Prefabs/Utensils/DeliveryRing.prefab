@@ -170,8 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e128a452c96873347ae3e142b49c2a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deliveryPrefab:
-    RawGuidValue: 00000000000000000000000000000000
+  deliveryPrefab: {fileID: 0}
   photoTaker: {fileID: 3069807421030854166}
   uploadUrl: https://mixed-restaurant.bogay.me/api/upload
   autoGradeUrl: https://mixed-restaurant.bogay.me/api/cartItem/auto-grade
@@ -193,7 +192,6 @@ MonoBehaviour:
   Flags: 262145
   NestedObjects: []
   NetworkedBehaviours:
-  - {fileID: 6639866318458636230}
   - {fileID: -3918816707547321589}
   ForceRemoteRenderTimeframe: 0
 --- !u!54 &-3958595327231678891

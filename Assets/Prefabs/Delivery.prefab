@@ -150,13 +150,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1373340931469383618}
-  - component: {fileID: 6712531128213060602}
   - component: {fileID: 5418671296270790902}
   - component: {fileID: 5228559150047644632}
   - component: {fileID: 1566622030191281390}
-  - component: {fileID: 1366591520995502514}
-  - component: {fileID: 732524713320102855}
-  - component: {fileID: 6098856102380387472}
   - component: {fileID: 6610480459013044580}
   m_Layer: 0
   m_Name: Delivery
@@ -182,28 +178,6 @@ Transform:
   - {fileID: 7869026110093227973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6712531128213060602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920817330574773644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockId: e9b4b64f-1c7e-4dff-8f3c-ce409bdc3951
-  instanceId: 4c33f85f-3211-4fa8-a915-db604068dbb1
-  version: 1
-  installationRoutineCheckpoint:
-    _installationRoutineId: 54548176-30f4-4a4a-8057-340a383c6102
-    _installationVariants:
-    - _memberName: _useGravity
-      _value: '{}'
-    - _memberName: installAutoMatchmaking
-      _value: '{}'
 --- !u!65 &5418671296270790902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -265,62 +239,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UseGravity: 0
---- !u!114 &1366591520995502514
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920817330574773644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SortKey: 234134133
-  ObjectInterest: 1
-  Flags: 524289
-  NestedObjects: []
-  NetworkedBehaviours:
-  - {fileID: 732524713320102855}
-  - {fileID: 6098856102380387472}
-  - {fileID: 6610480459013044580}
-  ForceRemoteRenderTimeframe: 0
---- !u!114 &732524713320102855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920817330574773644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b72e9ba2c21430c818f53e1079c2a93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6098856102380387472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920817330574773644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a591d221a634417e9827eb58e17de84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stateAuthorityChangeErrorCorrectionDelta: 0
-  SyncScale: 0
-  SyncParent: 1
-  _interpolationTarget: {fileID: 7869026110093227973}
-  UsePreciseRotation: 0
-  UseRenderSleepThresholds: 1
-  RenderThresholds:
-    UseEnergy: 1
-    Position: 0.01
-    Rotation: 0.01
-    Scale: 0.01
 --- !u!114 &6610480459013044580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,8 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8f096a938a5fc4aac4ea6f7f9fb6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  courierPrefab:
-    RawGuidValue: 92adff6fbf6f1f448b8df0c8e9f6c7a1
+  courierPrefab: {fileID: 0}
 --- !u!1 &3947976944725956245
 GameObject:
   m_ObjectHideFlags: 0

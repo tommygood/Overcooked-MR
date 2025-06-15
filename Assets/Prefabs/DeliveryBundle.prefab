@@ -635,7 +635,6 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 371162702643644524}
   - {fileID: 7498974497566837576}
-  - {fileID: 8013377180383569136}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &371162702643644524
 MonoBehaviour:
@@ -684,8 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e8f096a938a5fc4aac4ea6f7f9fb6b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  courierPrefab:
-    RawGuidValue: 92adff6fbf6f1f448b8df0c8e9f6c7a1
+  courierPrefab: {fileID: 0}
 --- !u!1001 &3174678004182638040
 PrefabInstance:
   m_ObjectHideFlags: 0

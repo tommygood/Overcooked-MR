@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 9034672199480762232}
   - component: {fileID: 5186425560766019488}
   - component: {fileID: 7112650369610410210}
-  - component: {fileID: 3226965045240353362}
   m_Layer: 0
   m_Name: DeliveryRing_sp
   m_TagString: Untagged
@@ -181,26 +180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e128a452c96873347ae3e142b49c2a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deliveryPrefab:
-    RawGuidValue: 00000000000000000000000000000000
+  deliveryPrefab: {fileID: 1920817330574773644, guid: 9121a682d336fd24380696826df7173e, type: 3}
   photoTaker: {fileID: 5870674453452524036}
   uploadUrl: https://mixed-restaurant.bogay.me/api/upload
   autoGradeUrl: https://mixed-restaurant.bogay.me/api/cartItem/auto-grade
   cleanDelay: 5
---- !u!114 &3226965045240353362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3011525087247244208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1541381998, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Guid:
-    RawGuidValue: 7dbad7407db026b43b424dbca295914a
 --- !u!1 &8499431191964600414
 GameObject:
   m_ObjectHideFlags: 0

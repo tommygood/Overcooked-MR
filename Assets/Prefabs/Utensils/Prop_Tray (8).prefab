@@ -303,8 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af824d7b770b39641aa0c9d8f6839667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _CleanProgress: 100
-  _IsClean: 1
   cleanMaterial: {fileID: 2100000, guid: 9866fda0e61a7904087eb0ec5ab17e03, type: 2}
   dirtyMaterial: {fileID: 2100000, guid: f52d0efc106b6a14cbb2349d580e195e, type: 2}
 --- !u!114 &3259320973444339629
@@ -323,8 +321,7 @@ MonoBehaviour:
   ObjectInterest: 1
   Flags: 262145
   NestedObjects: []
-  NetworkedBehaviours:
-  - {fileID: 2059699940958779628}
+  NetworkedBehaviours: []
   ForceRemoteRenderTimeframe: 0
 --- !u!1001 &4180735092930796427
 PrefabInstance:

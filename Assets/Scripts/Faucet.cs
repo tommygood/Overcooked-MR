@@ -42,7 +42,7 @@ public class Faucet : MonoBehaviour
                 if (c.gameObject.TryGetComponent(out ReceiveWater receiveWater))
                 {
                     Debug.Log($"Faucet received water from: {c.gameObject.name}");
-                    receiveWater.Rpc_ReceiveWaterFromFaucet();
+                    receiveWater.ReceiveWaterFromFaucet();
                 }
             })
             .AddTo(this);

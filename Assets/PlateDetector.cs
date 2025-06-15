@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
-using Fusion;
 
-public class PlateDetector : NetworkBehaviour
+public class PlateDetector : MonoBehaviour
 {
     [SerializeField]
-    private NetworkPrefabRef deliveryPrefab;
+    private GameObject deliveryPrefab;
 
     public PhotoShotManager photoTaker; // Assign this in the Inspector
     public string uploadUrl = "https://your-api-endpoint.com/upload"; // Replace with your actual API URL
@@ -100,7 +99,7 @@ public class PlateDetector : NetworkBehaviour
                     {
                         thisCleanDelay = 0f;
                         thisDeactivateDelay = 0f;
-                        Runner.Spawn(
+                        Instantiate(
                             deliveryPrefab,
                             nearestPlate.transform.position + Vector3.up * 0.5f,
                             nearestPlate.transform.rotation);

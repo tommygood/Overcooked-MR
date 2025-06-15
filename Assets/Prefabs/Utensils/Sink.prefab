@@ -431,11 +431,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d263cf4f1039945b1407ca05859de5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dishPrefab:
-    RawGuidValue: c9e1ce2bb68fafb48b2e4bf2d1588384
+  dishPrefab: {fileID: 0}
   debugVisual: {fileID: 1476830422106641546}
   debugPlateVisual: {fileID: 323586325596518779}
-  _IsHandInZone: 0
 --- !u!1 &4234277365060532015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1071,7 +1069,6 @@ MonoBehaviour:
   - {fileID: 8427029236679473914}
   NetworkedBehaviours:
   - {fileID: 471667568857794812}
-  - {fileID: 9088979431535967203}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &471667568857794812
 MonoBehaviour:

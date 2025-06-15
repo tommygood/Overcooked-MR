@@ -2,32 +2,34 @@ using System.Collections;
 using UnityEngine;
 using Fusion;
 
-public class StoveControl : NetworkBehaviour
+public class StoveControl : MonoBehaviour
 {
     [SerializeField]
-    public NetworkPrefabRef fireEffectPrefab;
+    public GameObject fireEffectPrefab;
 
-    [Networked]
-    private NetworkObject currentFire { get; set; }
-    [Networked]
-    [OnChangedRender(nameof(onFireChanged))]
-    private bool isOnFire { get; set; } = false;
-    [Networked]
+    private GameObject currentFire { get; set; }
+
+    private bool isOnFire 
+    {
+        get => _isOnFire;
+        set
+        {
+            _isOnFire = value;
+            onFireChanged();
+        }
+    }
+
+    private bool _isOnFire = false;
+
     public bool canMove { get; set; } = true;
-    [Networked]
-    private TickTimer waterTimer { get; set; }
+
+    private float waterTimer;
+    private bool isInWater = false;
 
     private AudioSource fireAudioSource;
 
-    [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
-    public void Rpc_StartFire()
+    public void StartFire()
     {
-        if (!Object.HasStateAuthority)
-        {
-            Debug.LogWarning("StartFire() 只能由擁有狀態權限的物件呼叫");
-            return;
-        }
-
         if (isOnFire)
         {
             Debug.Log("火已經存在，不重複產生");
@@ -41,7 +43,7 @@ public class StoveControl : NetworkBehaviour
         }
 
         Debug.Log("StartFire() 被呼叫");
-        currentFire = Runner.Spawn(
+        currentFire = Instantiate(
             fireEffectPrefab,
             transform.position + Vector3.up * 0.5f,
             Quaternion.identity);
@@ -49,17 +51,16 @@ public class StoveControl : NetworkBehaviour
         canMove = false;
     }
 
-    public override void FixedUpdateNetwork()
+    public void Update()
     {
-        if (!Object.HasStateAuthority)
+        if (this.isInWater && this.isOnFire)
         {
-            return; // 確保只有擁有狀態權限的物件可以處理固定更新
-        }
-
-        if (waterTimer.Expired(Runner))
-        {
-            Debug.Log("水接觸時間已到，熄火");
-            ExtinguishFire();
+            this.waterTimer += Time.deltaTime;
+            if (this.waterTimer >= 2f)
+            {
+                Debug.Log("水接觸時間已到，熄火");
+                ExtinguishFire();
+            }
         }
     }
 
@@ -68,7 +69,8 @@ public class StoveControl : NetworkBehaviour
         if (other.CompareTag("Water_T") && isOnFire)
         {
             Debug.Log("碰到Water");
-            this.waterTimer = TickTimer.CreateFromSeconds(Runner, 2f);
+            this.waterTimer = 0f;
+            this.isInWater = true;
         }
     }
 
@@ -77,7 +79,8 @@ public class StoveControl : NetworkBehaviour
         if (other.CompareTag("Water_T"))
         {
             Debug.Log("離開Water");
-            this.waterTimer = TickTimer.None;
+            this.waterTimer = 0f;
+            this.isInWater = false;
         }
     }
 
@@ -86,13 +89,13 @@ public class StoveControl : NetworkBehaviour
         Debug.Log("火已熄滅");
         if (currentFire)
         {
-            Runner.Despawn(currentFire);
+            Destroy(currentFire);
             currentFire = null;
         }
 
         isOnFire = false;
         canMove = true;
-        this.waterTimer = TickTimer.None;
+        this.waterTimer = 0f;
     }
 
     private void onFireChanged()

@@ -4,18 +4,17 @@ using System.Linq;
 using Fusion;
 using UnityEngine;
 
-public class Delivery : NetworkBehaviour
+public class Delivery : MonoBehaviour
 {
     public bool IsReadyForDelivery { get; set; } = false;
     // TODO: DI
     [SerializeField]
-    private NetworkPrefabRef courierPrefab;
+    private GameObject courierPrefab;
 
     private Rigidbody rb;
 
-    public override void Spawned()
+    public void Start()
     {
-        base.Spawned();
         Debug.Log("[Delivery] Delivery spawned: " + gameObject.name);
         this.rb = GetComponent<Rigidbody>();
         StartCoroutine(WaitForDelivery());
@@ -37,7 +36,7 @@ public class Delivery : NetworkBehaviour
             Debug.LogError("[Delivery] No start anchor found for courier");
         }
 
-        var courierGo = Runner.Spawn(
+        var courierGo = Instantiate(
             courierPrefab,
             anchor.transform.position,
             Quaternion.identity);

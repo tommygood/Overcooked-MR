@@ -228,7 +228,6 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 3250392231831387914}
   - {fileID: 1160973793474997427}
-  - {fileID: 1034503928588053225}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &3250392231831387914
 MonoBehaviour:

@@ -942,9 +942,6 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 1047573542522217018}
-  - {fileID: 7332244087872397582}
-  - {fileID: 346826307663545891}
-  - {fileID: 257035967680667472}
   ForceRemoteRenderTimeframe: 0
 --- !u!114 &1047573542522217018
 MonoBehaviour:
@@ -981,9 +978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b803ebbdd1a415295fca5ee4644fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireEffectPrefab:
-    RawGuidValue: d606d9c39ab7cfa45988e845703c44ab
-  _canMove: 1
+  fireEffectPrefab: {fileID: 0}
 --- !u!1 &7967521603781589680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,10 +1049,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookProgressSlider: {fileID: 491513751106875779}
   stirPromptText: {fileID: 3848330260462229182}
-  pumpkinSoupPrefab:
-    RawGuidValue: 9d8d2f6d2c3253840921a824a0873370
-  carrotSoupPrefab:
-    RawGuidValue: c5abd4a21084784489f2823785ddd6ae
+  pumpkinSoupPrefab: {fileID: 0}
+  carrotSoupPrefab: {fileID: 0}
   startBoilSound: {fileID: 8300000, guid: 1fe61354d4ad1aa4f880a1b309f59ef5, type: 3}
   boilFinishSound: {fileID: 8300000, guid: 67a9a981591be9346929dd83e7cad0bf, type: 3}
   stirSound: {fileID: 8300000, guid: 8942a63937c143b4582bb2ae315586c2, type: 3}
@@ -1080,10 +1073,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookProgressSlider: {fileID: 491513751106875779}
   stirPromptText: {fileID: 3848330260462229182}
-  pumpkinSoupPrefab:
-    RawGuidValue: 9d8d2f6d2c3253840921a824a0873370
-  carrotSoupPrefab:
-    RawGuidValue: c5abd4a21084784489f2823785ddd6ae
+  pumpkinSoupPrefab: {fileID: 0}
+  carrotSoupPrefab: {fileID: 0}
   startBoilSound: {fileID: 8300000, guid: 1fe61354d4ad1aa4f880a1b309f59ef5, type: 3}
   boilFinishSound: {fileID: 8300000, guid: 67a9a981591be9346929dd83e7cad0bf, type: 3}
   stirSound: {fileID: 8300000, guid: 8942a63937c143b4582bb2ae315586c2, type: 3}

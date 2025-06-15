@@ -10,7 +10,7 @@ public class CutRegistry : ScriptableObject
     public class Entry
     {
         public string Name;
-        public NetworkPrefabRef Prefab;
+        public GameObject Prefab;
     }
 
     public Entry[] All;
