@@ -2113,6 +2113,10 @@ PrefabInstance:
       propertyPath: orderController
       value: 
       objectReference: {fileID: 7526106789336469714}
+    - target: {fileID: 6917958314519508380, guid: 74dcf05b7e7610445a7e0d7f07c0e36a, type: 3}
+      propertyPath: total_game_time
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7063625471216904903, guid: 74dcf05b7e7610445a7e0d7f07c0e36a, type: 3}
       propertyPath: instanceId
       value: 3d394eb7-d0ea-4ae6-aeb9-7a508c1eba00

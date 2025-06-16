@@ -75,6 +75,8 @@ public class RealGameManager : MonoBehaviour
 
             // Optionally, you can stop any further updates or logic here.
             gameOverText.gameObject.SetActive(true);
+
+            SoundManager.Instance.PlaySFX(SoundRegistry.SoundID.GameOver, Vector3.zero);
         }
     }
 }

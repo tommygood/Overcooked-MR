@@ -85,26 +85,26 @@ public class HandWashingController : MonoBehaviour
         }
     }
 
-    private IEnumerator updateCleanProgress()
+    private IEnumerator Start()
     {
         while (true)
         {
             yield return new WaitForSeconds(1f);
             if (!IsHandInZone)
             {
-                // this.debugPlateVisual?.SetActive(false);
+                this.debugVisual.SetActive(false);
                 continue;
             }
             foreach (var plate in this.platesInZone)
             {
-                plate.CleanProgress = Mathf.Min(plate.CleanProgress + 1, 100);
-                // this.debugPlateVisual?.SetActive(true);
+                plate.CleanProgress = Mathf.Min(plate.CleanProgress + 20, 100);
+                this.debugPlateVisual.SetActive(true);
             }
         }
     }
 
     private bool isHand(GameObject obj)
     {
-        return obj.name == "TipCollider" || obj.name == "FingerTrackingHandCollider";
+        return obj.name == "TipCollider" || obj.name == "FingerTrackingHandCollider" || obj.name == "Collider";
     }
 }

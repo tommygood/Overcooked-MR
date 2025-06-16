@@ -21,6 +21,7 @@ public class SoundRegistry : ScriptableObject
         Boil,
         Ding,
         Bgm,
+        GameOver,
     }
 
     // A simple struct to hold the mapping for the Inspector
