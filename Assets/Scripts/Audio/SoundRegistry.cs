@@ -20,6 +20,7 @@ public class SoundRegistry : ScriptableObject
         BowlCleaned,
         Boil,
         Ding,
+        Bgm,
     }
 
     // A simple struct to hold the mapping for the Inspector

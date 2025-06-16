@@ -51,6 +51,7 @@ public class RealGameManager : MonoBehaviour
             Debug.Log("Start game from the trigger");
             StartCoroutine(orderController.StartOrdering()); // Start the order controller logic
             orderController.start_ordering = true;
+            SoundManager.Instance.PlayLoopingSFX(SoundRegistry.SoundID.Bgm, Vector3.zero);
         }
     }
 
