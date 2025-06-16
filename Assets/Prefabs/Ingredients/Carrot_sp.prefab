@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4921704802218732826}
   - component: {fileID: 4724326210234767920}
   - component: {fileID: 8340023483176020091}
+  - component: {fileID: 8750477808613132231}
   m_Layer: 0
   m_Name: Carrot_sp
   m_TagString: Untagged
@@ -135,6 +136,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8750477808613132231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3836439757008326986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f729b916775664b980d6908f91ed80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutter_duration: 0.5
+  cut_num_need: 5
+  cut_delay: 1
+  cutRegistry: {fileID: 11400000, guid: 891230a75407a144c95515eb77b62d30, type: 2}
 --- !u!1 &7864108611697506131
 GameObject:
   m_ObjectHideFlags: 0

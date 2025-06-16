@@ -53,7 +53,7 @@ MonoBehaviour:
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1.75
   - name: GasStoveSet
-    prefab: {fileID: 6336623710687341707, guid: 0d5d04fd768d1c14ea41b5251dfb44a9, type: 3}
+    prefab: {fileID: 2476045403293432649, guid: 54dd11a33698b7e47ad9892d51978891, type: 3}
     position: {x: 0, y: 0.1, z: 0}
     rotation: {x: 0.49999997, y: -0.49999997, z: -0.49999997, w: 0.49999997}
     scale: 1
@@ -74,7 +74,7 @@ MonoBehaviour:
     scale: 1
   - name: Floor
     prefab: {fileID: 5156511677125116127, guid: c78e28cfd17e24e4ca835eb222948096, type: 3}
-    position: {x: 0, y: -0.5, z: 0}
+    position: {x: 0, y: 1, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 1
   - name: AppleBox
@@ -141,6 +141,11 @@ MonoBehaviour:
     prefab: {fileID: 2887040897203602358, guid: 22c3f715e82336a4cabe311643c90483, type: 3}
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
+    scale: 1
+  - name: DeliveryDetector
+    prefab: {fileID: 3439798399690711511, guid: 0b347b7757359114eab56380f70f231d, type: 3}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0, w: 1}
     scale: 1
   - name: TurkeyBreastTray
     prefab: {fileID: 2082483893918499108, guid: c6ab67ce51a0ad540b7ab9772781a817, type: 3}

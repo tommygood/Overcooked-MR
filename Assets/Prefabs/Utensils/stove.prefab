@@ -776,8 +776,6 @@ GameObject:
   - component: {fileID: 1300788183519079349}
   - component: {fileID: 1191474704977850881}
   - component: {fileID: 3270455353678088101}
-  - component: {fileID: 7761638289486086780}
-  - component: {fileID: 1047573542522217018}
   - component: {fileID: 7332244087872397582}
   m_Layer: 0
   m_Name: stove
@@ -924,48 +922,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7761638289486086780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7721452653673687789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SortKey: 3590885793
-  ObjectInterest: 1
-  Flags: 262145
-  NestedObjects: []
-  NetworkedBehaviours:
-  - {fileID: 1047573542522217018}
-  ForceRemoteRenderTimeframe: 0
---- !u!114 &1047573542522217018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7721452653673687789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a591d221a634417e9827eb58e17de84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _stateAuthorityChangeErrorCorrectionDelta: 0
-  SyncScale: 1
-  SyncParent: 1
-  _interpolationTarget: {fileID: 0}
-  UsePreciseRotation: 0
-  UseRenderSleepThresholds: 1
-  RenderThresholds:
-    UseEnergy: 1
-    Position: 0.01
-    Rotation: 0.01
-    Scale: 0.01
 --- !u!114 &7332244087872397582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,7 +934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b803ebbdd1a415295fca5ee4644fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireEffectPrefab: {fileID: 0}
+  fireEffectPrefab: {fileID: 5340588813724511151, guid: d606d9c39ab7cfa45988e845703c44ab, type: 3}
 --- !u!1 &7967521603781589680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1049,8 +1005,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookProgressSlider: {fileID: 491513751106875779}
   stirPromptText: {fileID: 3848330260462229182}
-  pumpkinSoupPrefab: {fileID: 0}
-  carrotSoupPrefab: {fileID: 0}
+  pumpkinSoupPrefab: {fileID: 1300199336844320618, guid: 9d8d2f6d2c3253840921a824a0873370, type: 3}
+  carrotSoupPrefab: {fileID: 6757265173559157499, guid: c5abd4a21084784489f2823785ddd6ae, type: 3}
   startBoilSound: {fileID: 8300000, guid: 1fe61354d4ad1aa4f880a1b309f59ef5, type: 3}
   boilFinishSound: {fileID: 8300000, guid: 67a9a981591be9346929dd83e7cad0bf, type: 3}
   stirSound: {fileID: 8300000, guid: 8942a63937c143b4582bb2ae315586c2, type: 3}
@@ -1073,8 +1029,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cookProgressSlider: {fileID: 491513751106875779}
   stirPromptText: {fileID: 3848330260462229182}
-  pumpkinSoupPrefab: {fileID: 0}
-  carrotSoupPrefab: {fileID: 0}
+  pumpkinSoupPrefab: {fileID: 1300199336844320618, guid: 9d8d2f6d2c3253840921a824a0873370, type: 3}
+  carrotSoupPrefab: {fileID: 6757265173559157499, guid: c5abd4a21084784489f2823785ddd6ae, type: 3}
   startBoilSound: {fileID: 8300000, guid: 1fe61354d4ad1aa4f880a1b309f59ef5, type: 3}
   boilFinishSound: {fileID: 8300000, guid: 67a9a981591be9346929dd83e7cad0bf, type: 3}
   stirSound: {fileID: 8300000, guid: 8942a63937c143b4582bb2ae315586c2, type: 3}

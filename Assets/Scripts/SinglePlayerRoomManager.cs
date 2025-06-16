@@ -64,8 +64,8 @@ public class SinglePlayerRoomManager : MonoBehaviour
 
     private void SetupRoom()
     {
-        // HACK: de-deup
-        // bool deliveryDetectorSpawned = false;
+        // HACK: de-dup
+        bool deliveryDetectorSpawned = false;
         foreach (Transform child in room.gameObject.transform)
         {
             Debug.Log("[Debug] " + child.gameObject.name);
@@ -272,17 +272,16 @@ public class SinglePlayerRoomManager : MonoBehaviour
                     Destroy(collider);
                 }
 
-                // if (grandChild.gameObject.name == "DOOR_FRAME_EffectMesh" && !deliveryDetectorSpawned)
-                // {
-                //     deliveryDetectorSpawned = true;
-
-                //     PrefabInfo deliveryDetector = utensils.Find(x => x.name == "DeliveryDetector");
-                //     var newObject = Instantiate(deliveryDetector.prefab, grandChild.gameObject.transform);
-                //     newObject.transform.position += deliveryDetector.position;
-                //     newObject.transform.Rotate(deliveryDetector.rotation.eulerAngles);
-                //     newObject.transform.localScale *= deliveryDetector.scale;
-                //     Debug.Log("[Debug] DeliveryDetector spawned");
-                // }
+                if (grandChild.gameObject.name == "DOOR_FRAME_EffectMesh" && !deliveryDetectorSpawned)
+                {
+                    deliveryDetectorSpawned = true;
+                    PrefabInfo deliveryDetector = utensils.Find(x => x.name == "DeliveryDetector");
+                    var newObject = Instantiate(deliveryDetector.prefab, grandChild.gameObject.transform);
+                    newObject.transform.position += deliveryDetector.position;
+                    newObject.transform.Rotate(deliveryDetector.rotation.eulerAngles);
+                    newObject.transform.localScale *= deliveryDetector.scale;
+                    Debug.Log("[Debug] DeliveryDetector spawned");
+                }
             }
 
         }

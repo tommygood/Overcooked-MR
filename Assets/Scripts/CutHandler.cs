@@ -35,7 +35,7 @@ public class CutHandler : MonoBehaviour
     [SerializeField]
     private CutRegistry cutRegistry;
 
-    public void AfterSpawned()
+    public void Start()
     {
         // Find the left hand anchor by name at the start
         LeftHandAnchor = GameObject.Find("LeftHandAnchor");
@@ -198,6 +198,7 @@ public class CutHandler : MonoBehaviour
         {
             var no = Instantiate(cutPrefab, transform.position, transform.rotation);
             Debug.Log("replace with cutPrefab: " + no.gameObject.name);
+            gameObject.SetActive(false);
         }
         else
         {
