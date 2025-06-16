@@ -15730,10 +15730,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 710843033687325918, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1414670796391617524, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -15774,69 +15770,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1758247694646585202, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2545998913364587807, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208251038969426995, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3984999655435179623, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
       propertyPath: m_Name
       value: Shared Building Blocks
       objectReference: {fileID: 0}
-    - target: {fileID: 4260831910104748037, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5905175158262816912, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496227815656921670, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6627250984278796409, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: Flags
-      value: 262145
-      objectReference: {fileID: 0}
-    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: SortKey
-      value: 4266978775
-      objectReference: {fileID: 0}
-    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: NetworkedBehaviours.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: NetworkedBehaviours.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9139606899070633965, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6962509870850640993, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-    m_RemovedGameObjects:
-    - {fileID: 9139606899070633965, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-    - {fileID: 1758247694646585202, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-    - {fileID: 6627250984278796409, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-    - {fileID: 2545998913364587807, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-    - {fileID: 6496227815656921670, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-    - {fileID: 5905175158262816912, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-    - {fileID: 710843033687325918, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
-    - {fileID: 3208251038969426995, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ea8f17022f0e9a40a839b583487abf2, type: 3}

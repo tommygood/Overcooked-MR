@@ -59,8 +59,7 @@ public class Courier : MonoBehaviour
         }
         if (delivery.gameObject.TryGetComponent<Rigidbody>(out var rb))
         {
-            // rb.isKinematic = true; // Prevent physics interactions while moving
-            Destroy(rb);
+            rb.isKinematic = true; // Prevent physics interactions while moving
         }
         delivery.transform.SetParent(transform);
 
