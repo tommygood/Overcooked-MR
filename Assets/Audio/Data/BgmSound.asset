@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: BgmSound
   m_EditorClassIdentifier: 
   AudioClips:
-  - {fileID: 8300000, guid: 448cdd3a2ca23b14891aa814081ef551, type: 3}
+  - {fileID: 8300000, guid: 0a780345376104544b62911b60924820, type: 3}
   Volume: 1
   VolumeVariation: 0
   Pitch: 1
   PitchVariation: 0
   SpatialBlend: 0
-  Loop: 0
+  Loop: 1
   MinDistance: 1
   MaxDistance: 50
