@@ -18798,33 +18798,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3291762114971936492, guid: 0b347b7757359114eab56380f70f231d, type: 3}
-      propertyPath: SortKey
-      value: 213923324
-      objectReference: {fileID: 0}
     - target: {fileID: 3439798399690711511, guid: 0b347b7757359114eab56380f70f231d, type: 3}
       propertyPath: m_Name
       value: DeliveryBundle
-      objectReference: {fileID: 0}
-    - target: {fileID: 3554433397352158386, guid: 0b347b7757359114eab56380f70f231d, type: 3}
-      propertyPath: SortKey
-      value: 495634040
-      objectReference: {fileID: 0}
-    - target: {fileID: 5024236718593988655, guid: 0b347b7757359114eab56380f70f231d, type: 3}
-      propertyPath: SortKey
-      value: 3011624679
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301367542127044173, guid: 0b347b7757359114eab56380f70f231d, type: 3}
-      propertyPath: SortKey
-      value: 3888952052
-      objectReference: {fileID: 0}
-    - target: {fileID: 6870369865717403375, guid: 0b347b7757359114eab56380f70f231d, type: 3}
-      propertyPath: SortKey
-      value: 3094402620
-      objectReference: {fileID: 0}
-    - target: {fileID: 7906818656382499513, guid: 0b347b7757359114eab56380f70f231d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
