@@ -280,7 +280,9 @@ public class OrderController : MonoBehaviour
             {
                 Debug.Log($"Order not found in A: user_id={orderB.user_id}, food_id={orderB.food_id}");
                 is_equal = false;
-                GameObject newOrderGO = Instantiate(OrderObject, casherTransform);
+                var originalScale = OrderObject.transform.lossyScale;
+                GameObject newOrderGO = Instantiate(OrderObject, casherTransform.position, OrderObject.transform.rotation);
+                newOrderGO.transform.localScale = originalScale;
                 newOrderGO.SetActive(true);
                 OrderAnimator orderAnimator = newOrderGO.GetComponent<OrderAnimator>();
                 // get the food name from the foodList

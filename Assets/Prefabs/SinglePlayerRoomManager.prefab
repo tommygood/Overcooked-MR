@@ -55,7 +55,7 @@ MonoBehaviour:
   - name: GasStoveSet
     prefab: {fileID: 2476045403293432649, guid: 54dd11a33698b7e47ad9892d51978891, type: 3}
     position: {x: 0, y: 0.1, z: 0}
-    rotation: {x: 0.49999997, y: -0.49999997, z: -0.49999997, w: 0.49999997}
+    rotation: {x: -0.49999997, y: 0.49999997, z: 0.49999997, w: -0.49999997}
     scale: 1
   - name: Sink
     prefab: {fileID: 4139472504296835130, guid: 01b2ba01fc292e7489f607e7bd97c8aa, type: 3}
@@ -64,8 +64,8 @@ MonoBehaviour:
     scale: 0.75
   - name: Casher
     prefab: {fileID: 4585976740206670111, guid: a52005440d90e424fbc87f80d92ed880, type: 3}
-    position: {x: 4.5, y: -1.9, z: -0.9}
-    rotation: {x: 0.49999997, y: 0.49999997, z: -0.49999997, w: -0.49999997}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
     scale: 0.5
   - name: DeliveryRing
     prefab: {fileID: 3011525087247244208, guid: 49b969dae5eadce4db282385d9c69d1b, type: 3}
