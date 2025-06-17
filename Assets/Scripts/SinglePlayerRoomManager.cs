@@ -198,13 +198,13 @@ public class SinglePlayerRoomManager : MonoBehaviour
                                 ingredient = utensils.Find(x => x.name == "PumpkinBox");
                                 break;
                             case 9:
-                                ingredient = utensils.Find(x => x.name == "SearedGroundBeefTray");
+                                ingredient = utensils.Find(x => x.name == "TomatoBox");
                                 break;
                             case 10:
                                 ingredient = utensils.Find(x => x.name == "SteakTray");
                                 break;
                             case 11:
-                                ingredient = utensils.Find(x => x.name == "TomatoBox");
+                                ingredient = utensils.Find(x => x.name == "SearedGroundBeefTray");
                                 break;
                             case 12:
                                 ingredient = utensils.Find(x => x.name == "TortillaTray");
